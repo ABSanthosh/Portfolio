@@ -1,0 +1,47 @@
+@import "../../styles/mixins";
+
+.HeaderWrapper {
+  @include box(100%, 84px);
+  @include make-flex();
+  position: sticky;
+  top: 0;
+  background: rgba(253, 253, 253, 0.226);
+  backdrop-filter: blur(69px);
+  padding: 0 20px;
+  &__content {
+    @include box();
+    @include make-flex($just: space-between, $dir: row);
+    max-width: 100ch;
+
+    &--left {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    &--right {
+      a {
+        &:hover {
+          color: #6765da;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &--brackets {
+      color: #2532f5;
+    }
+    &--params {
+      color: #e1944d;
+    }
+    &--arrow {
+      font-weight: 400;
+      font-family: "JetBrains Mono", monospace;
+      font-variant-ligatures: common-ligatures;
+      margin-right: 3px;
+    }
+  }
+}
