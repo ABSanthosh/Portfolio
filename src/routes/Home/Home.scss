@@ -1,0 +1,63 @@
+@import "../../styles/mixins";
+
+.HomeWrapper {
+  @include make-flex($just: flex-start);
+  @include box($height: unset);
+  min-height: 100%;
+  background-color: #fdfdfd;
+
+  &__main {
+    @include box($height: unset);
+    @include make-flex();
+    min-height: calc(100% - 84px);
+  }
+
+  &__hero {
+    @include box($height: unset);
+    max-width: 100ch;
+    @include make-flex();
+
+    p {
+      font-size: 25px;
+      animation: zoomInOut 3s ease-in-out, rainbow 3s linear;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 174, 0);
+  }
+  25% {
+    color: rgb(0, 255, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
