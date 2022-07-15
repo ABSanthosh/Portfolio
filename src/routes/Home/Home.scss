@@ -10,6 +10,7 @@
     @include box($height: unset);
     @include make-flex($just: flex-start);
     min-height: calc(100% - 84px);
+    padding: 0 20px;
   }
 
   &__hero {
@@ -28,9 +29,21 @@
       font-size: 17px;
       @include make-flex($align: flex-start);
       gap: 17px;
+
+      p {
+        text-align: justify;
+      }
     }
 
-   
+    &--actions {
+      @include box(50%, 40px);
+      @include make-flex($dir: row, $just: flex-start);
+      gap: 16px;
+    }
+
+    @include respondAt(775px){
+      padding-top: 30px;
+    }
   }
 }
 

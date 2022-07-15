@@ -1,12 +1,6 @@
 <script>
-  import ToolTip from "../../components/ToolTip/ToolTip.svelte";
   import Header from "../../components/Header/Header.svelte";
-  const Santhosh = "Santhosh";
-  const func = (AB) => {
-    Santhosh;
-  };
-
-  console.log(func());
+  import FancyButton from "../../components/FancyButton/FancyButton.svelte";
 </script>
 
 <svelte:head>
@@ -33,6 +27,19 @@
         <p>
           commodo ut vestibulum a, iaculis in lacus. Donec feugiat porttitor
         </p>
+        <div class="HomeWrapper__hero--actions">
+          <FancyButton type="link" href="https://github.com/ABSanthosh" newTab
+            >Github</FancyButton
+          >
+          <FancyButton
+            type="link"
+            href="https://www.linkedin.com/in/a-b-santhosh-97872612b/"
+            newTab>LinkedIn</FancyButton
+          >
+          <FancyButton type="link" href="mailTo:a.b.santhosh02@gmail.com" newTab
+            >Email</FancyButton
+          >
+        </div>
       </article>
     </section>
   </main>
