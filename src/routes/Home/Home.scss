@@ -39,6 +39,17 @@
       @include box(50%, 40px);
       @include make-flex($dir: row, $just: flex-start);
       gap: 16px;
+      margin-top: 20px;
+
+      @include respondAt(775px){
+        width: 60%;
+      }
+      @include respondAt(620px){
+        width: 80%;
+      }
+      @include respondAt(420px){
+        width: 100%;
+      }
     }
 
     @include respondAt(775px){
