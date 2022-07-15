@@ -1,0 +1,25 @@
+@import "../../styles/mixins";
+
+.ExpItemWrapper {
+  @include box($height: auto);
+  min-height: 110px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e7e5e4;
+  @include make-flex($just: flex-start, $align: flex-start);
+
+  &--position {
+    width: 100%;
+    @include make-flex($just: space-between, $dir: row);
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+  &--company {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  &--range {
+    font-size: 14px;
+  }
+}
