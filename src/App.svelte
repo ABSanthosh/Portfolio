@@ -10,6 +10,7 @@
 <svelte:head>
   <style lang="scss" src="./styles/global.scss"></style>
   <style lang="scss" src="./styles/fonts.scss"></style>
+  <style lang="scss" src="./styles/locomotive-scroll.scss"></style>
 </svelte:head>
 
 <Router {url}>
