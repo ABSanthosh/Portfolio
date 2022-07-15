@@ -1,0 +1,17 @@
+@import "../../styles/mixins";
+
+.FancyButton {
+  @include box();
+  background-color: #e7e5e4;
+  @include make-flex();
+  padding: 0 15px;
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #adacff;
+  }
+}
