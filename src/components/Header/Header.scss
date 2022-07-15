@@ -8,11 +8,11 @@
   background: rgba(253, 253, 253, 0.226);
   backdrop-filter: blur(69px);
   padding: 0 20px;
+  z-index: 5;
   &__content {
     @include box();
     @include make-flex($just: space-between, $dir: row);
-    max-width: 100ch;
-
+    max-width: 95ch;
     &--left {
       font-size: 20px;
       font-weight: 400;
@@ -42,6 +42,7 @@
       font-family: "JetBrains Mono", monospace;
       font-variant-ligatures: common-ligatures;
       margin-right: 3px;
+      color: #9fd2c3;
     }
   }
 }
