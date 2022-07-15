@@ -1,6 +1,8 @@
 <script>
   import Header from "../../components/Header/Header.svelte";
   import FancyButton from "../../components/FancyButton/FancyButton.svelte";
+  import ExpItem from "../../components/ExpItem/ExpItem.svelte";
+  import ProjectCard from "../../components/ProjectCard/ProjectCard.svelte";
 </script>
 
 <svelte:head>
@@ -10,9 +12,9 @@
 <div class="HomeWrapper">
   <Header />
   <main class="HomeWrapper__main">
-    <section class="HomeWrapper__hero">
-      <h1 class="HomeWrapper__hero--title">Hey! I'm Santhosh</h1>
-      <article class="HomeWrapper__hero--desc">
+    <section class="HeroSection">
+      <h1 class="HeroSection--title">Hey! I'm Santhosh</h1>
+      <article class="HeroSection--desc">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae
           enim in massa honcus eu et ipsum. Maecenas eget dui auctor sapien
@@ -27,7 +29,7 @@
         <p>
           commodo ut vestibulum a, iaculis in lacus. Donec feugiat porttitor
         </p>
-        <div class="HomeWrapper__hero--actions">
+        <div class="HeroSection--actions">
           <FancyButton type="link" href="https://github.com/ABSanthosh" newTab
             >Github</FancyButton
           >
@@ -41,6 +43,79 @@
           >
         </div>
       </article>
+    </section>
+    <section class="ExperienceSection">
+      <h2 class="ExperienceSection--title">Experience</h2>
+      <ExpItem
+        position="Software Engineer"
+        company="Google"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+        tStart="2019"
+        tEnd="Present"
+      />
+      <ExpItem
+        position="Software Engineer"
+        company="Google"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+        tStart="2019"
+        tEnd="Present"
+      />
+      <ExpItem
+        position="Software Engineer"
+        company="Google"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+        tStart="2019"
+        tEnd="Present"
+      />
+      <ExpItem
+        position="Software Engineer"
+        company="Google"
+        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+        tStart="2019"
+        tEnd="Present"
+      />
+      <div class="ExperienceSection--viewMore">
+        <a href="/experience">View more</a>
+      </div>
+    </section>
+
+    <section class="ProjectsSection">
+      <h2 class="ProjectsSection--title">Projects</h2>
+      <div class="ProjectsSection__cardBox">
+        <ProjectCard
+          title="Project 1"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+          links={["", ""]}
+        />
+        <ProjectCard
+          title="Project 1"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+          links={["", ""]}
+        />
+        <ProjectCard
+          title="Project 1"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+          links={["", ""]}
+        />
+        <ProjectCard
+          title="Project 1"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+          links={["", ""]}
+        />
+        <ProjectCard
+          title="Project 1"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+          links={["", ""]}
+        />
+        <ProjectCard
+          title="Project 1"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
+          links={["", ""]}
+        />
+      </div>
+      <div class="ExperienceSection--viewMore">
+        <a href="/experience">View more</a>
+      </div>
     </section>
   </main>
 </div>

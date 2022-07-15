@@ -3,7 +3,6 @@
 .HomeWrapper {
   @include make-flex($just: flex-start);
   @include box($height: unset);
-  min-height: 100%;
   background-color: #fdfdfd;
 
   &__main {
@@ -13,9 +12,9 @@
     padding: 0 20px;
   }
 
-  &__hero {
+  .HeroSection {
     @include box($height: unset);
-    max-width: 100ch;
+    max-width: 95ch;
     @include make-flex($align: flex-start);
     padding-top: 85px;
     gap: 16px;
@@ -26,7 +25,6 @@
     }
 
     &--desc {
-      font-size: 17px;
       @include make-flex($align: flex-start);
       gap: 17px;
 
@@ -39,21 +37,72 @@
       @include box(50%, 40px);
       @include make-flex($dir: row, $just: flex-start);
       gap: 16px;
-      margin-top: 20px;
+      margin-top: 15px;
 
-      @include respondAt(775px){
+      @include respondAt(775px) {
         width: 60%;
       }
-      @include respondAt(620px){
+      @include respondAt(620px) {
         width: 80%;
       }
-      @include respondAt(420px){
+      @include respondAt(420px) {
         width: 100%;
       }
     }
 
-    @include respondAt(775px){
+    @include respondAt(775px) {
       padding-top: 30px;
+    }
+  }
+
+  .ExperienceSection {
+    margin-top: 45px;
+    max-width: 95ch;
+    @include box();
+    @include make-flex($just: flex-start, $align: flex-start);
+    gap: 16px;
+    &--title {
+      color: #474747;
+      @include box($height: 50px);
+      @include make-flex($align: flex-start);
+      background-color: #fdfdfd;
+      // position: sticky;
+      // top: 84px;
+    }
+    &--viewMore {
+      @include box($height: auto);
+      @include make-flex();
+    }
+  }
+
+  .ProjectsSection {
+    margin-top: 45px;
+    max-width: 95ch;
+    @include box();
+    @include make-flex($just: flex-start, $align: flex-start);
+    gap: 16px;
+    &--title {
+      color: #474747;
+      @include box($height: 50px);
+      @include make-flex($align: flex-start);
+      background-color: #fdfdfd;
+      // position: sticky;
+      // top: 84px;
+    }
+    &--viewMore {
+      @include box($height: auto);
+      @include make-flex();
+    }
+    &__cardBox {
+      @include box($height: unset);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 240px;
+      gap: 18px;
+
+      @include respondAt(545px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
