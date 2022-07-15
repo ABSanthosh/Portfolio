@@ -1,0 +1,61 @@
+@import "../../styles/mixins";
+
+.ProjectCard {
+  @include box();
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
+  max-width: 455px;
+
+  @include make-flex($just: space-between);
+
+  font-size: 16px;
+  letter-spacing: 0.004em;
+  line-height: 1.5;
+
+  @include respondAt(545px) {
+    max-width: unset;
+  }
+
+  &__content {
+    @include make-flex($align: flex-start, $just: flex-start);
+    @include box();
+    padding: 30px 30px 20px;
+    gap: 16px;
+
+    &--title {
+      color: #535353;
+    }
+    &--desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  &__links {
+    @include box($height: 48px);
+    @include make-flex($just: space-between, $dir: row);
+
+    &--resource {
+      @include box(50%);
+      @include make-flex($dir: row);
+      gap: 4px;
+        cursor: pointer;
+      img {
+        height: 20px;
+      }
+      &:hover{
+        background-color: #adacff;
+      }
+      &:first-child {
+        border-top: 1px solid #e6e6e6;
+        border-right: 1px solid #e6e6e6;
+      }
+      &:last-child {
+        border-top: 1px solid #e6e6e6;
+      }
+    }
+  }
+}
