@@ -1,8 +1,17 @@
 <script>
+  // @ts-nocheck
+
   import Header from "../../components/Header/Header.svelte";
   import FancyButton from "../../components/FancyButton/FancyButton.svelte";
   import ExpItem from "../../components/ExpItem/ExpItem.svelte";
   import ProjectCard from "../../components/ProjectCard/ProjectCard.svelte";
+  import ToolCard from "../../components/ToolCard/ToolCard.svelte";
+
+  import { Logos } from "../../Utils/Logos";
+  import { slide } from "svelte/transition";
+
+  let toolsOption = "Languages",
+    value = "Languages";
 </script>
 
 <svelte:head>
@@ -78,7 +87,6 @@
         <a href="/experience">View more</a>
       </div>
     </section>
-
     <section class="ProjectsSection">
       <h2 class="ProjectsSection--title">Projects</h2>
       <div class="ProjectsSection__cardBox">
@@ -115,6 +123,31 @@
       </div>
       <div class="ExperienceSection--viewMore">
         <a href="/experience">View more</a>
+      </div>
+    </section>
+    <section class="ToolsSection">
+      <div class="ToolsSection__top">
+        <h2 class="ToolsSection--title">Tools and Technologies</h2>
+        <select
+          {value}
+          on:change={(e) => {
+            value = e.target.value;
+            toolsOption = "Empty";
+
+            setTimeout(() => {
+              toolsOption = value;
+            },500);
+          }}
+        >
+          <option value="Languages">Languages</option>
+          <option value="Frameworks">Frameworks</option>
+          <option value="Tools">Tools</option>
+        </select>
+      </div>
+      <div class="ToolsSection__container" transition:slide>
+        {#each Logos[toolsOption] as item}
+          <ToolCard name={item.name} href={item.href} image={item.image} />
+        {/each}
       </div>
     </section>
   </main>

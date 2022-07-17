@@ -10,7 +10,9 @@
       </div>
     </div>
     <div class="HeaderWrapper__content--right">
-        <a href="https://github.com/ABSanthosh">Github</a>
+      <input type="checkbox" class="HeaderWrapper__themeToggle" on:change={()=>{
+        document.body.classList.toggle('dark-mode')
+      }}/>
     </div>
   </div>
 </header>

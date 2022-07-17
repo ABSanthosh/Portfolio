@@ -2,7 +2,7 @@
 
 .FancyButton {
   @include box();
-  background-color: #e7e5e4;
+  background-color: var(--lightGray);
   @include make-flex();
   padding: 0 15px;
   text-decoration: none;
@@ -12,6 +12,6 @@
   &:hover,
   &:focus,
   &:active {
-    background-color: #adacff;
+    background-color: var(--lightPurple);
   }
 }

@@ -2,10 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-  //   "Roboto", "Apple Color Emoji", "Segoe UI Emoji";
-  color: #3a3a3a;
+  color: var(--baseTextColor);
 }
 
 ::-webkit-scrollbar {
@@ -16,14 +13,14 @@
   height: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d3d1cb;
+  background: var(--scrollbarThumb);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #edece9;
+  background: var(--scrollbarTrack);
 }
 ::selection {
-  background: rgba(45, 170, 219, 0.3);
+  background: var(--textSelectionColor);
 }
 
 html,

@@ -5,25 +5,17 @@
   @include make-flex();
   position: sticky;
   top: 0;
-  background: rgba(253, 253, 253, 0.226);
+  background: var(--headerBackground);
   backdrop-filter: blur(69px);
   padding: 0 20px;
   z-index: 5;
   &__content {
     @include box();
     @include make-flex($just: space-between, $dir: row);
-    max-width: 95ch;
+    max-width: 90ch;
     &--left {
       font-size: 20px;
       font-weight: 400;
-    }
-
-    &--right {
-      a {
-        &:hover {
-          color: #6765da;
-        }
-      }
     }
   }
 
@@ -32,17 +24,17 @@
     justify-content: center;
     align-items: center;
     &--brackets {
-      color: #2532f5;
+      color: var(--headerBrackets);
     }
     &--params {
-      color: #e1944d;
+      color: var(--headerParams);
     }
     &--arrow {
       font-weight: 400;
       font-family: "JetBrains Mono", monospace;
       font-variant-ligatures: common-ligatures;
       margin-right: 3px;
-      color: #9fd2c3;
+      color: var(--headerArrow);
     }
   }
 }

@@ -2,9 +2,9 @@
 
 .ProjectCard {
   @include box();
-  background-color: white;
+  background-color: var(--backgroundColor);
   border-radius: 4px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--borderColor);
   max-width: 455px;
 
   @include make-flex($just: space-between);
@@ -24,7 +24,7 @@
     gap: 16px;
 
     &--title {
-      color: #535353;
+      color: var(--headingColor);
     }
     &--desc {
       display: -webkit-box;
@@ -42,19 +42,19 @@
       @include box(50%);
       @include make-flex($dir: row);
       gap: 4px;
-        cursor: pointer;
+      cursor: pointer;
       img {
         height: 20px;
       }
-      &:hover{
-        background-color: #adacff;
+      &:hover {
+        background-color: var(--lightPurple);
       }
       &:first-child {
-        border-top: 1px solid #e6e6e6;
-        border-right: 1px solid #e6e6e6;
+        border-top: 1px solid var(--borderColor);
+        border-right: 1px solid var(--borderColor);
       }
       &:last-child {
-        border-top: 1px solid #e6e6e6;
+        border-top: 1px solid var(--borderColor);
       }
     }
   }
