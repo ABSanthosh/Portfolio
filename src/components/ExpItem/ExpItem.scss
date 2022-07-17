@@ -4,7 +4,7 @@
   @include box($height: auto);
   min-height: 110px;
   padding: 15px 0;
-  border-bottom: 1px solid #e7e5e4;
+  border-bottom: 1px solid var(--borderColor);
   @include make-flex($just: flex-start, $align: flex-start);
 
   &--position {
