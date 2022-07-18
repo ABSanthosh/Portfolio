@@ -1,5 +1,3 @@
-@import "../../styles/mixins";
-
 .ExpItemWrapper {
   @include box($height: auto);
   min-height: 110px;

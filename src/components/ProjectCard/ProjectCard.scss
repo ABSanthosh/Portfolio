@@ -1,5 +1,3 @@
-@import "../../styles/mixins";
-
 .ProjectCard {
   @include box();
   background-color: var(--backgroundColor);
