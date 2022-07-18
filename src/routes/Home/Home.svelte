@@ -6,6 +6,7 @@
   import ExpItem from "../../components/ExpItem/ExpItem.svelte";
   import ProjectCard from "../../components/ProjectCard/ProjectCard.svelte";
   import ToolCard from "../../components/ToolCard/ToolCard.svelte";
+  import Footer from "../../components/Footer/Footer.svelte";
 
   import { Logos } from "../../Utils/Logos";
   import { slide } from "svelte/transition";
@@ -16,17 +17,18 @@
 
   onMount(() => {
     const container = document.querySelector(".ToolsSection__container");
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        container.style.height = `${container.scrollHeight}px`;
+      }, 200);
+    });
 
-    setTimeout(() => {
-      container.style.height = `${container.scrollHeight}px`;
-    }, 100);
-
-    window.onresize = () => {
+    window.addEventListener("resize", () => {
       container.style.height = "unset";
       setTimeout(() => {
         container.style.height = `${container.scrollHeight}px`;
-      }, 100);
-    };
+      }, 200);
+    });
   });
 </script>
 
@@ -167,6 +169,7 @@
       </div>
     </section>
   </main>
+  <Footer />
 </div>
 
 <style lang="scss" src="./Home.scss"></style>
