@@ -1,3 +1,7 @@
+<script>
+  let mode = localStorage.getItem("theme") != "" ? "Dark" : "Light";
+</script>
+
 <header class="HeaderWrapper">
   <div class="HeaderWrapper__content">
     <div class="HeaderWrapper__content--left">
@@ -10,9 +14,25 @@
       </div>
     </div>
     <div class="HeaderWrapper__content--right">
-      <input type="checkbox" class="HeaderWrapper__themeToggle" on:change={()=>{
-        document.body.classList.toggle('dark-mode')
-      }}/>
+      <button
+        title="Toggles light & dark"
+        aria-label="auto"
+        aria-live="polite"
+        class="HeaderWrapper__themeToggle"
+        on:click={() => {
+          if (document.body.classList.contains("dark-mode")) {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "");
+            mode = "Light";
+          } else {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark-mode");
+            mode = "Dark";
+          }
+        }}
+      >
+        {mode}
+      </button>
     </div>
   </div>
 </header>

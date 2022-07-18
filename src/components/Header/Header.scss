@@ -1,10 +1,10 @@
 .HeaderWrapper {
-  @include box(100%, 84px);
+  @include box(100%, 70px);
   @include make-flex();
-  position: sticky;
+  position: fixed;
   top: 0;
   background: var(--headerBackground);
-  backdrop-filter: blur(69px);
+  backdrop-filter: var(--headerBlur);
   padding: 0 20px;
   z-index: 5;
   &__content {
@@ -34,5 +34,19 @@
       margin-right: 3px;
       color: var(--headerArrow);
     }
+  }
+
+  &__themeToggle {
+    background: var(--backgroundColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    border-style: solid;
+    padding: 6px 10px;
+    width: 60px;
+
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: 5px;
   }
 }
