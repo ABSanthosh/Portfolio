@@ -9,7 +9,7 @@
   class="ToolCard"
   transition:slide={{ duration: 200, easing: expoInOut }}
 >
-  <img src={image} alt={name} />
+  <img src={image} alt={name} loading="lazy" target="_blank" />
   <h3>{name}</h3>
 </a>
 
