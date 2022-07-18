@@ -1,5 +1,3 @@
-@import "../../styles/mixins";
-
 .HomeWrapper {
   @include make-flex($just: flex-start);
   @include box($height: unset);
@@ -122,7 +120,11 @@
         width: 25%;
         padding: 0 10px;
         border: 1px solid var(--borderColor);
-        background-color: var(--backgroundColor);
+        -webkit-appearance: none;
+        border-radius: 2px;
+
+        background: var(--backgroundColor) var(--downArrow) no-repeat;
+        background-position: right 5px top 50%;
 
         @include respondAt(595px) {
           width: 35%;
@@ -147,7 +149,9 @@
 
     &__container {
       @include box($height: unset);
+      // min-height: 242px;
       @include make-flex($just: flex-start, $align: flex-start, $dir: row);
+      align-content: flex-start;
       flex-wrap: wrap;
       gap: 16px;
     }

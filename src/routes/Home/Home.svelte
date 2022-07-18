@@ -9,9 +9,25 @@
 
   import { Logos } from "../../Utils/Logos";
   import { slide } from "svelte/transition";
+  import { onMount } from "svelte";
 
   let toolsOption = "Languages",
     value = "Languages";
+
+  onMount(() => {
+    const container = document.querySelector(".ToolsSection__container");
+
+    setTimeout(() => {
+      container.style.height = `${container.scrollHeight}px`;
+    }, 100);
+
+    window.onresize = () => {
+      container.style.height = "unset";
+      setTimeout(() => {
+        container.style.height = `${container.scrollHeight}px`;
+      }, 100);
+    };
+  });
 </script>
 
 <svelte:head>
@@ -136,7 +152,7 @@
 
             setTimeout(() => {
               toolsOption = value;
-            },500);
+            }, 500);
           }}
         >
           <option value="Languages">Languages</option>
