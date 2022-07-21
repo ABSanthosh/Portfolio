@@ -1,0 +1,71 @@
+.OSCard {
+  @include box(100%, 80px);
+
+  @include make-flex($dir: row, $just: space-between);
+  background-color: var(--backgroundColor);
+  border-radius: 4px;
+  border: 1px solid var(--borderColor);
+//   gap: 4px;
+  &--left {
+    @include make-flex($dir: row, $just: space-between);
+    width: calc(100% - 40px);
+    padding: 11px;
+    gap: 15px;
+  }
+
+  img {
+    @include box(50px, 50px);
+    padding: 3px 0 3px 3px;
+  }
+  &__details {
+    @include make-flex($dir: column);
+    @include box(76%);
+    gap: 5px;
+
+    &--title {
+      font-size: 23px;
+      width: 100%;
+    }
+    &--desc {
+      font-size: 16px;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__Stats {
+    @include make-flex($dir: column, $just: space-between, $align: flex-end);
+    gap: 14px;
+    height: 100%;
+    &--additions {
+      color: var(--successColor);
+      font-size: 16px;
+      white-space: nowrap;
+    }
+    &--deletions {
+      color: var(--dangerColor);
+      font-size: 16px;
+      white-space: nowrap;
+    }
+  }
+  button {
+    @include box(40px);
+    @include make-flex($dir: column);
+    background-color: var(--backgroundColor);
+    border-radius: 0 4px 4px 0;
+    border-style: none;
+    cursor: pointer;
+    border-left: 1px solid var(--borderColor);
+    padding: 0 12px;
+
+    svg{
+        width: 100%;
+        fill: var(--baseTextColor);
+    }
+    &:hover {
+      background-color: var(--lightPurple);
+    }
+  }
+}
