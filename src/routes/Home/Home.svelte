@@ -8,9 +8,10 @@
   import ToolCard from "../../components/ToolCard/ToolCard.svelte";
   import Footer from "../../components/Footer/Footer.svelte";
 
-  import { Logos } from "../../Utils/Logos";
+  import { Logos, OpenSource } from "../../Utils/Logos";
   import { slide } from "svelte/transition";
   import { onMount } from "svelte";
+  import OSCard from "../../components/OSCard/OSCard.svelte";
 
   let toolsOption = "Languages",
     value = "Languages";
@@ -167,6 +168,24 @@
           <ToolCard name={item.name} href={item.href} image={item.image} />
         {/each}
       </div>
+    </section>
+
+    <section class="OpenSourceSection">
+      <h2 class="OpenSourceSection--title">Open Source</h2>
+      {#each OpenSource as item}
+        <OSCard
+          title={item.title}
+          desc={item.desc}
+          src={item.src}
+          href={item.href}
+          additions={item.additions}
+          deletions={item.deletions}
+        />
+      {/each}
+    </section>
+
+    <section class="GithubSection">
+      <h2 class="GithubSection--title">Github Contributions</h2>
     </section>
   </main>
   <Footer />
