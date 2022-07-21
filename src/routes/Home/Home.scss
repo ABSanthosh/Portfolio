@@ -83,8 +83,6 @@
       @include box($height: 50px);
       @include make-flex($align: flex-start);
       background-color: var(--backgroundColor);
-      // position: sticky;
-      // top: 84px;
     }
     &--viewMore {
       @include box($height: auto);
@@ -103,8 +101,6 @@
       @include box($height: 50px);
       @include make-flex($align: flex-start);
       background-color: var(--backgroundColor);
-      // position: sticky;
-      // top: 84px;
     }
     &--viewMore {
       @include box($height: auto);
@@ -179,6 +175,32 @@
       align-content: flex-start;
       flex-wrap: wrap;
       gap: 16px;
+    }
+  }
+
+  .OpenSourceSection {
+    max-width: 90ch;
+    @include box();
+    @include make-flex($just: flex-start, $align: flex-start);
+    gap: 16px;
+    &--title {
+      color: var(--headingColor);
+      @include box($height: 50px);
+      @include make-flex($align: flex-start);
+      background-color: var(--backgroundColor);
+    }
+  }
+
+  .GithubSection {
+    max-width: 90ch;
+    @include box();
+    @include make-flex($just: flex-start, $align: flex-start);
+    gap: 16px;
+    &--title {
+      color: var(--headingColor);
+      @include box($height: 50px);
+      @include make-flex($align: flex-start);
+      background-color: var(--backgroundColor);
     }
   }
 }
