@@ -47,10 +47,12 @@
     --footerBackground: #f5f5f5;
     --downArrow: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
     color-scheme: light;
+    --successColor: #1a7f37;
+    --dangerColor: #cf222e;
   }
   :global(body.dark-mode) {
     --lightGray: #5f5f5f;
-    --lightPurple: #2d3045;
+    --lightPurple: #adacff;
     --headerBackground: #2d30456b;
     --headerBrackets: #ff0000;
     --headerBlur: blur(5px);
@@ -66,5 +68,8 @@
     --footerBackground: #353b66;
     --downArrow: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
     color-scheme: dark;
+    --successColor: #3fb950;
+    --dangerColor: #f85149;
+    
   }
 </style>
