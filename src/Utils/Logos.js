@@ -30,6 +30,8 @@ import SVN from "../assets/Images/Tools/SVN.svg";
 import VSCode from "../assets/Images/Tools/vscode.png";
 import Yarn from "../assets/Images/Tools/Yarn.png";
 
+import Lightify from "../assets/Images/LightifyLogo.png";
+
 export const Logos = {
   Empty: [],
   Languages: [
@@ -176,3 +178,22 @@ export const Logos = {
     },
   ],
 };
+
+export const OpenSource = [
+  {
+    title: "Litefy",
+    src: Lightify,
+    desc: "Redesigned and implemented the design on the angular based lightweight spotify client website.",
+    href: "https://github.com/mathkruger/litefy",
+    additions: "9,840 --",
+    deletions: "10,461 ++",
+  },
+  {
+    title: "React-Quizlet-FlashCard",
+    src: NPM,
+    desc: "A React component that allows you to create flashcards like Quizlet.",
+    href: "https://www.npmjs.com/package/react-quizlet-flashcard",
+    additions: "28,077 ++",
+    deletions: "6,997 --",
+  }
+];
