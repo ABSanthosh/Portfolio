@@ -1,0 +1,8 @@
+.GithubMap {
+  @include make-flex();
+  @include box();
+  img{
+    width: 100%;
+    max-width: 495px;
+  }
+}
