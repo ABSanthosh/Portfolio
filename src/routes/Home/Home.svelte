@@ -1,6 +1,5 @@
 <script>
   // @ts-nocheck
-
   import Header from "../../components/Header/Header.svelte";
   import FancyButton from "../../components/FancyButton/FancyButton.svelte";
   import ExpItem from "../../components/ExpItem/ExpItem.svelte";
@@ -12,6 +11,17 @@
   import { slide } from "svelte/transition";
   import { onMount } from "svelte";
   import OSCard from "../../components/OSCard/OSCard.svelte";
+  import GithubMap from "../../components/GithubMap/GithubMap.svelte";
+
+  const mode = "prod";
+  let baseRoute;
+  let isNewTab = true;
+
+  if (mode === "prod") {
+    baseRoute = "https://github.com/ABSanthosh";
+  } else {
+    baseRoute = "/project";
+  }
 
   let toolsOption = "Languages",
     value = "Languages";
@@ -44,18 +54,19 @@
       <h1 class="HeroSection--title">Hey! I'm Santhosh</h1>
       <article class="HeroSection--desc">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae
-          enim in massa honcus eu et ipsum. Maecenas eget dui auctor sapien
-          feugiat convallis finibus quis ipsum. Nam vitae metus vitae nibh
-          tincidunt pharetra sit amet at justo.
+          I'm a software developer and a CS undergrad at Shiv Nadar University,
+          Delhi, NCR. I make functional websites and native mobile android
+          applications. I'm currently creating and managing production level
+          modules as a php intern at GameNation.
         </p>
         <p>
-          Aliquam metus risus, tempor at ante a, molestie consequat eros. Fusce
-          vitae sem porttitor, vestibulum nunc non, faucibus felis. Integer
-          commodo ultricies enim quis vulputate.
+          I'm also contribute to open source projects while also building and
+          maintaining my own open source libraries. Currently, I'm working on
+          react-quizlet-flashcard component library.
         </p>
         <p>
-          commodo ut vestibulum a, iaculis in lacus. Donec feugiat porttitor
+          When I'm not writing code, I try to catch up with my favourite manga
+          and anime series or play sandbox games like Minecraft.
         </p>
         <div class="HeroSection--actions">
           <FancyButton type="link" href="https://github.com/ABSanthosh" newTab
@@ -75,74 +86,92 @@
     <section class="ExperienceSection">
       <h2 class="ExperienceSection--title">Experience</h2>
       <ExpItem
-        position="Software Engineer"
-        company="Google"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-        tStart="2019"
+        position="PHP Intern"
+        company="GameNation"
+        desc="Desiging and building production level modules for platform with 20k+ users per day."
+        tStart="June 2022"
         tEnd="Present"
       />
       <ExpItem
-        position="Software Engineer"
-        company="Google"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-        tStart="2019"
+        position="JavaScript Intern"
+        company="Synergy Hi-Tech Designers"
+        desc="Built and hosted a website for a startup company and helped them get recognized by Govt. of India."
+        tStart="Aug 2021"
+        tEnd="Oct 2021"
+      />
+      <ExpItem
+        position="Web Dev team Lead"
+        company="ECell SNU"
+        desc="Leading a team of 6 web developers to build a website for a inter University Entrepreneurship event."
+        tStart="Apri 2022"
         tEnd="Present"
       />
       <ExpItem
-        position="Software Engineer"
-        company="Google"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-        tStart="2019"
+        position="Web Dev team Lead"
+        company="Surge"
+        desc="Leading a team of web developers and designers to build a website that manages everything from registration to payment for the annual sports event."
+        tStart="July 2022"
         tEnd="Present"
       />
-      <ExpItem
-        position="Software Engineer"
-        company="Google"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-        tStart="2019"
-        tEnd="Present"
-      />
-      <div class="ExperienceSection--viewMore">
+      <!-- <div class="ExperienceSection--viewMore">
         <a href="/experience">View more</a>
-      </div>
+      </div> -->
     </section>
     <section class="ProjectsSection">
       <h2 class="ProjectsSection--title">Projects</h2>
       <div class="ProjectsSection__cardBox">
         <ProjectCard
-          title="Project 1"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-          links={["", ""]}
+          title="Verse Lyrics"
+          desc="Kotlin Android application that helps users to fetch and save lyrics of songs played in Spotify automatically. Available on Playstore."
+          links={[
+            "https://play.google.com/store/apps/details?id=com.absan.verse&hl=en_IN&gl=US",
+            { href: `${baseRoute}/Verse-Lyrics`, newTab: isNewTab },
+          ]}
         />
         <ProjectCard
-          title="Project 1"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-          links={["", ""]}
+          title="react-quizlet-flashcard"
+          desc="A simple and responsive quizlet-like flashcard component with no additional dependency. Written in Javascript and React."
+          links={[
+            "https://www.npmjs.com/package/react-quizlet-flashcard",
+            { href: `${baseRoute}/react-quizlet-flashcard`, newTab: isNewTab },
+          ]}
         />
         <ProjectCard
-          title="Project 1"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-          links={["", ""]}
+          title="Quartz(Under dev)"
+          desc="A multifunctional web app task managment tool with cross platform authentication and storage using Supabase, In the aim to replace Notion and Obsidian."
+          links={[
+            { href: "https://smoky-quartz.netlify.app/", newTab: true },
+            { href: `${baseRoute}/Quartz`, newTab: isNewTab },
+          ]}
         />
         <ProjectCard
-          title="Project 1"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-          links={["", ""]}
+          title="Gastly"
+          desc="A simple pokedex web app that fetches from custom pokemon api and displays them in a beautiful UI. Built with NextJs"
+          links={[
+            { href: "https://gastly-v4.netlify.app/", newTab: true },
+            { href: `${baseRoute}/Gastly`, newTab: isNewTab },
+          ]}
         />
         <ProjectCard
-          title="Project 1"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-          links={["", ""]}
+          title="Nihongo"
+          desc="A blog built with NextJs to keep track of my Japanese learning process. Uses markdown to store and display posts"
+          links={[
+            { href: "https://nihongo-blogs.netlify.app/", newTab: true },
+            { href: `${baseRoute}/Nihongo`, newTab: isNewTab },
+          ]}
         />
         <ProjectCard
-          title="Project 1"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. vitae metus vitae nibh tincidunt pharetra sit at justo."
-          links={["", ""]}
+          title="Miru"
+          desc="A minimal web interface to explore Ethereum blockchain logs and analyze the interconnections of transactions. Built for the HackManthon 2022."
+          links={[
+            { href: "https://miru-chain.netlify.app/eth", newTab: true },
+            { href: `${baseRoute}/Miru`, newTab: isNewTab },
+          ]}
         />
       </div>
-      <div class="ExperienceSection--viewMore">
+      <!-- <div class="ExperienceSection--viewMore">
         <a href="/experience">View more</a>
-      </div>
+      </div> -->
     </section>
     <section class="ToolsSection">
       <div class="ToolsSection__top">
@@ -169,7 +198,6 @@
         {/each}
       </div>
     </section>
-
     <section class="OpenSourceSection">
       <h2 class="OpenSourceSection--title">Open Source</h2>
       {#each OpenSource as item}
@@ -186,6 +214,7 @@
 
     <section class="GithubSection">
       <h2 class="GithubSection--title">Github Contributions</h2>
+      <GithubMap />
     </section>
   </main>
   <Footer />
