@@ -6,6 +6,7 @@
 
 <a
   {href}
+  target="_blank"
   class="ToolCard"
   transition:slide={{ duration: 200, easing: expoInOut }}
 >
