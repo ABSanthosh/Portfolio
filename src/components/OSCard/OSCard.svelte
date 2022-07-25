@@ -5,7 +5,7 @@
 <div class="OSCard">
   <img {src} />
   <div class="OSCard__details">
-    <a {href} class="OSCard__details--title">{title}</a>
+    <a {href} target="_blank" class="OSCard__details--title">{title}</a>
     <p class="OSCard__details--desc">{desc}</p>
   </div>
   <div class="OSCard__Stats">
