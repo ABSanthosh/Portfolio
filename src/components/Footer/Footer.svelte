@@ -2,7 +2,7 @@
   import SvelteIcon from "../../assets/Images/Languages/svelte.png";
 </script>
 
-<footer class="FooterWrapper">
+<footer class="FooterWrapper" data-scroll-section>
   <div class="FooterWrapper__container">
     <div class="FooterWrapper__container--left">
       Made with <span class="FooterWrapper__container--heart">&hearts;</span>
