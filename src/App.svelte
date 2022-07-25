@@ -1,17 +1,15 @@
 <script>
   import { Router, Route } from "svelte-routing";
   import Home from "./routes/Home/Home.svelte";
+  import Project from "./routes/Project/Project.svelte";
   export let url = "";
 </script>
-
-
 
 <svelte:head>
   <style lang="scss" src="./styles/global.scss"></style>
   <style lang="scss" src="./styles/fonts.scss"></style>
-  <style lang="scss" src="./styles/locomotive-scroll.scss"></style>
 
-  <script> 
+  <script>
     const theme = localStorage.getItem("theme");
     if (theme) {
       document.body.classList.add(theme);
@@ -26,6 +24,7 @@
 
 <Router {url}>
   <Route path="/"><Home /></Route>
+  <Route path="/project/:projectName" let:params><Project params={params} /></Route>
 </Router>
 
 <style>
@@ -63,13 +62,12 @@
     --backgroundColor: #2d3045;
     --baseTextColor: #fdfdfd;
     --scrollbarThumb: #d3d1cb;
-    --scrollbarTrack: #edece9;
+    --scrollbarTrack: #2d3045;
     --textSelectionColor: #2daadb4d;
     --footerBackground: #353b66;
     --downArrow: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
     color-scheme: dark;
     --successColor: #3fb950;
     --dangerColor: #f85149;
-    
   }
 </style>
