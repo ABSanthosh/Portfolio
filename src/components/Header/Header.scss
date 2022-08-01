@@ -5,6 +5,7 @@
   top: 0;
   background: var(--headerBackground);
   backdrop-filter: var(--headerBlur);
+  box-shadow: var(--headerShadow);
   padding: 0 20px;
   z-index: 5;
   &__content {
@@ -42,11 +43,13 @@
     border-radius: 5px;
     border-style: solid;
     padding: 6px 10px;
-    width: 60px;
+    width: 85px;
 
     cursor: pointer;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     outline-offset: 5px;
+    @include make-flex($dir: row);
+    gap: 7px;
   }
 }
