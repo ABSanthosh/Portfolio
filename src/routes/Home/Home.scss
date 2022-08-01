@@ -46,7 +46,21 @@
       gap: 17px;
 
       p {
-        text-align: justify;
+        word-break: break-word;
+        word-spacing: -0.05em;
+        line-height: 22px;
+
+        a {
+          background-color: var(--highlightColor);
+          padding: 0px 4px;
+          border-radius: 4px;
+          text-decoration: none;
+
+          &:active,&:focus,&:hover {
+            background-color: var(--lightPurple);
+            color: var(--backgroundColor);
+          }
+        }
       }
     }
 
@@ -64,6 +78,7 @@
       }
       @include respondAt(420px) {
         width: 100%;
+        flex-wrap: wrap;
       }
     }
 
@@ -142,7 +157,7 @@
         -webkit-appearance: none;
         border-radius: 2px;
         font-size: 15px;
-
+        outline: none;
         background: var(--backgroundColor) var(--downArrow) no-repeat;
         background-position: right 5px top 50%;
 

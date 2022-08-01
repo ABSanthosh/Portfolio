@@ -56,13 +56,14 @@
         <p>
           I'm a software developer and a CS undergrad at Shiv Nadar University,
           Delhi, NCR. I make functional websites and native mobile android
-          applications. I'm currently creating and managing production level
-          modules as a php intern at GameNation.
+          applications while specializing at converting design to code. In my
+          last internship at GameNation, I created and maintained production
+          level modules as a php intern.
         </p>
         <p>
-          I'm also contribute to open source projects while also building and
+          I also contribute to open source projects while also building and
           maintaining my own open source libraries. Currently, I'm working on
-          react-quizlet-flashcard component library.
+          <a href="https://www.npmjs.com/package/react-quizlet-flashcard" target="_blank">react-quizlet-flashcard</a> component library.
         </p>
         <p>
           When I'm not writing code, I try to catch up with my favourite manga
@@ -88,9 +89,9 @@
       <ExpItem
         position="PHP Intern"
         company="GameNation"
-        desc="Desiging and building production level modules for platform with 20k+ users per day."
+        desc="Designed and built production level modules for a platform with 20k+ page visits per day."
         tStart="June 2022"
-        tEnd="Present"
+        tEnd="Aug 2022"
       />
       <ExpItem
         position="JavaScript Intern"
@@ -124,7 +125,10 @@
           title="Verse Lyrics"
           desc="Kotlin Android application that helps users to fetch and save lyrics of songs played in Spotify automatically. Available on Playstore."
           links={[
-            "https://play.google.com/store/apps/details?id=com.absan.verse&hl=en_IN&gl=US",
+            {
+              href: "https://play.google.com/store/apps/details?id=com.absan.verse&hl=en_IN&gl=US",
+              newTab: isNewTab,
+            },
             { href: `${baseRoute}/Verse-Lyrics`, newTab: isNewTab },
           ]}
         />
@@ -132,7 +136,10 @@
           title="react-quizlet-flashcard"
           desc="A simple and responsive quizlet-like flashcard component with no additional dependency. Written in Javascript and React."
           links={[
-            "https://www.npmjs.com/package/react-quizlet-flashcard",
+            {
+              href: "https://www.npmjs.com/package/react-quizlet-flashcard",
+              newTab: isNewTab,
+            },
             { href: `${baseRoute}/react-quizlet-flashcard`, newTab: isNewTab },
           ]}
         />
