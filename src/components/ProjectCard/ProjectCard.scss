@@ -23,6 +23,13 @@
 
     &--title {
       color: var(--headingColor);
+
+      @include respondAt(644px) {
+        font-size: 2.5vw;
+      }
+      @include respondAt(545px) {
+        font-size: unset;
+      }
     }
     &--desc {
       display: -webkit-box;
@@ -35,16 +42,17 @@
   &__links {
     @include box($height: 48px);
     @include make-flex($just: space-between, $dir: row);
-
     &--resource {
       @include box(50%);
       @include make-flex($dir: row);
       gap: 4px;
+      text-decoration: none;
       cursor: pointer;
       img {
         height: 20px;
       }
       &:hover {
+        color: var(--backgroundColor);
         background-color: var(--lightPurple);
       }
       &:first-child {
