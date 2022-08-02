@@ -8,8 +8,8 @@
   &--position {
     width: 100%;
     @include make-flex($just: space-between, $dir: row);
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 21px;
     margin-bottom: 2px;
     gap: 10px;
   }
