@@ -63,24 +63,43 @@
         <p>
           I also contribute to open source projects while also building and
           maintaining my own open source libraries. Currently, I'm working on
-          <a href="https://www.npmjs.com/package/react-quizlet-flashcard" target="_blank">react-quizlet-flashcard</a> component library.
+          <a
+            href="https://www.npmjs.com/package/react-quizlet-flashcard"
+            target="_blank"
+          >
+            react-quizlet-flashcard
+          </a>
+          component library.
         </p>
         <p>
           When I'm not writing code, I try to catch up with my favourite manga
           and anime series or play sandbox games like Minecraft.
         </p>
         <div class="HeroSection--actions">
-          <FancyButton type="link" href="https://github.com/ABSanthosh" newTab
-            >Github</FancyButton
-          >
+          <FancyButton type="link" href="https://github.com/ABSanthosh" newTab>
+            Github
+          </FancyButton>
           <FancyButton
             type="link"
             href="https://www.linkedin.com/in/a-b-santhosh-97872612b/"
-            newTab>LinkedIn</FancyButton
+            newTab
           >
-          <FancyButton type="link" href="mailTo:a.b.santhosh02@gmail.com" newTab
-            >Email</FancyButton
+            LinkedIn
+          </FancyButton>
+          <FancyButton
+            type="link"
+            href="mailTo:a.b.santhosh02@gmail.com"
+            newTab
           >
+            Email
+          </FancyButton>
+          <FancyButton
+            type="link"
+            href="src/assets/Docs/My Resume.pdf"
+            newTab
+          >
+            Resume
+          </FancyButton>
         </div>
       </article>
     </section>
