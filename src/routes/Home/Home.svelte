@@ -95,7 +95,7 @@
           </FancyButton>
           <FancyButton
             type="link"
-            href="src/assets/Docs/My Resume.pdf"
+            href="../assets/Docs/My Resume.pdf"
             newTab
           >
             Resume
