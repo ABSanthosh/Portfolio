@@ -1,6 +1,5 @@
 <script>
-
-    export let {height = 27, width = 27} = $$props
+  export let { height = 27, width = 27 } = $$props;
 </script>
 
 <div class="IoSpinnerWrapper loader-ios">
