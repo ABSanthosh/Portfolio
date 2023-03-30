@@ -193,8 +193,8 @@
           ]}
         />
         <ProjectCard
-          title="Surge 2022(Database asleep 😴)"
-          desc="Event management website built with NextJs and Prisma. Handled about 1000+ registrations and 30k+ unique page visits before the event."
+          title="Surge 2022"
+          desc="(Database asleep 😴)Event management website built with NextJs and Prisma. Handled 1000+ registrations and 30k+ unique page visits before the event."
           links={[
             { href: "https://surgesnu.in/", newTab: true },
             {
