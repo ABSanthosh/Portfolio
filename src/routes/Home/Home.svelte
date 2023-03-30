@@ -93,11 +93,7 @@
           >
             Email
           </FancyButton>
-          <FancyButton
-            type="link"
-            href="../assets/Docs/My Resume.pdf"
-            newTab
-          >
+          <FancyButton type="link" href="../assets/Docs/My Resume.pdf" newTab>
             Resume
           </FancyButton>
         </div>
@@ -163,16 +159,27 @@
           ]}
         />
         <ProjectCard
-          title="Quartz(Under dev)"
-          desc="A multifunctional web app task managment tool with cross platform authentication and storage using Supabase, In the aim to replace Notion and Obsidian."
+          title="Dàimǎ"
+          desc="A web based minimal IDE built with Monaco Editor and React. Supports multiple languages and themes. Runs faster than VSCode Web with less memory usage."
           links={[
-            { href: "https://smoky-quartz.netlify.app/", newTab: true },
-            { href: `${baseRoute}/Quartz`, newTab: isNewTab },
+            { href: "https://daima.netlify.app/", newTab: true },
+            { href: `https://github.com/Daima-Editor/Daima`, newTab: isNewTab },
+          ]}
+        />
+        <ProjectCard
+          title="Surge 2022(Database asleep 😴)"
+          desc="Event management website built with NextJs and Prisma. Handled about 1000+ registrations and 30k+ unique page visits before the event."
+          links={[
+            { href: "https://surgesnu.in/", newTab: true },
+            {
+              href: `https://github.com/surge-snu/Surge2022`,
+              newTab: isNewTab,
+            },
           ]}
         />
         <ProjectCard
           title="Gastly"
-          desc="A simple pokedex web app that fetches from custom pokemon api and displays them in a beautiful UI. Built with NextJs"
+          desc="A simple pokedex web app that fetches from custom pokemon api and displays them in a beautiful UI. Built with NextJs."
           links={[
             { href: "https://gastly-v4.netlify.app/", newTab: true },
             { href: `${baseRoute}/Gastly`, newTab: isNewTab },
@@ -180,10 +187,18 @@
         />
         <ProjectCard
           title="Nihongo"
-          desc="A blog built with NextJs to keep track of my Japanese learning process. Uses markdown to store and display posts"
+          desc="A blog built with NextJs to keep track of my Japanese learning process. Uses markdown to store and display posts."
           links={[
             { href: "https://nihongo-blogs.netlify.app/", newTab: true },
             { href: `${baseRoute}/Nihongo`, newTab: isNewTab },
+          ]}
+        />
+        <ProjectCard
+          title="Quartz(Under dev)"
+          desc="A multifunctional web app task managment tool with cross platform authentication and storage using Supabase, In the aim to replace Notion and Obsidian."
+          links={[
+            { href: "https://smoky-quartz.netlify.app/", newTab: true },
+            { href: `${baseRoute}/Quartz`, newTab: isNewTab },
           ]}
         />
         <ProjectCard
