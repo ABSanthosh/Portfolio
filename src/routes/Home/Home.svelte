@@ -134,7 +134,7 @@
       </div> -->
     </section>
     <section class="ProjectsSection">
-      <h2 class="ProjectsSection--title">Projects</h2>
+      <h2 class="ProjectsSection--title">Featured Projects</h2>
       <div class="ProjectsSection__cardBox">
         <ProjectCard
           title="Verse Lyrics"
@@ -146,6 +146,7 @@
             },
             { href: `${baseRoute}/Verse-Lyrics`, newTab: isNewTab },
           ]}
+          languages={[Logos["Languages"][1], Logos["Languages"][2]]}
         />
         <ProjectCard
           title="react-quizlet-flashcard"
@@ -157,6 +158,11 @@
             },
             { href: `${baseRoute}/react-quizlet-flashcard`, newTab: isNewTab },
           ]}
+          languages={[
+            Logos["Languages"][9],
+            Logos["Languages"][8],
+            Logos["Frameworks"][5],
+          ]}
         />
         <ProjectCard
           title="Dàimǎ"
@@ -164,6 +170,12 @@
           links={[
             { href: "https://daima.netlify.app/", newTab: true },
             { href: `https://github.com/Daima-Editor/Daima`, newTab: isNewTab },
+          ]}
+          languages={[
+            Logos["Languages"][4],
+            Logos["Languages"][9],
+            Logos["Languages"][8],
+            Logos["Frameworks"][5],
           ]}
         />
         <ProjectCard
@@ -176,6 +188,12 @@
               newTab: isNewTab,
             },
           ]}
+          languages={[
+            Logos["Languages"][4],
+            Logos["Languages"][8],
+            Logos["Frameworks"][3],
+            Logos["Frameworks"][7],
+          ]}
         />
         <ProjectCard
           title="Gastly"
@@ -183,6 +201,11 @@
           links={[
             { href: "https://gastly-v4.netlify.app/", newTab: true },
             { href: `${baseRoute}/Gastly`, newTab: isNewTab },
+          ]}
+          languages={[
+            Logos["Languages"][4],
+            Logos["Languages"][8],
+            Logos["Frameworks"][3],
           ]}
         />
         <ProjectCard
@@ -192,6 +215,11 @@
             { href: "https://nihongo-blogs.netlify.app/", newTab: true },
             { href: `${baseRoute}/Nihongo`, newTab: isNewTab },
           ]}
+          languages={[
+            Logos["Languages"][4],
+            Logos["Languages"][8],
+            Logos["Frameworks"][3],
+          ]}
         />
         <ProjectCard
           title="Quartz(Under dev)"
@@ -200,6 +228,11 @@
             { href: "https://smoky-quartz.netlify.app/", newTab: true },
             { href: `${baseRoute}/Quartz`, newTab: isNewTab },
           ]}
+          languages={[
+            Logos["Languages"][4],
+            Logos["Languages"][8],
+            Logos["Frameworks"][5],
+          ]}
         />
         <ProjectCard
           title="Miru"
@@ -207,6 +240,11 @@
           links={[
             { href: "https://miru-chain.netlify.app/eth", newTab: true },
             { href: `${baseRoute}/Miru`, newTab: isNewTab },
+          ]}
+          languages={[
+            Logos["Languages"][4],
+            Logos["Languages"][8],
+            Logos["Frameworks"][5],
           ]}
         />
       </div>

@@ -7,7 +7,7 @@
     bgStyle = `background: radial-gradient(circle at ${event.clientX}px ${event.clientY}px, rgb(79, 20, 204) 0%, rgba(79, 20, 204, 0) calc(0% + 150px)) no-repeat border-box border-box rgba(255, 255, 255, 0.1)`;
   }
 
-  export let { title, desc, links } = $$props;
+  export let { title, desc, links, languages } = $$props;
 </script>
 
 <!-- TODO: ADD hover gradient with js -->
@@ -19,6 +19,11 @@ on:mouseleave={() => (bgStyle = "")} -->
   <div class="ProjectCard__content">
     <h3 class="ProjectCard__content--title">{title}</h3>
     <p class="ProjectCard__content--desc">{desc}</p>
+  </div>
+  <div class="ProjectCard__languages">
+    {#each languages as language}
+      <img src={language["image"]} alt={language["name"]} title={language["name"]} />
+    {/each}
   </div>
   <div class="ProjectCard__links">
     <a
