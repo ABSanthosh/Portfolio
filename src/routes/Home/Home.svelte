@@ -93,7 +93,7 @@
           >
             Email
           </FancyButton>
-          <FancyButton type="link" href="../assets/Docs/My Resume.pdf" newTab>
+          <FancyButton type="link" href="https://raw.githubusercontent.com/ABSanthosh/Portfolio/main/public/assets/Docs/AB%20Santhosh%20Resume.pdf" newTab>
             Resume
           </FancyButton>
         </div>

@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="HeaderWrapper__content--right">
-      <a href="../../assets/Docs/AB Santhosh Resume.pdf" target="_blank" >Resume</a>
+      <a href="https://raw.githubusercontent.com/ABSanthosh/Portfolio/main/public/assets/Docs/AB%20Santhosh%20Resume.pdf" target="_blank" >Resume</a>
       <button
         title="Toggles light & dark"
         aria-label="auto"
