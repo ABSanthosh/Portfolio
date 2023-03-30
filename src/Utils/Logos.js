@@ -34,6 +34,7 @@ import VSCode from "../assets/Images/Tools/vscode.png";
 import Yarn from "../assets/Images/Tools/Yarn.png";
 
 import Lightify from "../assets/Images/LightifyLogo.png";
+import Verse from "../assets/Images/VerseLogo.png";
 
 export const Logos = {
   Empty: [],
@@ -172,7 +173,7 @@ export const Logos = {
       name: "Easy Peasy",
       image: EasyPeasy,
       href: "https://easy-peasy.vercel.app/",
-    }
+    },
   ],
   Tools: [
     {
@@ -228,19 +229,27 @@ export const Logos = {
 
 export const OpenSource = [
   {
-    title: "Litefy",
-    src: Lightify,
-    desc: "Redesigned and implemented the design on the angular based lightweight spotify client website.",
-    href: "https://github.com/mathkruger/litefy",
-    additions: "9,840 --",
-    deletions: "10,461 ++",
-  },
-  {
     title: "React-Quizlet-FlashCard",
     src: NPM,
     desc: "A React component that allows you to create flashcards like Quizlet.",
     href: "https://www.npmjs.com/package/react-quizlet-flashcard",
     additions: "28,077 ++",
     deletions: "6,997 --",
+  },
+  {
+    title: "Verse Lyrics",
+    src: Verse,
+    desc: "A simple kotlin app that fetches lyrics from google. Has 1000+ downloads on Playstore.",
+    href: "https://play.google.com/store/apps/details?id=com.absan.verse&hl=en_IN&gl=US",
+    additions: "56,074 ++",
+    deletions: "44,974 --",
+  },
+  {
+    title: "Litefy",
+    src: Lightify,
+    desc: "Redesigned and implemented the design on the angular based lightweight spotify client website.",
+    href: "https://github.com/mathkruger/litefy",
+    additions: "9,840 --",
+    deletions: "10,461 ++",
   },
 ];

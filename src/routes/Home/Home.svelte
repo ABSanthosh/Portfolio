@@ -100,11 +100,25 @@
       </article>
     </section>
     <section class="ExperienceSection">
-      <h2 class="ExperienceSection--title">Experience</h2>
+      <h2 class="ExperienceSection--title">Featured Experiences</h2>
+      <ExpItem
+        position="Development Lead"
+        company="Google Developer Student Club"
+        desc="Manage all the development activities of the club and teach a cohort of 30+ students about Web development and Mobile development."
+        tStart="June 2022"
+        tEnd="Aug 2022"
+      />
+      <ExpItem
+        position="Freelance Web Developer"
+        company="Fresh From Farm"
+        desc="Built an admin panel for a startup company to manage their products and orders and a website for their customers to place orders."
+        tStart="Dec 2022"
+        tEnd="Feb 2023"
+      />
       <ExpItem
         position="PHP Intern"
         company="GameNation"
-        desc="Designed and built production level modules for a platform with 20k+ page visits per day."
+        desc="Designed and built production level modules for a platform with 20k+ page visits per day along with scrapers for machine learning."
         tStart="June 2022"
         tEnd="Aug 2022"
       />
@@ -118,8 +132,8 @@
       <ExpItem
         position="Web Dev team Lead"
         company="ECell SNU"
-        desc="Leading a team of 6 web developers to build a website for a inter University Entrepreneurship event."
-        tStart="Apri 2022"
+        desc="Lead a team of 6 web developers to build a website for a inter University Entrepreneurship event."
+        tStart="April 2022"
         tEnd="Present"
       />
       <ExpItem
