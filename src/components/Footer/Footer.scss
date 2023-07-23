@@ -3,7 +3,8 @@
   padding: 20px 0;
   text-align: center;
   @include make-flex();
-  @include box(100%, 69px);
+  @include box(100vw, 69px);
+  margin-top: 70px;
 
   &__container {
     @include make-flex($dir: row);

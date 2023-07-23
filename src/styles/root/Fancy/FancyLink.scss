@@ -1,0 +1,22 @@
+.FancyLink {
+  &[data-type="ButtonLink"] {
+    @include box();
+    background-color: var(--lightGray);
+    border: 1px solid var(--borderColor);
+    @include make-flex();
+    padding: 0 15px;
+    text-decoration: none;
+    border-radius: 3px;
+
+    @include respondAt(420px) {
+      width: unset;
+      flex-grow: 1;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--lightPurple);
+      color: var(--backgroundColor);
+    }
+  }
+}

@@ -2,7 +2,7 @@
   @include make-flex($just: flex-start);
   @include box($height: unset);
   background-color: var(--backgroundColor);
-  gap: 70px;
+  padding: 0 20px;
 
   @include respondAt(635px) {
     gap: 50px;
@@ -16,7 +16,6 @@
     @include box($height: unset);
     @include make-flex($just: flex-start);
     min-height: calc(100% - 84px);
-    padding: 0 20px;
     padding-top: 160px;
     gap: 65px;
 
@@ -34,7 +33,8 @@
   @include box($height: unset);
   @include make-flex($just: flex-start);
   min-height: calc(100% - 84px);
-  padding: 0 20px;
+  // padding: 0 20px;
+  max-width: 835px;
   padding-top: 160px;
   gap: 65px;
 
@@ -44,5 +44,62 @@
 
   @include respondAt(475px) {
     padding-top: 100px;
+  }
+
+  &__section {
+    @include box($height: unset);
+    @include make-flex($align: flex-start);
+    gap: 16px;
+  }
+
+  .HeroSection {
+    &--title {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      color: var(--headingColor);
+    }
+
+    &--desc {
+      @include make-flex($align: flex-start);
+      gap: 17px;
+
+      p {
+        word-break: break-word;
+        word-spacing: -0.05em;
+        line-height: 22px;
+
+        a {
+          background-color: var(--highlightColor);
+          padding: 0px 4px;
+          border-radius: 4px;
+          text-decoration: none;
+
+          &:active,
+          &:focus,
+          &:hover {
+            background-color: var(--lightPurple);
+            color: var(--backgroundColor);
+          }
+        }
+      }
+    }
+
+    &--actions {
+      @include box(50%, 40px);
+      @include make-flex($dir: row, $just: flex-start);
+      gap: 16px;
+      margin-top: 15px;
+
+      @include respondAt(775px) {
+        width: 60%;
+      }
+      @include respondAt(620px) {
+        width: 80%;
+      }
+      @include respondAt(420px) {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+    }
   }
 }
