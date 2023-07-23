@@ -5,7 +5,7 @@ interface IExperience {
   start: string;
   end: string;
 }
-export const Experiences: IExperience[] = [
+const Experiences: IExperience[] = [
   {
     position: "Development Lead",
     company: "Google Developer Student Club",
@@ -49,3 +49,5 @@ export const Experiences: IExperience[] = [
     end: "Present",
   },
 ];
+
+export default Experiences;

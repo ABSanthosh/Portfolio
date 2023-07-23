@@ -10,7 +10,7 @@ interface IProject {
   tech: ILogo[];
 }
 
-export const Projects: IProject[] = [
+const Projects: IProject[] = [
   {
     title: "Verse Lyrics",
     desc: "Kotlin Android application that helps users to fetch and save lyrics of songs played in Spotify automatically. Available on Playstore.",
@@ -114,3 +114,5 @@ export const Projects: IProject[] = [
     ],
   },
 ];
+
+export default Projects;

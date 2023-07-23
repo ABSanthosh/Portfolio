@@ -2,6 +2,10 @@
   // import "@/styles/routes/home.scss";
   import Header from "$components/Header/Header.svelte";
   import Footer from "$components/Footer/Footer.svelte";
+
+  import Experiences from "$data/Experiences";
+  import Projects from "$data/Projects";
+  import ExpItem from "$components/ExpItem/ExpItem.svelte";
 </script>
 
 <div class="HomeWrapper">
@@ -74,6 +78,15 @@
     </section>
     <section>
       <h2>Experiences</h2>
+      {#each Experiences.splice(0, 3) as exp}
+        <ExpItem
+          position={exp.position}
+          company={exp.company}
+          desc={exp.desc}
+          tStart={exp.start}
+          tEnd={exp.end}
+        />
+      {/each}
     </section>
     <section>
       <h2>Projects</h2>
