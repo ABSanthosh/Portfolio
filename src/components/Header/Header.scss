@@ -1,10 +1,13 @@
 .HeaderWrapper {
-  @include box(100%, 70px);
-  @include make-flex();
-  position: fixed;
   top: 0;
-  padding: 0 20px;
   z-index: 5;
+  position: fixed;
+  padding: 0 20px;
+  @include make-flex();
+  @include box(100%, 64px);
+  background: var(--headerBackground);
+  backdrop-filter: var(--headerBlur);
+  box-shadow: var(--headerShadow);
 }
 
 .Header {
@@ -24,6 +27,9 @@
       @include respondAt(400px) {
         display: none;
       }
+    }
+    button {
+      text-transform: capitalize;
     }
   }
 
