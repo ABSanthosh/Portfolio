@@ -5,7 +5,6 @@
   <meta name="author" content="ABSanthosh" />
 
   <title>ABSanthosh</title>
-  <style lang="scss" src="./styles/root/global.scss"></style>
 </svelte:head>
 
 <slot />

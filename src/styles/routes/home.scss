@@ -1,0 +1,31 @@
+.Home {
+  @include make-flex($just: flex-start);
+  @include box($height: unset);
+  background-color: var(--backgroundColor);
+  gap: 70px;
+
+  @include respondAt(635px) {
+    gap: 50px;
+  }
+
+  @include respondAt(475px) {
+    gap: 30px;
+  }
+
+  &__main {
+    @include box($height: unset);
+    @include make-flex($just: flex-start);
+    min-height: calc(100% - 84px);
+    padding: 0 20px;
+    padding-top: 160px;
+    gap: 65px;
+
+    @include respondAt(635px) {
+      padding-top: 135px;
+    }
+
+    @include respondAt(475px) {
+      padding-top: 100px;
+    }
+  }
+}
