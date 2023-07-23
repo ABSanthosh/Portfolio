@@ -46,6 +46,4 @@
   </div>
 </header>
 
-<style lang="scss">
-  @import "./Header.scss";
-</style>
+<style lang="scss" src="./Header.scss"></style>

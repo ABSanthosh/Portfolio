@@ -19,11 +19,14 @@
 
   <meta name="color-scheme" content={$theme} />
 
-  <link rel="stylesheet" href={`/theme/light.css`} />
-  <link rel="stylesheet" href={`/theme/dark.css`} />
-  <link rel="stylesheet" href={`/theme/system.css`} />
+  <link rel="stylesheet" href="/theme/light.css" />
+  <link rel="stylesheet" href="/theme/dark.css" />
 
   <title>ABSanthosh</title>
 </svelte:head>
 
 <slot />
+
+<style lang="scss" global>
+  @import "../styles/root/global.scss";
+</style>

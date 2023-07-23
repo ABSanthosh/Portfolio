@@ -1,8 +1,3 @@
-<script>
-  // import SvelteIcon from "/assets/Images/Languages/svelte.png";
-  import "./Footer.scss";
-</script>
-
 <footer class="FooterWrapper" data-scroll-section>
   <div class="FooterWrapper__container">
     <div class="FooterWrapper__container--left">
@@ -19,3 +14,5 @@
     </div>
   </div>
 </footer>
+
+<style lang="scss" src="./Footer.scss"></style>
