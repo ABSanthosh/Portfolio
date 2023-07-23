@@ -12,6 +12,8 @@
       ) {
         document.documentElement.setAttribute("data-theme", "dark");
         localStorage.theme = "dark";
+      } else if (localStorage.theme) {
+        document.documentElement.setAttribute("data-theme", localStorage.theme);
       } else {
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.theme = "light";
