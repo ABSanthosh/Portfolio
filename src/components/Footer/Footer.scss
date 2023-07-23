@@ -1,0 +1,22 @@
+.FooterWrapper {
+  background-color: var(--footerBackground);
+  padding: 20px 0;
+  text-align: center;
+  @include make-flex();
+  @include box($height: 69px);
+
+  &__container {
+    @include make-flex($dir: row);
+    @include box();
+    max-width: 90ch;
+
+    &--left {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+      img {
+        height: 15px;
+      }
+    }
+  }
+}
