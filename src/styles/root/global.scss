@@ -1,0 +1,43 @@
+@import "./fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--baseTextColor);
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbarThumb);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbarTrack);
+}
+::selection {
+  background: var(--textSelectionColor);
+}
+
+html,
+body,
+#app {
+  @include box(100vw, 100vh);
+  @include make-flex($just: flex-start);
+  font-family: "iAWriter", monospace;
+  font-size: 15.5px;
+}
+
+// global needs
+*[data-mandatory] {
+  &:after {
+    content: " *";
+    color: red;
+  }
+}
