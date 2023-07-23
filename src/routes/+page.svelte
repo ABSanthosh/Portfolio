@@ -7,7 +7,7 @@
 <div class="HomeWrapper">
   <Header />
   <main class="Home">
-    <section class="Home__section">
+    <section class="HeroSection">
       <h1 class="HeroSection--title">Hey! I'm Santhosh</h1>
       <article class="HeroSection--desc">
         <p>
@@ -71,6 +71,21 @@
           </a>
         </div>
       </article>
+    </section>
+    <section>
+      <h2>Experiences</h2>
+    </section>
+    <section>
+      <h2>Projects</h2>
+    </section>
+    <section>
+      <h2>Tools and Technologies</h2>
+    </section>
+    <section>
+      <h2>Open Source</h2>
+    </section>
+    <section>
+      <h2>Github Stats</h2>
     </section>
   </main>
   <Footer />
