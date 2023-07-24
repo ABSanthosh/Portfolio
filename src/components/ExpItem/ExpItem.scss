@@ -19,7 +19,7 @@
     margin-bottom: 10px;
     width: 100%;
     @include make-flex($just: space-between, $dir: row);
-  }e
+  }
   &--desc {
     text-align: justify;
     word-break: break-word;

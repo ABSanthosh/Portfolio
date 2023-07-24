@@ -1,6 +1,7 @@
 [data-theme="dark"] {
   --lightGray: #1d1f22;
   --lightPurple: #adacff;
+  --lightHoverPurple: #aeacff20;
   --headerBackground: #2d30456b;
   --headerBrackets: #ff0000;
   --headerBlur: blur(5px);

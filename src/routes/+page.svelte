@@ -6,6 +6,7 @@
   import Experiences from "$data/Experiences";
   import Projects from "$data/Projects";
   import ExpItem from "$components/ExpItem/ExpItem.svelte";
+  import ProjectCard from "$components/ProjectCard/ProjectCard.svelte";
 </script>
 
 <div class="HomeWrapper">
@@ -88,8 +89,41 @@
         />
       {/each}
     </section>
-    <section>
+    <section class="ProjectSection">
       <h2>Projects</h2>
+      <div
+        class="ProjectSection__cards"
+        on:mouseleave={() => {
+          document.querySelectorAll(".ProjectCardWrapper").forEach((card) => {
+            // @ts-ignore
+            card.style.removeProperty("--mouse-x");
+            // @ts-ignore
+            card.style.removeProperty("--mouse-y");
+          });
+        }}
+        on:mousemove={(e) => {
+          document.querySelectorAll(".ProjectCardWrapper").forEach((card) => {
+            const rect = card.getBoundingClientRect(),
+              x = e.clientX - rect.left,
+              y = e.clientY - rect.top;
+
+            // @ts-ignore
+            card.style.setProperty("--mouse-x", `${x}px`);
+            // @ts-ignore
+            card.style.setProperty("--mouse-y", `${y}px`);
+          });
+        }}
+        on:focus={() => {}}
+        role="list"
+      >
+        {#each Projects.splice(0, 6) as project}
+          <ProjectCard
+            desc={project.desc}
+            links={project.links}
+            title={project.title}
+          />
+        {/each}
+      </div>
     </section>
     <section>
       <h2>Tools and Technologies</h2>

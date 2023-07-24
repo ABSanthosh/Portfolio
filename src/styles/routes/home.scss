@@ -97,4 +97,18 @@
       }
     }
   }
+
+  .ProjectSection {
+    &__cards {
+      @include box($height: unset);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 230px;
+      gap: 18px;
+
+      @include respondAt(545px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }

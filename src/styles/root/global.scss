@@ -2,6 +2,8 @@
 @import "./Fancy/FancyButton.scss";
 @import "./Fancy/FancyLink.scss";
 
+$scrollbarWidth: 8px;
+
 * {
   margin: 0;
   padding: 0;
@@ -13,15 +15,15 @@
   background: transparent;
 }
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  @include box($scrollbarWidth, $scrollbarWidth);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbarThumb);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--scrollbarTrack);
+  // background: var(--scrollbarTrack);
+  background: transparent;
 }
 ::selection {
   background: var(--textSelectionColor);
@@ -34,6 +36,13 @@ body,
   @include make-flex($just: flex-start);
   font-family: "iAWriter", monospace;
   font-size: 15.5px;
+  overflow: hidden;
+}
+
+#app {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 // global needs
