@@ -93,14 +93,7 @@
       <h2>Projects</h2>
       <div
         class="ProjectSection__cards"
-        on:mouseleave={() => {
-          document.querySelectorAll(".ProjectCardWrapper").forEach((card) => {
-            // @ts-ignore
-            card.style.removeProperty("--mouse-x");
-            // @ts-ignore
-            card.style.removeProperty("--mouse-y");
-          });
-        }}
+        
         on:mousemove={(e) => {
           document.querySelectorAll(".ProjectCardWrapper").forEach((card) => {
             const rect = card.getBoundingClientRect(),

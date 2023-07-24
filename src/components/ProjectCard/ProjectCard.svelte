@@ -8,15 +8,7 @@
       <h3 class="ProjectCard__content--title">{title}</h3>
       <p class="ProjectCard__content--desc">{desc}</p>
     </div>
-    <!-- <div class="ProjectCard__languages">
-    {#each languages as language}
-      <img
-        src={language["image"]}
-        alt={language["name"]}
-        title={language["name"]}
-      />
-    {/each}
-  </div> -->
+
     <div class="ProjectCard__links">
       <a
         href={""}
