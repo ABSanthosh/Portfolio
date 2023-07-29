@@ -13,6 +13,9 @@ interface ILogos {
   tool: {
     [key: string]: ILogo;
   };
+  misc: {
+    [key: string]: ILogo;
+  };
 }
 
 export const Logos: ILogos = {
@@ -138,12 +141,12 @@ export const Logos: ILogos = {
     },
     git: {
       name: "Git",
-      image: "/assets/Images/Tools/Git.png",
+      image: "/assets/Images/Tools/Git.svg",
       href: "https://git-scm.com/",
     },
     github: {
       name: "GitHub",
-      image: "/assets/Images/Tools/GitHub.png",
+      image: "/assets/Images/Tools/GitHub.svg",
       href: "https://github.com",
     },
     netlify: {
@@ -163,13 +166,40 @@ export const Logos: ILogos = {
     },
     "vs code": {
       name: "VS Code",
-      image: "/assets/Images/Tools/vscode.png",
+      image: "/assets/Images/Tools/VSCode.svg",
       href: "https://code.visualstudio.com/",
     },
     yarn: {
       name: "Yarn",
-      image: "/assets/Images/Tools/Yarn.png",
+      image: "/assets/Images/Tools/Yarn.svg",
       href: "https://yarnpkg.com/",
+    },
+    figma: {
+      name: "Figma",
+      image: "/assets/Images/Tools/Figma.svg",
+      href: "https://www.figma.com/",
+    },
+    postman: {
+      name: "Postman",
+      image: "/assets/Images/Tools/Postman.svg",
+      href: "https://www.postman.com/",
+    },
+    docker: {
+      name: "Docker",
+      image: "/assets/Images/Tools/Docker.svg",
+      href: "https://www.docker.com/",
+    },
+  },
+  misc: {
+    verse: {
+      href: "",
+      image: "/assets/Images/VerseLogo.png",
+      name: "",
+    },
+    litefy: {
+      href: "",
+      image: "/assets/Images/LightifyLogo.png",
+      name: "",
     },
   },
 };

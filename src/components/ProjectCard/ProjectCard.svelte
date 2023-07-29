@@ -11,7 +11,7 @@
 
     <div class="ProjectCard__links">
       <a
-        href={""}
+        href={links.live}
         target="_blank"
         rel="noopener noreferrer"
         class="ProjectCard__links--resource"
@@ -20,17 +20,12 @@
         <img src="/assets/Images/live.png" alt="Live Icon" />
       </a>
       <a
-        href={""}
+        href={links.github}
         target="_blank"
         rel="noopener noreferrer"
         class="ProjectCard__links--resource">Code</a
       >
-      <a
-        href={""}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="ProjectCard__links--resource">More</a
-      >
+      <a href={`/project/${links.slug}`} class="ProjectCard__links--resource">More</a>
     </div>
   </div>
 </div>

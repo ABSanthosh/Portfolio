@@ -6,6 +6,7 @@ interface IProject {
   links: {
     github: string;
     live: string;
+    slug: string;
   };
   tech: ILogo[];
 }
@@ -17,6 +18,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/ABSanthosh/Verse-Lyrics",
       live: "https://play.google.com/store/apps/details?id=com.absan.verse&hl=en_IN&gl=US",
+      slug: "verse-lyrics",
     },
     tech: [Logos.language.kotlin, Logos.language.java],
   },
@@ -26,6 +28,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/ABSanthosh/react-quizlet-flashcard",
       live: "https://www.npmjs.com/package/react-quizlet-flashcard",
+      slug: "react-quizlet-flashcard",
     },
     tech: [
       Logos.language.typescript,
@@ -39,6 +42,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/ABSanthosh/Daima-Hosting",
       live: "https://daima.netlify.app/",
+      slug: "daima",
     },
     tech: [
       Logos.language.typescript,
@@ -53,6 +57,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/surge-snu/Surge2022",
       live: "https://surgesnu.in/",
+      slug: "surge-2022",
     },
     tech: [
       Logos.language.javascript,
@@ -67,6 +72,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/ABSanthosh/Gastly",
       live: "https://gastly-v4.netlify.app/",
+      slug: "gastly",
     },
     tech: [
       Logos.language.javascript,
@@ -80,6 +86,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/ABSanthosh/Nihongo",
       live: "https://nihongo-blogs.netlify.app/",
+      slug: "nihongo",
     },
     tech: [
       Logos.language.javascript,
@@ -93,6 +100,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/ABSanthosh/Quartz",
       live: "https://smoky-quartz.netlify.app/app",
+      slug: "quartz",
     },
     tech: [
       Logos.language.typescript,
@@ -106,6 +114,7 @@ const Projects: IProject[] = [
     links: {
       github: "https://github.com/ABSanthosh/Miru",
       live: "https://miru-chain.netlify.app/eth",
+      slug: "miru",
     },
     tech: [
       Logos.language.javascript,

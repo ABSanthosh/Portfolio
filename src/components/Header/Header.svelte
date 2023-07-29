@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { theme } from "$lib/stores";
+  import { theme } from "$lib/ThemeStore";
 
   // TODO: Add onMount to gracefully switch default theme
   // TODO: Get resume link from global store

@@ -7,6 +7,14 @@
   import Projects from "$data/Projects";
   import ExpItem from "$components/ExpItem/ExpItem.svelte";
   import ProjectCard from "$components/ProjectCard/ProjectCard.svelte";
+  import { OpenSource } from "$data/OpenSource";
+  import OsCard from "$components/OSCard/OSCard.svelte";
+  import { Logos } from "$data/Logos";
+  import ToolCard from "$components/ToolCard/ToolCard.svelte";
+  import GithubMap from "$components/GithubMap/GithubMap.svelte";
+
+  let toolsOption = "languages",
+    value: "language" | "tool" | "framework" = "language";
 </script>
 
 <div class="HomeWrapper">
@@ -93,7 +101,6 @@
       <h2>Projects</h2>
       <div
         class="ProjectSection__cards"
-        
         on:mousemove={(e) => {
           document.querySelectorAll(".ProjectCardWrapper").forEach((card) => {
             const rect = card.getBoundingClientRect(),
@@ -106,10 +113,9 @@
             card.style.setProperty("--mouse-y", `${y}px`);
           });
         }}
-        on:focus={() => {}}
         role="list"
       >
-        {#each Projects.splice(0, 6) as project}
+        {#each Projects.splice(0, 6) as project (project.title)}
           <ProjectCard
             desc={project.desc}
             links={project.links}
@@ -118,14 +124,49 @@
         {/each}
       </div>
     </section>
-    <section>
-      <h2>Tools and Technologies</h2>
+    <section class="ToolsSection">
+      <div class="ToolsSection__top">
+        <h2 class="ToolsSection--title">Tools and Technologies</h2>
+        <select
+          {value}
+          class="FancySelect"
+          on:change={(e) => {
+            // @ts-ignore
+            value = e.target.value;
+            toolsOption = "Empty";
+
+            setTimeout(() => {
+              toolsOption = value;
+            }, 500);
+          }}
+        >
+          <option value="language">Languages</option>
+          <option value="framework">Frameworks</option>
+          <option value="tool">Tools</option>
+        </select>
+      </div>
+      <div class="ToolsSection__container">
+        {#each Object.values(Logos[value]) as item}
+          <ToolCard name={item.name} href={item.href} image={item.image} />
+        {/each}
+      </div>
     </section>
     <section>
       <h2>Open Source</h2>
+      {#each OpenSource as item}
+        <OsCard
+          title={item.title}
+          desc={item.desc}
+          src={item.src}
+          href={item.href}
+          additions={item.additions}
+          deletions={item.deletions}
+        />
+      {/each}
     </section>
     <section>
       <h2>Github Stats</h2>
+      <GithubMap />
     </section>
   </main>
   <Footer />
