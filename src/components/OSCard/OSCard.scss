@@ -68,22 +68,22 @@
       justify-content: flex-end;
     }
   }
-  button {
-    @include box(40px);
-    @include make-flex($dir: column);
-    background-color: var(--backgroundColor);
-    border-radius: 0 4px 4px 0;
-    border-style: none;
-    cursor: pointer;
-    border-left: 1px solid var(--borderColor);
-    padding: 0 12px;
+  // button {
+  //   @include box(40px);
+  //   @include make-flex($dir: column);
+  //   background-color: var(--backgroundColor);
+  //   border-radius: 0 4px 4px 0;
+  //   border-style: none;
+  //   cursor: pointer;
+  //   border-left: 1px solid var(--borderColor);
+  //   padding: 0 12px;
 
-    svg {
-      width: 100%;
-      fill: var(--baseTextColor);
-    }
-    &:hover {
-      background-color: var(--lightPurple);
-    }
-  }
+  //   svg {
+  //     width: 100%;
+  //     fill: var(--baseTextColor);
+  //   }
+  //   &:hover {
+  //     background-color: var(--lightPurple);
+  //   }
+  // }
 }

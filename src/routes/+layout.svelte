@@ -1,6 +1,7 @@
 <script lang="ts">
   import { theme } from "$lib/ThemeStore";
   import { onMount } from "svelte";
+  import oneko from "../utils/Neko/oneko";
 
   onMount(() => {
     theme.subscribe((value) => {
@@ -8,6 +9,7 @@
         document.documentElement.setAttribute("data-theme", value);
       }
     });
+    oneko();
   });
 </script>
 
