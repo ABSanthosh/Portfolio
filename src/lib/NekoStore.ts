@@ -1,19 +1,17 @@
 import { writable } from "svelte/store";
 import { browser } from "$app/environment";
-import type { NekoStorage } from "../utils/Neko";
+import { NekoSizeVariations, type NekoStorage } from "../utils/Neko";
 
 const initialValue = (): NekoStorage => {
   if (browser) {
     if (window.localStorage.getItem("neko")) {
-      const newNeko = JSON.parse(window.localStorage.getItem("neko") as string);
-      newNeko.forEach((neko: any) => {
-        neko.isShown = false;
-      });
-      return newNeko;
+      return JSON.parse(window.localStorage.getItem("neko") as string);
     }
   }
-
-  return [];
+  return {
+    isShown: true,
+    size: NekoSizeVariations.SMALL,
+  };
 };
 
 const nekoStore = writable<NekoStorage>(initialValue());

@@ -1,15 +1,13 @@
 export enum NekoSizeVariations {
   SMALL = 32,
-  MEDIUM = 36,
-  LARGE = 40,
+  MEDIUM = 38,
+  LARGE = 42,
 }
 
 export type NekoStorage = {
-  id: number;
   isShown: boolean;
-  neko: any;
   size: NekoSizeVariations;
-}[];
+};
 
 export class Neko {
   private nekoEl: HTMLDivElement | undefined;
@@ -22,7 +20,7 @@ export class Neko {
     `(prefers-reduced-motion: reduce)`
   ).matches;
 
-  private size: number = NekoSizeVariations.SMALL;
+  public size: number = NekoSizeVariations.SMALL;
 
   private frameCount: number = 0;
   private idleTime: number = 0;
@@ -252,16 +250,14 @@ export class Neko {
     this.distanceFromMouse = Math.floor(Math.random() * (100 - 48 + 1) + 48);
   }
 
-  public destroy(id: number) {
-    console.log("destroy ", id);
-    if (this.nekoId == id) {
-      this.nekoEl!.remove();
-      clearInterval((window as any).nekoInterval);
-    } else {
-      document.querySelector(`[data-neko="${id}"]`)!.remove();
-    }
-    if (document.querySelector(`[data-neko="${id}"]`)) {
-      document.querySelector(`[data-neko="${id}"]`)!.remove();
-    }
+  public destroy() {
+    this.nekoEl!.remove();
+    clearInterval((window as any).nekoInterval);
+  }
+
+  public setSize(size: NekoSizeVariations) {
+    this.size = size;
+    this.nekoEl!.style.width = `${this.size}px`;
+    this.nekoEl!.style.height = `${this.size}px`;
   }
 }

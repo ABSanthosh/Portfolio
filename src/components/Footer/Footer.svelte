@@ -3,26 +3,26 @@
   import { NekoSizeVariations } from "$utils/Neko";
   import type { NekoStorage } from "$utils/Neko";
 
-  const RandomSize = () => {
-    const sizes = [
-      NekoSizeVariations.SMALL,
-      NekoSizeVariations.MEDIUM,
-      NekoSizeVariations.LARGE,
-    ];
-
-    return sizes[Math.floor(Math.random() * sizes.length)];
+  const nextSize = (size: NekoSizeVariations) => {
+    switch (size) {
+      case NekoSizeVariations.SMALL:
+        return NekoSizeVariations.MEDIUM;
+      case NekoSizeVariations.MEDIUM:
+        return NekoSizeVariations.LARGE;
+      case NekoSizeVariations.LARGE:
+        return NekoSizeVariations.SMALL;
+    }
   };
 
-  const addNeko = () => {
-    const nextId = $nekoStore.length + 1;
-    nekoStore.set([
-      ...$nekoStore,
-      {
-        id: nextId,
-        isShown: false,
-        size: RandomSize(),
-      },
-    ] as NekoStorage);
+  const prevSize = (size: NekoSizeVariations) => {
+    switch (size) {
+      case NekoSizeVariations.SMALL:
+        return NekoSizeVariations.LARGE;
+      case NekoSizeVariations.MEDIUM:
+        return NekoSizeVariations.SMALL;
+      case NekoSizeVariations.LARGE:
+        return NekoSizeVariations.MEDIUM;
+    }
   };
 </script>
 
@@ -44,23 +44,40 @@
       <button
         class="FancyButton"
         on:click={() => {
-          // call .destroy() on last neko
-          const lastNeko = $nekoStore[$nekoStore.length - 1];
-          if (lastNeko) {
-            lastNeko.neko.destroy(lastNeko.id);
-          }
-          // remove last neko from store
-          nekoStore.set($nekoStore.slice(0, $nekoStore.length - 1));
+          nekoStore.update((neko) => {
+            neko.size = prevSize(neko.size);
+            return neko;
+          });
         }}
-        disabled={$nekoStore.length <= 0}
+        title="Decrease Neko Size"
+        disabled={$nekoStore.size === NekoSizeVariations.SMALL}
       >
         -
       </button>
-      <span>NEKO</span>
+      <span>
+        <input
+          type="checkbox"
+          checked={$nekoStore.isShown}
+          on:change={() => {
+            nekoStore.update((neko) => {
+              neko.isShown = !neko.isShown;
+              return neko;
+            });
+          }}
+          title="Toggle Neko"
+        />
+        <span>NEKO</span>
+      </span>
       <button
         class="FancyButton"
-        on:click={addNeko}
-        disabled={$nekoStore.length >= 5}
+        on:click={() => {
+          nekoStore.update((neko) => {
+            neko.size = nextSize(neko.size);
+            return neko;
+          });
+        }}
+        title="Increase Neko Size"
+        disabled={$nekoStore.size === NekoSizeVariations.LARGE}
       >
         +
       </button>

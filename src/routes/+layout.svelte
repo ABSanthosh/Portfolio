@@ -5,6 +5,8 @@
   import { Neko, NekoSizeVariations } from "$utils/Neko";
 
   onMount(() => {
+    let neko: Neko | null = new Neko(NekoSizeVariations.SMALL);
+
     theme.subscribe((value) => {
       if (document) {
         document.documentElement.setAttribute("data-theme", value);
@@ -12,36 +14,17 @@
     });
 
     nekoStore.subscribe((value) => {
-      if (value.length > 0) {
-        value.forEach((singleNeko) => {
-          if (!singleNeko.isShown) {
-            const newNeko = new Neko(singleNeko.id, singleNeko.size);
-            nekoStore.update((neko) => {
-              return neko.map((singleNeko) => {
-                if (singleNeko.id === singleNeko.id) {
-                  return {
-                    ...singleNeko,
-                    isShown: true,
-                    neko: newNeko,
-                    size: singleNeko.size,
-                  };
-                }
-                return singleNeko;
-              });
-            });
-          }
-        });
+      if (value.isShown && neko === null) {
+        neko = new Neko(value.size);
+      } else if (!value.isShown && neko !== null) {
+        neko.destroy();
+        neko = null;
+      }
+
+      if (neko?.size !== value.size) {
+        neko?.setSize(value.size);
       }
     });
-
-    nekoStore.set([
-      {
-        id: 1,
-        isShown: false,
-        size: NekoSizeVariations.SMALL,
-        neko: null,
-      },
-    ]);
   });
 </script>
 
