@@ -7,7 +7,7 @@
   margin-top: 70px;
 
   &__container {
-    @include make-flex($dir: row);
+    @include make-flex($dir: row, $just: space-between);
     @include box();
     max-width: 835px;
 
@@ -17,6 +17,14 @@
       align-items: center;
       img {
         height: 15px;
+      }
+    }
+
+    &--right {
+      @include make-flex($dir: row);
+      gap: 10px;
+      button {
+        @include box(25px, 25px);
       }
     }
   }

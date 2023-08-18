@@ -15,4 +15,11 @@
   outline-offset: 5px;
   @include make-flex($dir: row);
   gap: 7px;
+
+  &:disabled {
+    background-color: #f4f5f6;
+    color: #84878d;
+    border: 1px solid #d0d5dd;
+    cursor: not-allowed;
+  }
 }

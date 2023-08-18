@@ -1,8 +1,8 @@
 <script lang="ts">
   import { theme } from "$lib/ThemeStore";
   import { onMount } from "svelte";
-  // import oneko from "../utils/Neko/oneko";
-  import { Neko } from "../utils/Neko/Neko";
+  import { nekoStore } from "$lib/NekoStore";
+  import { Neko, NekoSizeVariations } from "$utils/Neko";
 
   onMount(() => {
     theme.subscribe((value) => {
@@ -11,7 +11,37 @@
       }
     });
 
-    new Neko();
+    nekoStore.subscribe((value) => {
+      if (value.length > 0) {
+        value.forEach((singleNeko) => {
+          if (!singleNeko.isShown) {
+            const newNeko = new Neko(singleNeko.id, singleNeko.size);
+            nekoStore.update((neko) => {
+              return neko.map((singleNeko) => {
+                if (singleNeko.id === singleNeko.id) {
+                  return {
+                    ...singleNeko,
+                    isShown: true,
+                    neko: newNeko,
+                    size: singleNeko.size,
+                  };
+                }
+                return singleNeko;
+              });
+            });
+          }
+        });
+      }
+    });
+
+    nekoStore.set([
+      {
+        id: 1,
+        isShown: false,
+        size: NekoSizeVariations.SMALL,
+        neko: null,
+      },
+    ]);
   });
 </script>
 

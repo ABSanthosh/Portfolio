@@ -1,4 +1,5 @@
 import adapter from "@sveltejs/adapter-auto";
+import autoprefixer from "autoprefixer";
 import preprocess from "svelte-preprocess";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -12,6 +13,9 @@ const config = {
         @import "src/styles/root/_colors.scss";
         `,
     },
+    postcss: {
+      plugins: [autoprefixer()],
+    },
   }),
 
   kit: {
@@ -23,6 +27,7 @@ const config = {
       $components: "src/components",
       $styles: "src/styles/routes",
       $data: "src/data",
+      $utils: "src/utils",
     },
   },
 };

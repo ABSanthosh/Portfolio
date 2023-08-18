@@ -1,5 +1,19 @@
+export enum NekoSizeVariations {
+  SMALL = 32,
+  MEDIUM = 36,
+  LARGE = 40,
+}
+
+export type NekoStorage = {
+  id: number;
+  isShown: boolean;
+  neko: any;
+  size: NekoSizeVariations;
+}[];
+
 export class Neko {
   private nekoEl: HTMLDivElement | undefined;
+  private nekoId: number = 0;
   private nekoPosX: number = 32;
   private nekoPosY: number = 32;
   private mousePosX: number = 0;
@@ -8,7 +22,7 @@ export class Neko {
     `(prefers-reduced-motion: reduce)`
   ).matches;
 
-  private size: number = 32;
+  private size: number = NekoSizeVariations.SMALL;
 
   private frameCount: number = 0;
   private idleTime: number = 0;
@@ -85,17 +99,19 @@ export class Neko {
     ],
   };
 
-  constructor() {
+  constructor(nekoId?: number | null, nekoSize?: NekoSizeVariations | null) {
     if (this.isReduced) {
       return;
     }
+    this.size = nekoSize ? nekoSize : NekoSizeVariations.SMALL;
+    this.nekoId = nekoId ? nekoId : this.nekoId;
     this.create();
   }
 
-  private create(nekoId: number = 0) {
+  private create() {
     this.nekoEl = document.createElement("div");
-    this.nekoEl.dataset.neko = `${nekoId}`;
-    this.nekoEl.id = `neko-${nekoId}`;
+    this.nekoEl.dataset.neko = `${this.nekoId}`;
+    this.nekoEl.id = `neko-${this.nekoId}`;
     this.nekoEl.style.width = `${this.size}px`;
     this.nekoEl.style.height = `${this.size}px`;
     this.nekoEl.style.left = `${this.nekoPosX - this.size / 2}px`;
@@ -106,6 +122,11 @@ export class Neko {
     document.addEventListener("mousemove", (event) => {
       this.mousePosX = event.clientX;
       this.mousePosY = event.clientY;
+    });
+
+    document.addEventListener("touchmove", (event) => {
+      this.mousePosX = event.touches[0].clientX;
+      this.mousePosY = event.touches[0].clientY;
     });
 
     (window as any).nekoInterval = setInterval(this.frame.bind(this), 60);
@@ -229,5 +250,18 @@ export class Neko {
 
   private randomizeDistance() {
     this.distanceFromMouse = Math.floor(Math.random() * (100 - 48 + 1) + 48);
+  }
+
+  public destroy(id: number) {
+    console.log("destroy ", id);
+    if (this.nekoId == id) {
+      this.nekoEl!.remove();
+      clearInterval((window as any).nekoInterval);
+    } else {
+      document.querySelector(`[data-neko="${id}"]`)!.remove();
+    }
+    if (document.querySelector(`[data-neko="${id}"]`)) {
+      document.querySelector(`[data-neko="${id}"]`)!.remove();
+    }
   }
 }

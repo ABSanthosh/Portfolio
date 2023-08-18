@@ -21,7 +21,7 @@
   <Header />
   <main class="Home">
     <section class="HeroSection">
-      <h1 class="HeroSection--title">Hey! I'm Santhosh</h1>
+      <h1 id='nekoHome' class="HeroSection--title">Hey! I'm Santhosh</h1>
       <article class="HeroSection--desc">
         <p>
           I'm a software developer and a CS undergrad at Shiv Nadar University,
