@@ -44,6 +44,7 @@ body,
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-gutter: stable;
+  position: relative;
 }
 
 // global needs
@@ -52,4 +53,12 @@ body,
     content: " *";
     color: red;
   }
+}
+
+[data-neko] {
+  position: absolute;
+  image-rendering: pixelated;
+  background-image: url("/assets/neko.gif");
+  pointer-events: none;
+  z-index: 4;
 }

@@ -1,118 +1,233 @@
-import { nekoStateMachine } from "./state";
-
-const imageNames = [
-  "awake.png",
-  "dtogi1.png",
-  "dwleft2.png",
-  "jare2.png",
-  "left1.png",
-  "ltogi2.png",
-  "right1.png",
-  "rtogi2.png",
-  "up1.png",
-  "upleft2.png",
-  "utogi1.png",
-  "down1.png",
-  "dtogi2.png",
-  "dwright1.png",
-  "kaki1.png",
-  "left2.png",
-  "mati2.png",
-  "right2.png",
-  "sleep1.png",
-  "up2.png",
-  "upright1.png",
-  "utogi2.png",
-  "down2.png",
-  "dwleft1.png",
-  "dwright2.png",
-  "kaki2.png",
-  "ltogi1.png",
-  "mati3.png",
-  "rtogi1.png",
-  "sleep2.png",
-  "upleft1.png",
-  "upright2.png",
-];
-const images = Object.fromEntries(
-  imageNames.map((name) => {
-    const image = new Image(64, 64);
-    image.src = "/assets/neko/" + name + ".png";
-    return [name, image];
-  })
-);
-
-interface INeko {
-  elem: HTMLDivElement;
-  stateMachine: typeof nekoStateMachine;
-  imageElement: HTMLImageElement;
-}
-
 export class Neko {
-  nekoSize = 64;
-  elem: INeko["elem"];
-  stateMachine: INeko["stateMachine"];
-  imageElement: INeko["imageElement"];
-  onMouseMove: (e: MouseEvent) => void;
+  private nekoEl: HTMLDivElement | undefined;
+  private nekoPosX: number = 32;
+  private nekoPosY: number = 32;
+  private mousePosX: number = 0;
+  private mousePosY: number = 0;
+  private isReduced: boolean = window.matchMedia(
+    `(prefers-reduced-motion: reduce)`
+  ).matches;
 
-  currentState: null | string | string[] = null;
-  nextStateTimeOut: null | any = null;
-  imageCycleTimeOut: null | any = null;
-  animationIndex: number = 0;
+  private size: number = 32;
 
-  goto = {
-    x: 0,
-    y: 0,
+  private frameCount: number = 0;
+  private idleTime: number = 0;
+  private idleAnimation: string | null = null;
+  private idleAnimationFrame: number = 0;
+  private nekoSpeed: number = 10;
+
+  private distanceFromMouse: number = Math.floor(
+    Math.random() * (100 - 48 + 1) + 48
+  );
+
+  private spriteSets: {
+    [key: string]: number[][];
+  } = {
+    idle: [[-3, -3]],
+    alert: [[-7, -3]],
+    scratchSelf: [
+      [-5, 0],
+      [-6, 0],
+      [-7, 0],
+    ],
+    scratchWallN: [
+      [0, 0],
+      [0, -1],
+    ],
+    scratchWallS: [
+      [-7, -1],
+      [-6, -2],
+    ],
+    scratchWallE: [
+      [-2, -2],
+      [-2, -3],
+    ],
+    scratchWallW: [
+      [-4, 0],
+      [-4, -1],
+    ],
+    tired: [[-3, -2]],
+    sleeping: [
+      [-2, 0],
+      [-2, -1],
+    ],
+    N: [
+      [-1, -2],
+      [-1, -3],
+    ],
+    NE: [
+      [0, -2],
+      [0, -3],
+    ],
+    E: [
+      [-3, 0],
+      [-3, -1],
+    ],
+    SE: [
+      [-5, -1],
+      [-5, -2],
+    ],
+    S: [
+      [-6, -3],
+      [-7, -2],
+    ],
+    SW: [
+      [-5, -3],
+      [-6, -1],
+    ],
+    W: [
+      [-4, -2],
+      [-4, -3],
+    ],
+    NW: [
+      [-1, 0],
+      [-1, -1],
+    ],
   };
 
-  constructor(elem: INeko["elem"]) {
-    this.elem = elem;
-    this.stateMachine = nekoStateMachine;
-    this.imageElement = new Image(this.nekoSize, this.nekoSize);
-    this.elem.appendChild(this.imageElement);
-    this.imageElement.addEventListener("click", () => this.onClick());
-    this.onMouseMove = (e: MouseEvent) => {
-      const [x, y] = [e.clientX, e.clientY];
-    };
+  constructor() {
+    if (this.isReduced) {
+      return;
+    }
+    this.create();
   }
 
-  render() {
-    // @ts-ignore
-    let name = this.stateMachine[this.currentState!].image;
-    this.animationIndex++;
-    if (Array.isArray(name)) {
-      name = name[this.animationIndex % name.length];
-    }
-    this.imageElement.src = images[name].src;
+  private create(nekoId: number = 0) {
+    this.nekoEl = document.createElement("div");
+    this.nekoEl.dataset.neko = `${nekoId}`;
+    this.nekoEl.id = `neko-${nekoId}`;
+    this.nekoEl.style.width = `${this.size}px`;
+    this.nekoEl.style.height = `${this.size}px`;
+    this.nekoEl.style.left = `${this.nekoPosX - this.size / 2}px`;
+    this.nekoEl.style.top = `${this.nekoPosY - this.size / 2}px`;
+
+    document.getElementById("app")!.appendChild(this.nekoEl);
+
+    document.addEventListener("mousemove", (event) => {
+      this.mousePosX = event.clientX;
+      this.mousePosY = event.clientY;
+    });
+
+    (window as any).nekoInterval = setInterval(this.frame.bind(this), 60);
   }
 
-  setState(stateName: string | string[]) {
-    clearTimeout(this.nextStateTimeOut!);
-    clearTimeout(this.imageCycleTimeOut!);
-
-    if (Array.isArray(stateName)) {
-      stateName = stateName[Math.floor(Math.random() * stateName.length)];
-    }
-    // @ts-ignore
-    if (!this.stateMachine[stateName]) {
-      throw new Error(`Invalid state name: ${stateName}`);
-    }
-
-    this.currentState = stateName;
-    // @ts-ignore
-    const stateData = this.stateMachine[stateName];
-    if (stateData.nextState) {
-      this.nextStateTimeOut = setTimeout(() => {
-        this.setState(stateData.nextState);
-      }, stateData.nextStateDelay * 1000);
-    }
-    if (stateData.imageInterval) {
-      this.imageCycleTimeOut = setTimeout(() => {
-        this.setState(stateData.image);
-      }, stateData.imageInterval * 1000);
-    }
-    this.render();
+  private setSprite(name: string, frame: number) {
+    const sprite = this.spriteSets[name][frame % this.spriteSets[name].length];
+    this.nekoEl!.style.backgroundPosition = `${sprite[0] * this.size}px ${
+      sprite[1] * this.size
+    }px`;
   }
 
-  onClick() {}
+  private resetIdleAnimation() {
+    this.idleAnimation = null;
+    this.idleAnimationFrame = 0;
+  }
+
+  private idle() {
+    this.idleTime += 1;
+
+    // every ~20 seconds
+    if (
+      this.idleTime > 5 &&
+      Math.floor(Math.random() * 200) == 0 &&
+      this.idleAnimation == null
+    ) {
+      let availableIdleAnimations = ["sleeping", "scratchSelf"];
+      if (this.nekoPosX < 32) {
+        availableIdleAnimations.push("scratchWallW");
+      }
+      if (this.nekoPosY < 32) {
+        availableIdleAnimations.push("scratchWallN");
+      }
+      if (this.nekoPosX > window.innerWidth - 32) {
+        availableIdleAnimations.push("scratchWallE");
+      }
+      if (this.nekoPosY > window.innerHeight - 32) {
+        availableIdleAnimations.push("scratchWallS");
+      }
+      this.idleAnimation =
+        availableIdleAnimations[
+          Math.floor(Math.random() * availableIdleAnimations.length)
+        ];
+    }
+
+    switch (this.idleAnimation) {
+      case "sleeping":
+        if (this.idleAnimationFrame < 8) {
+          this.setSprite("tired", 0);
+          break;
+        }
+        this.setSprite("sleeping", Math.floor(this.idleAnimationFrame / 4));
+        if (this.idleAnimationFrame > 192) {
+          this.resetIdleAnimation();
+        }
+        break;
+      case "scratchWallN":
+      case "scratchWallS":
+      case "scratchWallE":
+      case "scratchWallW":
+      case "scratchSelf":
+        this.setSprite(this.idleAnimation, this.idleAnimationFrame);
+        if (this.idleAnimationFrame > 9) {
+          this.resetIdleAnimation();
+        }
+        break;
+      default:
+        this.setSprite("idle", 0);
+        return;
+    }
+    this.idleAnimationFrame += 1;
+  }
+
+  private frame() {
+    this.frameCount += 1;
+    const diffX = this.nekoPosX - this.mousePosX;
+    const diffY = this.nekoPosY - this.mousePosY;
+    const distance = Math.sqrt(diffX ** 2 + diffY ** 2);
+
+    if (distance < this.nekoSpeed || distance < this.distanceFromMouse) {
+      if (distance < this.nekoSpeed) {
+        this.randomizeDistance();
+      }
+      this.idle();
+      return;
+    }
+
+    this.idleAnimation = null;
+    this.idleAnimationFrame = 0;
+
+    if (this.idleTime > 1) {
+      this.setSprite("alert", 0);
+      // count down after being alerted before moving
+      this.idleTime = Math.min(this.idleTime, 7);
+      this.idleTime -= 1;
+      return;
+    }
+
+    let direction;
+    direction = diffY / distance > 0.5 ? "N" : "";
+    direction += diffY / distance < -0.5 ? "S" : "";
+    direction += diffX / distance > 0.5 ? "W" : "";
+    direction += diffX / distance < -0.5 ? "E" : "";
+    this.setSprite(direction, this.frameCount);
+
+    this.nekoPosX -= (diffX / distance) * this.nekoSpeed;
+    this.nekoPosY -= (diffY / distance) * this.nekoSpeed;
+
+    this.nekoPosX = Math.min(
+      Math.max(this.size / 2, this.nekoPosX),
+      window.innerWidth - this.size / 2
+    );
+    this.nekoPosY = Math.min(
+      Math.max(this.size / 2, this.nekoPosY),
+      window.innerHeight - this.size / 2
+    );
+
+    this.nekoEl!.style.left = `${this.nekoPosX - this.size / 2}px`;
+    this.nekoEl!.style.top = `${this.nekoPosY - this.size / 2}px`;
+  }
+
+  private randomizeDistance() {
+    this.distanceFromMouse = Math.floor(Math.random() * (100 - 48 + 1) + 48);
+  }
 }
