@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import { nekoStore } from "$lib/NekoStore";
   import { Neko, NekoSizeVariations } from "$utils/Neko";
+  import { base } from "$app/paths";
 
   onMount(() => {
     let neko: Neko | null = new Neko(NekoSizeVariations.SMALL);
@@ -36,8 +37,8 @@
 
   <meta name="color-scheme" content={$theme} />
 
-  <link rel="stylesheet" href="/theme/light.css" />
-  <link rel="stylesheet" href="/theme/dark.css" />
+  <link rel="stylesheet" href={`${base}/theme/light.css`} />
+  <link rel="stylesheet" href={`${base}/theme/dark.css`} />
 
   <title>ABSanthosh</title>
 </svelte:head>

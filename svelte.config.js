@@ -1,7 +1,9 @@
-import adapter from "@sveltejs/adapter-auto";
+import adapter from "@sveltejs/adapter-static";
 import autoprefixer from "autoprefixer";
 import preprocess from "svelte-preprocess";
 import { mdsvex } from "mdsvex";
+
+const dev = process.argv.includes("dev");
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -35,6 +37,10 @@ const config = {
       $styles: "src/styles/routes",
       $data: "src/data",
       $utils: "src/utils",
+    },
+    paths: {
+      base: dev ? "" : "/Portfolio",
+      relative: false,
     },
   },
 };

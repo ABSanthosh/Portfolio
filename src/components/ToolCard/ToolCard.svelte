@@ -1,6 +1,7 @@
 <script>
   import { expoInOut } from "svelte/easing";
   import { slide } from "svelte/transition";
+  import { base } from "$app/paths";
 
   export let { name, image, href } = $$props;
 </script>
@@ -11,7 +12,7 @@
   class="ToolCard"
   transition:slide={{ duration: 200, easing: expoInOut }}
 >
-  <img src={image} alt={name} loading="lazy" />
+  <img src={`${base}/${image}`} alt={name} loading="lazy" />
   <h3>{name}</h3>
 </a>
 
