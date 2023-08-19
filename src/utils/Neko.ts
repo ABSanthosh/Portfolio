@@ -12,15 +12,14 @@ export type NekoStorage = {
 export class Neko {
   private nekoEl: HTMLDivElement | undefined;
   private nekoId: number = 0;
-  private nekoPosX: number = 32;
-  private nekoPosY: number = 32;
-  private mousePosX: number = 0;
-  private mousePosY: number = 0;
+  public size: number = NekoSizeVariations.SMALL;
+  private nekoPosX: number = this.size / 2;
+  private nekoPosY: number = this.size / 2;
+  private mousePosX: number = this.size / 2;
+  private mousePosY: number = this.size / 2;
   private isReduced: boolean = window.matchMedia(
     `(prefers-reduced-motion: reduce)`
   ).matches;
-
-  public size: number = NekoSizeVariations.SMALL;
 
   private frameCount: number = 0;
   private idleTime: number = 0;
@@ -28,9 +27,7 @@ export class Neko {
   private idleAnimationFrame: number = 0;
   private nekoSpeed: number = 10;
 
-  private distanceFromMouse: number = Math.floor(
-    Math.random() * (100 - 48 + 1) + 48
-  );
+  private distanceFromMouse: number = 25;
 
   private spriteSets: {
     [key: string]: number[][];
@@ -205,9 +202,6 @@ export class Neko {
     const distance = Math.sqrt(diffX ** 2 + diffY ** 2);
 
     if (distance < this.nekoSpeed || distance < this.distanceFromMouse) {
-      if (distance < this.nekoSpeed) {
-        this.randomizeDistance();
-      }
       this.idle();
       return;
     }
@@ -244,10 +238,6 @@ export class Neko {
 
     this.nekoEl!.style.left = `${this.nekoPosX - this.size / 2}px`;
     this.nekoEl!.style.top = `${this.nekoPosY - this.size / 2}px`;
-  }
-
-  private randomizeDistance() {
-    this.distanceFromMouse = Math.floor(Math.random() * (100 - 48 + 1) + 48);
   }
 
   public destroy() {
