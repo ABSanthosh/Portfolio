@@ -54,9 +54,10 @@
       >
         -
       </button>
-      <span>
+      <span class="FooterWrapper__NekoBox">
         <input
           type="checkbox"
+          id="nekoCheck"
           checked={$nekoStore.isShown}
           on:change={() => {
             nekoStore.update((neko) => {
@@ -66,7 +67,20 @@
           }}
           title="Toggle Neko"
         />
-        <span>NEKO</span>
+        <label
+          for="nekoCheck"
+          class={`FooterWrapper__Neko${$nekoStore.isShown ? "" : "--strike"}`}
+        >
+          NEKO
+        </label>
+        <a
+          href="https://eliotakira.com/neko/"
+          target="_blank"
+          referrerpolicy="no-referrer"
+          title="What is Neko about?"
+        >
+          ?
+        </a>
       </span>
       <button
         class="FancyButton"

@@ -1,0 +1,34 @@
+.ArticleWrapper {
+  @include make-flex($just: flex-start);
+  @include box($height: unset);
+  background-color: var(--backgroundColor);
+}
+
+.Article {
+  @include box($height: unset);
+  @include make-flex($just: flex-start);
+  padding: 20px;
+  max-width: calc(835px + 40px);
+  margin-top: 66px;
+  gap: 65px;
+
+  @include respondAt(635px) {
+    margin-top: 115px;
+  }
+
+  @include respondAt(475px) {
+    margin-top: 80px;
+  }
+
+  & > article {
+    @include box($height: unset);
+    @include make-flex($align: flex-start);
+    // gap: 16px;
+  }
+  & > h1 {
+    color: var(--headingColor);
+    @include box($height: auto);
+    @include make-flex($align: flex-start);
+    background-color: var(--backgroundColor);
+  }
+}

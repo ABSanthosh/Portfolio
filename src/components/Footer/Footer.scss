@@ -1,3 +1,5 @@
+$extraPadding: 20px;
+
 .FooterWrapper {
   background-color: var(--footerBackground);
   padding: 20px 0;
@@ -6,10 +8,20 @@
   @include box(100vw, 69px);
   margin-top: 70px;
 
+  @include respondAt(500px) {
+    height: auto;
+  }
+
   &__container {
     @include make-flex($dir: row, $just: space-between);
     @include box();
-    max-width: 835px;
+    max-width: calc(835px + 2 *#{$extraPadding});
+    padding: 0 $extraPadding;
+
+    @include respondAt(500px) {
+      gap: 20px;
+      flex-direction: column;
+    }
 
     &--left {
       display: inline-flex;
@@ -26,6 +38,31 @@
       button {
         @include box(25px, 25px);
       }
+    }
+  }
+
+  &__NekoBox {
+    @include make-flex($dir: row);
+    gap: 10px;
+    & > a {
+      @include box(20px, 20px);
+      padding: 10px;
+      @include make-flex();
+      background-color: var(--backgroundColor);
+      border-radius: 50%;
+      font-size: 10px;
+      border: 1px solid var(--borderColor);
+      text-decoration: none;
+    }
+  }
+
+  &__Neko {
+    cursor: pointer;
+    user-select: none;
+    &--strike {
+      user-select: none;
+      cursor: pointer;
+      text-decoration: line-through;
     }
   }
 }
