@@ -1,0 +1,29 @@
+.PageWrapper {
+  @include make-flex($just: flex-start);
+  @include box($height: unset);
+  background-color: var(--backgroundColor);
+
+  @include respondAt(635px) {
+    gap: 50px;
+  }
+
+  @include respondAt(475px) {
+    gap: 30px;
+  }
+}
+
+.Page {
+  @include box($height: unset);
+  @include make-flex($just: flex-start);
+  padding: 20px;
+  max-width: calc(835px + 40px);
+  gap: 65px;
+
+  @include respondAt(635px) {
+    margin-top: 115px;
+  }
+
+  @include respondAt(475px) {
+    margin-top: 80px;
+  }
+}

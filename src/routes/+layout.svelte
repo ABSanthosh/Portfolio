@@ -4,6 +4,8 @@
   import { nekoStore } from "$lib/NekoStore";
   import { Neko, NekoSizeVariations } from "$utils/Neko";
   import { base } from "$app/paths";
+  import Header from "$components/Header/Header.svelte";
+  import Footer from "$components/Footer/Footer.svelte";
 
   onMount(() => {
     let neko: Neko | null = new Neko(
@@ -45,7 +47,11 @@
   <title>ABSanthosh</title>
 </svelte:head>
 
-<slot />
+<div class="PageWrapper">
+  <Header />
+  <slot />
+  <Footer />
+</div>
 
 <style lang="scss" global>
   @import "../styles/root/global.scss";

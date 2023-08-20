@@ -6,7 +6,7 @@ $extraPadding: 20px;
   text-align: center;
   @include make-flex();
   @include box(100vw, 69px);
-  // margin-top: 70px;
+  margin-top: 70px;
 
   @include respondAt(500px) {
     height: auto;

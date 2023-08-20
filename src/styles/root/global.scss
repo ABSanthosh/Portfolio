@@ -3,6 +3,8 @@
 @import "./Fancy/FancyLink.scss";
 @import "./Fancy/FancySelect.scss";
 
+@import "../routes/pageLayout.scss";
+
 $scrollbarWidth: 8px;
 
 * {

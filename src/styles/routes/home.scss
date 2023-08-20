@@ -1,38 +1,5 @@
-.HomeWrapper {
-  @include make-flex($just: flex-start);
-  @include box($height: unset);
-  background-color: var(--backgroundColor);
-  // padding: 0 20px;
-
-  @include respondAt(635px) {
-    gap: 50px;
-  }
-
-  @include respondAt(475px) {
-    gap: 30px;
-  }
-}
-
 .Home {
-  @include box($height: unset);
-  @include make-flex($just: flex-start);
-  padding: 20px;
-  max-width: calc(835px + 40px);
   margin-top: 140px;
-  gap: 65px;
-
-  // background: var(--headerBackground);
-  // backdrop-filter: blur(3px);
-  // border: 1px solid rgba(0, 0, 0, 0.086);
-  border-radius: 8px;
-
-  @include respondAt(635px) {
-    margin-top: 115px;
-  }
-
-  @include respondAt(475px) {
-    margin-top: 80px;
-  }
 
   & > section {
     @include box($height: unset);
