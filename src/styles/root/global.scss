@@ -59,5 +59,6 @@ body,
   background-image: url("/assets/neko.gif");
   background-size: calc(800%) calc(400%);
   user-select: none;
+  pointer-events: none;
   z-index: 5;
 }

@@ -149,15 +149,15 @@ export class Neko {
     this.nekoEl.style.left = `${this.nekoPosX - this.size / 2}px`;
     this.nekoEl.style.top = `${this.nekoPosY - this.size / 2}px`;
 
-    this.nekoEl.addEventListener("click", () => {
-      if (this.isAudioPlaying) return;
-      this.isAudioPlaying = true;
-      new Audio("/assets/audio/meow1.mp3").play().then(() => {
-        setTimeout(() => {
-          this.isAudioPlaying = false;
-        }, 1000);
-      });
-    });
+    // this.nekoEl.addEventListener("click", () => {
+    //   if (this.isAudioPlaying) return;
+    //   this.isAudioPlaying = true;
+    //   new Audio("/assets/audio/meow1.mp3").play().then(() => {
+    //     setTimeout(() => {
+    //       this.isAudioPlaying = false;
+    //     }, 1000);
+    //   });
+    // });
 
     document.getElementById("app")!.appendChild(this.nekoEl);
 
