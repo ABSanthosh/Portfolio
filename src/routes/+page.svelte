@@ -11,6 +11,9 @@
 
   let toolsOption = "languages",
     value: "language" | "tool" | "framework" = "language";
+
+  Projects.splice(6, Projects.length - 6);
+  Experiences.splice(3, Experiences.length - 3);
 </script>
 
 <main class="Home Page">
@@ -81,7 +84,7 @@
   </section>
   <section>
     <h2>Experiences</h2>
-    {#each Experiences.splice(0, 3) as exp}
+    {#each Experiences as exp (exp)}
       <ExpItem
         position={exp.position}
         company={exp.company}
@@ -109,7 +112,7 @@
       }}
       role="list"
     >
-      {#each Projects.splice(0, 6) as project (project)}
+      {#each Projects as project (project)}
         <ProjectCard
           desc={project.desc}
           links={project.links}

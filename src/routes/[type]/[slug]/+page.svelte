@@ -1,5 +1,6 @@
 <script lang="ts">
   import "@/styles/root/markdown.scss";
+  import { base } from "$app/paths";
 
   export let data;
 </script>
@@ -11,6 +12,7 @@
   <article class="MarkdownBody">
     {@html data.html}
   </article>
+  <a href={`${base}/`}> Home </a>
 </main>
 
 <style lang="scss" src="../../../styles/routes/article.scss" global></style>
