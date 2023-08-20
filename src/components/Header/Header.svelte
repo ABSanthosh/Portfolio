@@ -8,7 +8,7 @@
 <header class="HeaderWrapper">
   <div class="Header">
     <div class="Header__left">
-      <div class="Header__title">
+      <div class="Header__title" id="headerName">
         <span class="Header__title--brackets">(</span>
         <span class="Header__title--params">AB</span>
         <span class="Header__title--brackets">)</span>

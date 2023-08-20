@@ -2,7 +2,6 @@
   import { nekoStore } from "$lib/NekoStore";
   import { NekoSizeVariations } from "$utils/Neko";
   import { base } from "$app/paths";
-  console.log(base)
 
   const nextSize = (size: NekoSizeVariations) => {
     switch (size) {
@@ -33,14 +32,15 @@
       Made with <span class="FooterWrapper__container--heart">&hearts;</span>
       and
       <a href="https://svelte.dev" target="_blank">
-        <!-- <img src="/assets/Images/Languages/svelte.png" alt="Svelte" /> -->
         <img src={`${base}/assets/Images/Languages/svelte.png`} alt="Svelte" />
       </a>
       by
       <a
         href="https://www.linkedin.com/in/a-b-santhosh-97872612b/"
-        target="_blank">Santhosh</a
+        target="_blank"
       >
+        Santhosh
+      </a>
     </div>
     <div class="FooterWrapper__container--right">
       <button
