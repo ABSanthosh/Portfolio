@@ -5,9 +5,7 @@
   import { Neko, NekoSizeVariations } from "$utils/Neko";
   import Header from "$components/Header/Header.svelte";
   import Footer from "$components/Footer/Footer.svelte";
-
   import { base } from "$app/paths";
-  import { afterNavigate } from "$app/navigation";
 
   onMount(() => {
     let neko: Neko | null = new Neko(
@@ -32,11 +30,6 @@
         neko?.setSize(value.size);
       }
     });
-  });
-
-  // Infamous scroll issue: https://github.com/sveltejs/kit/issues/2733#issuecomment-1543785948
-  afterNavigate(() => {
-    document.getElementById("app")?.scrollTo(0, 0);
   });
 </script>
 

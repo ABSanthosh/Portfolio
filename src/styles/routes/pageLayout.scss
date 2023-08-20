@@ -4,11 +4,11 @@
   background-color: var(--backgroundColor);
 
   @include respondAt(635px) {
-    gap: 50px;
+    gap: 50px !important;
   }
 
   @include respondAt(475px) {
-    gap: 30px;
+    gap: 30px !important;
   }
 }
 
@@ -20,10 +20,10 @@
   gap: 65px;
 
   @include respondAt(635px) {
-    margin-top: 115px;
+    margin-top: 115px !important;
   }
 
   @include respondAt(475px) {
-    margin-top: 80px;
+    margin-top: 80px !important;
   }
 }

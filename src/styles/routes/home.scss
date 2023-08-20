@@ -1,6 +1,5 @@
 .Home {
   margin-top: 140px;
-
   & > section {
     @include box($height: unset);
     @include make-flex($align: flex-start);

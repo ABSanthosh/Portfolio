@@ -110,6 +110,18 @@
           card.style.setProperty("--mouse-y", `${y}px`);
         });
       }}
+      on:touchmove={(e) => {
+        document.querySelectorAll(".ProjectCardWrapper").forEach((card) => {
+          const rect = card.getBoundingClientRect(),
+            x = e.touches[0].clientX - rect.left,
+            y = e.touches[0].clientY - rect.top;
+
+          // @ts-ignore
+          card.style.setProperty("--mouse-x", `${x}px`);
+          // @ts-ignore
+          card.style.setProperty("--mouse-y", `${y}px`);
+        });
+      }}
       role="list"
     >
       {#each Projects as project (project)}
