@@ -1,32 +1,35 @@
-.ExpItemWrapper {
+.ExpItem {
+  padding: 12px;
+  border-radius: 12px;
   @include box($height: auto);
-  min-height: 110px;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--borderColor);
-  @include make-flex($just: flex-start, $align: flex-start);
+  text-decoration: none;
+  @include make-flex($dir: row);
+  gap: 12px;
+  transition: background-color 0.1s ease-in-out;
 
-  &--position {
-    width: 100%;
-    @include make-flex($just: space-between, $dir: row);
-    font-weight: 600;
-    font-size: 21px;
-    margin-bottom: 2px;
-    gap: 10px;
-  }
-  &--company {
-    font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 10px;
-    width: 100%;
-    @include make-flex($just: space-between, $dir: row);
-  }
-  &--desc {
-    text-align: justify;
-    word-break: break-word;
-  }
-  &--range {
-    font-size: 14px;
-    text-align: right;
+  & > h4 {
     white-space: nowrap;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & > hr {
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    flex-grow: 1;
+  }
+
+  & > p {
+    color: hsl(0 0% 43.5%);
+    @include respondAt(715px) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    background-color: hsl(0 0% 95.1%);
   }
 }
