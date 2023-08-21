@@ -28,6 +28,10 @@
     transition: background-color 0.1s ease-in-out;
     background-color: var(--backgroundColor);
 
+    &[data-just="space-between"] {
+      justify-content: space-between;
+    }
+
     &::-webkit-details-marker {
       display: none;
     }
@@ -42,5 +46,20 @@
       transition: transform 0.1s ease-in-out;
       transform: rotate(-90deg);
     }
+
+    &:hover {
+      background-color: var(--detailsHover);
+    }
+
+    &[data-bg] {
+      background-color: var(--detailsHover);
+    }
+  }
+
+  & > main {
+    padding: 12px;
+    @include box();
+    @include make-flex($align: flex-start);
+    gap: 20px;
   }
 }

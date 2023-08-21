@@ -1,0 +1,43 @@
+.MdFigure {
+  @include make-flex();
+  gap: 10px;
+  margin: 0;
+  position: relative;
+
+  & > img {
+    border: 1px solid var(--detailsBorder);
+    border-radius: 7px;
+    padding: 10px 10px 20px 10px;
+  }
+
+  & > figcaption {
+    font-size: 15px;
+    color: var(--detailsShortDesc);
+    text-align: center;
+    user-select: none;
+    font-style: italic;
+
+    position: absolute;
+    bottom: -10px;
+    background-color: var(--backgroundColor);
+    padding: 0 8px;
+    max-width: 80%;
+    border-left: 1px solid var(--detailsBorder);
+    border-right: 1px solid var(--detailsBorder);
+    border-radius: 5px;
+  }
+}
+
+.MdRow {
+  @include make-flex($dir: row);
+  gap: 20px;
+
+  @include respondAt(630px) {
+    flex-direction: column;
+  }
+}
+
+.MdCol {
+  @include make-flex($dir: column);
+  gap: 20px;
+}

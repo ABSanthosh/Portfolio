@@ -8,10 +8,10 @@
   import { base } from "$app/paths";
 
   onMount(() => {
-    let neko: Neko | null = new Neko(
-      0,
-      $nekoStore.size || NekoSizeVariations.SMALL
-    );
+    // let neko: Neko | null = new Neko(
+    //   0,
+    //   $nekoStore.size || NekoSizeVariations.SMALL
+    // );
 
     theme.subscribe((value) => {
       if (document) {
@@ -19,17 +19,17 @@
       }
     });
 
-    nekoStore.subscribe((value) => {
-      if (value.isShown) {
-        neko?.wake();
-      } else {
-        neko?.sleep();
-      }
+    // nekoStore.subscribe((value) => {
+    //   if (value.isShown) {
+    //     neko?.wake();
+    //   } else {
+    //     neko?.sleep();
+    //   }
 
-      if (neko?.size !== value.size) {
-        neko?.setSize(value.size);
-      }
-    });
+    //   if (neko?.size !== value.size) {
+    //     neko?.setSize(value.size);
+    //   }
+    // });
   });
 </script>
 
