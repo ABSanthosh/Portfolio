@@ -1,0 +1,46 @@
+.FancyDetail {
+  // Detail tag
+  @include box($height: auto);
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid var(--backgroundColor);
+
+  &[open] {
+    border: 1px solid var(--detailsBorder);
+
+    & > summary {
+      border-radius: 12px 12px 0 0;
+      border-bottom: 1px solid var(--detailsBorder);
+      background-color: var(--detailsHover);
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  & > summary {
+    padding: 12px;
+    border-radius: 12px;
+    @include box($height: auto);
+    text-decoration: none;
+    @include make-flex($dir: row);
+    gap: 12px;
+    transition: background-color 0.1s ease-in-out;
+    background-color: var(--backgroundColor);
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      @include box(12px, 7px);
+      background-color: transparent;
+      background-image: var(--downArrow);
+      background-position: left -7px top 50%;
+      background-repeat: no-repeat;
+      transition: transform 0.1s ease-in-out;
+      transform: rotate(-90deg);
+    }
+  }
+}

@@ -5,7 +5,7 @@
   const start = new Date(tEnd === "Present" ? tStart : tEnd).getFullYear();
 </script>
 
-<details class="ExpItemDetails">
+<details class="ExpItemDetails FancyDetail">
   <summary class="ExpItem">
     <h4>
       {position}

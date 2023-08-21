@@ -2,6 +2,7 @@
 @import "./Fancy/FancyButton.scss";
 @import "./Fancy/FancyLink.scss";
 @import "./Fancy/FancySelect.scss";
+@import "./Fancy/FancyDetail.scss";
 
 @import "../routes/pageLayout.scss";
 
@@ -12,6 +13,8 @@ $scrollbarWidth: 8px;
   padding: 0;
   box-sizing: border-box;
   color: var(--baseTextColor);
+
+  transition: color 0.1s ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -61,4 +64,9 @@ body,
   user-select: none;
   pointer-events: none;
   z-index: 5;
+}
+
+.Testimonial {
+  background-color: aqua;
+  @include box();
 }
