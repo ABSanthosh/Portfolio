@@ -1,3 +1,27 @@
+.ExpItemDetails {
+  @include box($height: auto);
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid var(--backgroundColor);
+
+  &[open] {
+    border: 1px solid var(--detailsBorder);
+
+    & > summary {
+      border-radius: 12px 12px 0 0;
+      border-bottom: 1px solid var(--detailsBorder);
+      background-color: var(--detailsHover);
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__content {
+    padding: 20px 12px;
+  }
+}
+
 .ExpItem {
   padding: 12px;
   border-radius: 12px;
@@ -6,12 +30,29 @@
   @include make-flex($dir: row);
   gap: 12px;
   transition: background-color 0.1s ease-in-out;
+  background-color: var(--backgroundColor);
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    @include box(12px, 7px);
+    background-color: transparent;
+    background-image: var(--downArrow);
+    background-position: left -7px top 50%;
+    background-repeat: no-repeat;
+    transition: transform 0.1s ease-in-out;
+    transform: rotate(-90deg);
+  }
 
   & > h4 {
     white-space: nowrap;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
+    user-select: none;
   }
 
   & > hr {
@@ -20,16 +61,23 @@
     border-left: none;
     border-right: none;
     flex-grow: 1;
+    user-select: none;
+  }
+
+  & > span {
+    user-select: none;
   }
 
   & > p {
-    color: hsl(0 0% 43.5%);
+    color: var(--detailsShortDesc);
+    user-select: none;
+
     @include respondAt(715px) {
       display: none;
     }
   }
 
   &:hover {
-    background-color: hsl(0 0% 95.1%);
+    background-color: var(--detailsHover);
   }
 }

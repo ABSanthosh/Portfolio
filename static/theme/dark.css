@@ -21,4 +21,8 @@
   --successColor: #3fb950;
   --dangerColor: #f85149;
   --headerShadow: inset 0 -1px 0 hsl(0deg 0% 100% / 10%);
+  --detailsHover: #292929;
+  --detailsBackground: #f9f9f9;
+  --detailsBorder: #393939;
+  --detailsShortDesc: #919191;
 }

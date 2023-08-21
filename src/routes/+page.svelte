@@ -13,7 +13,6 @@
     value: "language" | "tool" | "framework" = "language";
 
   Projects.splice(6, Projects.length - 6);
-  // Experiences.splice(3, Experiences.length - 3);
 </script>
 
 <main class="Home Page">
@@ -87,7 +86,8 @@
     {#each Experiences as exp (exp)}
       <ExpItem
         position={exp.position}
-        desc={exp.shortDesc}
+        shortDesc={exp.shortDesc}
+        desc={exp.desc}
         tStart={exp.start}
         tEnd={exp.end}
         slug={exp.slug}
