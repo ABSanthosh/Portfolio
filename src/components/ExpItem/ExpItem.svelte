@@ -1,14 +1,11 @@
 <script>
   import { base } from "$app/paths";
   let { position, slug, shortDesc, desc, tStart, tEnd } = $$props;
-  
+
   const start = new Date(tEnd === "Present" ? tStart : tEnd).getFullYear();
 </script>
 
-<details
-  class="ExpItemDetails"
-  
->
+<details class="ExpItemDetails">
   <summary class="ExpItem">
     <h4>
       {position}
@@ -22,7 +19,18 @@
     </span>
   </summary>
   <main class="ExpItemDetails__content">
-    {desc}
+    <p>
+      {desc}
+    </p>
+    <div class="ExpItemDetails__content--links">
+      <a
+        class="FancyLink"
+        href={`${base}/experience/${slug}`}
+        data-type="ButtonLink"
+      >
+        Read more
+      </a>
+    </div>
   </main>
 </details>
 

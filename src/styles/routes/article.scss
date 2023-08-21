@@ -1,5 +1,12 @@
 .Article {
   margin-top: 66px;
+  // min-height: calc(100vh - 66px - 70px - 69px);
+  height: 100%;
+  flex-grow: 1;
+
+  @include respondAt(635px) {
+    // min-height: calc(100vh - 115px - 70px - 106px - 50px);
+  }
 
   & > article {
     @include box($height: unset);

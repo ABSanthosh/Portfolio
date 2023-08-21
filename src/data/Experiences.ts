@@ -33,7 +33,7 @@ const Experiences: IExperience[] = [
     shortDesc: "Built production level modules",
     start: "June 2022",
     end: "Aug 2022",
-    slug: "gamenation",
+    slug: "game-nation",
   },
   {
     position: "JavaScript Intern",

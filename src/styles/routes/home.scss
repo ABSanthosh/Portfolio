@@ -29,19 +29,19 @@
         word-spacing: -0.05em;
         line-height: 22px;
 
-        a {
-          background-color: var(--highlightColor);
-          padding: 0px 4px;
-          border-radius: 4px;
-          text-decoration: none;
+        // a {
+        //   background-color: var(--highlightColor);
+        //   padding: 0px 4px;
+        //   border-radius: 4px;
+        //   text-decoration: none;
 
-          &:active,
-          &:focus,
-          &:hover {
-            background-color: var(--lightPurple);
-            color: var(--backgroundColor);
-          }
-        }
+        //   &:active,
+        //   &:focus,
+        //   &:hover {
+        //     background-color: var(--lightPurple);
+        //     color: var(--backgroundColor);
+        //   }
+        // }
       }
     }
 

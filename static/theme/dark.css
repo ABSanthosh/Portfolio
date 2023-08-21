@@ -1,6 +1,7 @@
 [data-theme="dark"] {
   --lightGray: #1d1f22;
   --lightPurple: #adacff;
+  --lightViolet: #aa8dff;
   --CardHover: #0affa2;
   --headerBackground: #2d30456b;
   --headerBrackets: #ff0000;
@@ -14,7 +15,7 @@
   --baseTextColor: #f3f4f6;
   --scrollbarThumb: #d3d1cb;
   --scrollbarTrack: #2d3045;
-  --textSelectionColor: #2daadb4d;
+  --textSelectionColor: #2daadb91;
   --footerBackground: #292929;
   --downArrow: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   color-scheme: dark;

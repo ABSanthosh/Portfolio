@@ -30,8 +30,11 @@
         I also contribute to open source projects while also building and
         maintaining my own open source libraries. Currently, I'm working on
         <a
+          class="FancyLink"
+          data-type="Bracket"
           href="https://www.npmjs.com/package/react-quizlet-flashcard"
           target="_blank"
+          referrerpolicy="no-referrer"
         >
           react-quizlet-flashcard
         </a>

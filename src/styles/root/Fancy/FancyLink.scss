@@ -5,6 +5,7 @@
     border: 1px solid var(--borderColor);
     @include make-flex();
     padding: 0 15px;
+    transition: all 0.1s ease-in-out;
     text-decoration: none;
     border-radius: 3px;
 
@@ -17,6 +18,38 @@
     &:active {
       background-color: var(--lightPurple);
       color: var(--backgroundColor);
+    }
+  }
+
+  &[data-type="Bracket"] {
+    padding: 0px 0 1px 0;
+    border-radius: 3px;
+    text-decoration: none;
+
+    color: var(--lightViolet);
+    &::after {
+      content: "]";
+      color: var(--lightViolet);
+    }
+    &::before {
+      content: "[";
+      color: var(--lightViolet);
+    }
+
+    transition: all 0.1s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--lightViolet);
+      color: var(--backgroundColor);
+
+      &::after {
+        color: var(--backgroundColor);
+      }
+      &::before {
+        color: var(--backgroundColor);
+      }
     }
   }
 }

@@ -18,7 +18,20 @@
   }
 
   &__content {
-    padding: 20px 12px;
+    padding: 12px;
+    @include box();
+    @include make-flex();
+    gap: 20px;
+
+    &--links {
+      @include box($height: auto);
+      @include make-flex($dir: row, $just: flex-end);
+
+      a {
+        @include box(auto, 28px);
+        font-size: 14px;
+      }
+    }
   }
 }
 
