@@ -1,8 +1,6 @@
 <script>
   import { base } from "$app/paths";
   let { position, slug, shortDesc, desc, tStart, tEnd } = $$props;
-
-  const start = new Date(tEnd === "Present" ? tStart : tEnd).getFullYear();
 </script>
 
 <details class="ExpItemDetails FancyDetail">
@@ -15,7 +13,7 @@
     </p>
     <hr />
     <span>
-      {start}
+      {tEnd === "Present" ? tStart.split(" ")[1] : tEnd.split(" ")[1]}
     </span>
   </summary>
   <main class="ExpItemDetails__content">

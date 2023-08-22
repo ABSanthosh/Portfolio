@@ -107,7 +107,9 @@ export class Neko {
   };
 
   constructor(nekoId?: number | null, nekoSize?: NekoSizeVariations | null) {
-    if (this.isReduced) {
+    // get element with attribute data-neko
+    const isNekoAlive = document.querySelector("[data-neko]") as HTMLDivElement;
+    if (this.isReduced || isNekoAlive) {
       return;
     }
     this.size = nekoSize ? nekoSize : NekoSizeVariations.SMALL;

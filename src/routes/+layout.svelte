@@ -8,28 +8,29 @@
   import { base } from "$app/paths";
 
   onMount(() => {
-    // let neko: Neko | null = new Neko(
-    //   0,
-    //   $nekoStore.size || NekoSizeVariations.SMALL
-    // );
-
     theme.subscribe((value) => {
       if (document) {
         document.documentElement.setAttribute("data-theme", value);
       }
     });
 
-    // nekoStore.subscribe((value) => {
-    //   if (value.isShown) {
-    //     neko?.wake();
-    //   } else {
-    //     neko?.sleep();
-    //   }
+    
+    let neko: Neko | null = new Neko(
+      0,
+      $nekoStore.size || NekoSizeVariations.SMALL
+    );
 
-    //   if (neko?.size !== value.size) {
-    //     neko?.setSize(value.size);
-    //   }
-    // });
+    nekoStore.subscribe((value) => {
+      if (value.isShown) {
+        neko?.wake();
+      } else {
+        neko?.sleep();
+      }
+
+      if (neko?.size !== value.size) {
+        neko?.setSize(value.size);
+      }
+    });
   });
 </script>
 

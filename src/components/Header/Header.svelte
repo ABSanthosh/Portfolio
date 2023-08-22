@@ -1,20 +1,20 @@
 <script lang="ts">
   import { theme } from "$lib/ThemeStore";
+  import { base } from "$app/paths";
 
-  // TODO: Add onMount to gracefully switch default theme
   // TODO: Get resume link from global store
 </script>
 
 <header class="HeaderWrapper">
   <div class="Header">
     <div class="Header__left">
-      <div class="Header__title" id="headerName">
+      <a href={`${base}/`} class="Header__title" id="headerName">
         <span class="Header__title--brackets">(</span>
         <span class="Header__title--params">AB</span>
         <span class="Header__title--brackets">)</span>
         <span class="Header__title--arrow"> =></span>
         <span class="Header__title--name">Santhosh</span>
-      </div>
+      </a>
     </div>
     <div class="Header__right">
       <a
