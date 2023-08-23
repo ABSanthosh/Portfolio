@@ -14,7 +14,6 @@
       }
     });
 
-    
     let neko: Neko | null = new Neko(
       0,
       $nekoStore.size || NekoSizeVariations.SMALL

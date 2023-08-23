@@ -61,5 +61,6 @@
     @include box();
     @include make-flex($align: flex-start);
     gap: 20px;
+    cursor: default;
   }
 }

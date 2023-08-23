@@ -5,14 +5,17 @@
   export let data;
 </script>
 
+<svelte:head>
+  <link rel="stylesheet" href={`${base}/theme/prism.css`} />
+</svelte:head>
+
 <main class="Article Page">
-  <h1>
+  <!-- <h1>
     {data.meta.title}
-  </h1>
+  </h1> -->
   <article class="MarkdownBody">
     {@html data.html}
   </article>
-  <a href={`${base}/`}> Home </a>
 </main>
 
 <style lang="scss" src="../../../styles/routes/article.scss" global></style>

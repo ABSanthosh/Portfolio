@@ -66,8 +66,3 @@ body,
   pointer-events: none;
   z-index: 5;
 }
-
-.Testimonial {
-  background-color: aqua;
-  @include box();
-}

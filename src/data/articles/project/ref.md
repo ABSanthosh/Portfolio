@@ -45,3 +45,7 @@ tags:
 | Text     | Text     | Text     |
 | Text     | Text     | Text     |
 | Text     | Text     | Text     |
+
+## `<a>` tag
+
+<a href="https://www.instagram.com/iamkubic/" target="_blank" class="FancyLink" data-type="Bracket"> @kubic</a>

@@ -37,7 +37,65 @@
   }
 }
 
+.JustBetween {
+  justify-content: space-between;
+}
+
+.W100 {
+  width: 100%;
+}
+
 .MdCol {
   @include make-flex($dir: column);
   gap: 20px;
+}
+
+.Ratings {
+  @include make-flex($dir: row);
+  gap: 3px;
+  & > svg {
+    @include box(16px, 16px);
+  }
+}
+
+.VerseReview {
+  width: auto;
+  background-color: var(--backgroundColor);
+  border-radius: 4px;
+  border: 1px solid var(--borderColor);
+  padding: 20px;
+  @include make-flex();
+  flex-grow: 1;
+  gap: 15px;
+
+  &__top {
+    @include make-flex($dir: row, $just: space-between);
+    @include box($height: auto);
+    font-size: 14px;
+    gap: 10px;
+    & > p {
+      color: var(--detailsShortDesc);
+      margin-bottom: 0 !important;
+    }
+
+    & > span {
+      @include make-flex($dir: row);
+      gap: 10px;
+    }
+  }
+  & > p {
+    // color: var(--detailsShortDesc);
+    margin-bottom: 0 !important;
+  }
+}
+
+.Testimonial {
+  margin-bottom: 10px;
+  &__content {
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    height: unset !important;
+  }
 }
