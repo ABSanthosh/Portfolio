@@ -1,166 +1,81 @@
 ---
-title: Markdown Reference
+title: React Quizlet Flashcard
 date: 2022-09-12
 tags:
   - Code
-  - Markdown
+  - Open Source
+  - React
 ---
 
-## What to expect from here on out
+<script context="module">
+  import { base } from "$app/paths";
+</script>
 
-What follows from here is just a bunch of absolute nonsense I've written to dog food the plugin itself. It includes every sensible typographic element I could think of, like **bold text**, unordered lists, ordered lists, code blocks, block quotes, _and even italics_.
+<h1 class="MdRow JustBetween W100">
+  {title}
+  <a href='https://www.npmjs.com/package/react-quizlet-flashcard' target="_blank" rel="noopener noreferrer"><img alt='Get it on Google Play' height="30px" class="MdRow" src='{base}/assets/Images/Tools/NPM.svg'/></a>
+</h1>
 
-It's important to cover all of these use cases for a few reasons:
+A simple and responsive quizlet-like flashcard component with no additional dependency. Written in Typescript and React.
 
-1. We want everything to look good out of the box.
-2. Really just the first reason, that's the whole point of the plugin.
-3. Here's a third pretend reason though a list with three items looks more realistic than a list with two items.
+## Why did I make it?
 
-Footnotes[^1] should also work.
+To talk about this project, I’ll have to bring in one of my other “failed” or “abandoned” or “re-thought” project, [Genki]. I wanted to make a lightweight, no-nonsense flashcard app that just does what it says on the box. Other popular apps like <a href="https://quizlet.com/" target="_blank" class="FancyLink" data-type="Bracket">Quizlet</a>, are bloated with features that I’m never going to use or apps like <a href="https://apps.ankiweb.net/" target="_blank" class="FancyLink" data-type="Bracket">Anki</a> that are straight from 2000s(<a href="https://en.m.wikipedia.org/wiki/Anki_(software)" target="_blank" class="FancyLink" data-type="Bracket">no really</a>). I wanted to make something that is simple, fast, and responsive. I wanted to make something that I would use.
 
-Now we're going to try out another header style.
+But whats the core of a flashcard app? Flashcards. I looked for a library that works just like Quizlet’s flashcard but guess what? There isn’t one. So I was like...
 
-### Typography should be easy
+<span class="MdRow W100">
+    <figure class="MdFigure">
+        <img alt="Fine I'll do it myself meme" src="{base}/assets/Articles/projects/react-quizlet-flashcard/meme.gif"  loading="lazy" width="80%"/>
+        <figcaption>Meme</figcaption>
+    </figure>
+</span>
 
-So that's a header for you — with any luck if we've done our job correctly that will look pretty reasonable.
+## Implementation
 
-Something a wise person once told me about typography is:
+I wanted a Quizlet-like flashcard component right? And where can you find that? Yeah in Quizlet website. For the first version, I just copied CSS from Quizlet and made a simple React component. It was quite interesting to see how it was implemented in their site(although now they changed it).
 
-> Typography is pretty important if you don't want your stuff to look like trash. Make it good then it won't be bad.
+To have a subtle animation to make it come from right or left, the always have 3 cards loaded. When left or right button is clicked, the card in the other side is removed and a new card is added, making the invisible card visible.
 
-It's probably important that images look okay here by default as well:
+|                                               react-quizlet-flashcard                                               |                                            Quizlet's flashcard component                                            |
+| :-----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| ![component](https://user-images.githubusercontent.com/24393343/150652939-5d7a14df-4484-4d9b-aee1-8dee94205a16.gif) | ![component](https://user-images.githubusercontent.com/24393343/150373430-8b5f9905-9e4f-4639-827e-a8be303f49cb.gif) |
 
+Look how similar it looks to the original one. I’m quite proud of it. <a href="https://absanthosh.github.io/react-quizlet-flashcard/?path=/story/flashcard--basic-flashcard" target="_blank" class="FancyLink" data-type="Bracket">Try it yourself here</a>.
 
+## Improvements
 
-Now I'm going to show you an example of an unordered list to make sure that looks good, too:
+At first I made the component with Javascript and scss. It worked. It didn't have any features except displaying cards. You wouldn't be able to style it properly because of the default styles like `padding` taking precedence due to the selector specificity.
 
-- So here is the first item in this list.
-- In this example we're keeping the items short.
-- Later, we'll use longer, more complex list items.
+I added some of the features as people asked in the issues page. As of writing this, I've solved <a href="https://github.com/ABSanthosh/react-quizlet-flashcard/issues?q=" target="_blank" class="FancyLink" data-type="Bracket">11 issues</a>. Its not much but I'm happy that I could help people use my library in their projects.
 
-And that's the end of this section.
+After some time, the project became unmaintainable because it had no type saftey and all the logic was in a single file. Even if I wanted to add more features, It would take a lot of time to understand my own code. So I decided to rewrite the whole thing in Typescript and also made a Storybook for it. Now its slightly easier to maintain.
 
-## What if we stack headings?
+There are around 50 people using my library and everytime I see the list, It just makes me so happy.
 
-### We should make sure that looks good, too.
+<span class="MdRow W100">
+    <figure class="MdFigure">
+        <img alt="No. of people using" src="{base}/assets/Articles/projects/react-quizlet-flashcard/UsedBy.png"  loading="lazy" height="150px"/>
+        <figcaption>No. of people using</figcaption>
+    </figure>
+</span>
 
-Sometimes you have headings directly underneath each other. In those cases you often have to undo the top margin on the second heading because it usually looks better for the headings to be closer together than a paragraph followed by a heading should be.
+Thank you all &hearts;
 
-### When a heading comes after a paragraph …
+## Stars
 
-When a heading comes after a paragraph, we need a bit more space, like I already mentioned above. Now let's see what a more complex list would look like.
+It has 33 stars!! 33!! yay
 
-- **I often do this thing where list items have headings.**
+Special mention to my friend who made a website for me using my library so she can star it &hearts;.
 
-  For some reason I think this looks cool which is unfortunate because it's pretty annoying to get the styles right.
+<span class="MdRow W100">
 
-  I often have two or three paragraphs in these list items, too, so the hard part is getting the spacing between the paragraphs, list item heading, and separate list items to all make sense. Pretty tough honestly, you could make a strong argument that you just shouldn't write this way.
+  <figure class="MdFigure">
+  <img alt="Latest star" src="{base}/assets/Articles/projects/react-quizlet-flashcard/starNotification.png"  loading="lazy"/>
+  <figcaption>Latest star</figcaption>
+  </figure>
+</span>
 
-- **Since this is a list, I need at least two items.**
+## Conclusion
 
-  I explained what I'm doing already in the previous list item, but a list wouldn't be a list if it only had one item, and we really want this to look realistic. That's why I've added this second list item so I actually have something to look at when writing the styles.
-
-- **It's not a bad idea to add a third item either.**
-
-  I think it probably would've been fine to just use two items but three is definitely not worse, and since I seem to be having no trouble making up arbitrary things to type, I might as well include it.
-
-After this sort of list I usually have a closing statement or paragraph, because it kinda looks weird jumping right to a heading.
-
-## Code should look okay by default.
-
-I think most people are going to use [highlight.js](https://highlightjs.org/) or [Prism](https://prismjs.com/) or something if they want to style their code blocks but it wouldn't hurt to make them look _okay_ out of the box, even with no syntax highlighting.
-
-Here's what a default `tailwind.config.js` file looks like at the time of writing:
-
-```js
-module.exports = {
-  purge: [],
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
-};
-```
-
-Hopefully that looks good enough to you.
-
-### What about nested lists?
-
-Nested lists basically always look bad which is why editors like Medium don't even let you do it, but I guess since some of you goofballs are going to do it we have to carry the burden of at least making it work.
-
-1. **Nested lists are rarely a good idea.**
-   - You might feel like you are being really "organized" or something but you are just creating a gross shape on the screen that is hard to read.
-   - Nested navigation in UIs is a bad idea too, keep things as flat as possible.
-   - Nesting tons of folders in your source code is also not helpful.
-2. **Since we need to have more items, here's another one.**
-   - I'm not sure if we'll bother styling more than two levels deep.
-   - Two is already too much, three is guaranteed to be a bad idea.
-   - If you nest four levels deep you belong in prison.
-3. **Two items isn't really a list, three is good though.**
-   - Again please don't nest lists if you want people to actually read your content.
-   - Nobody wants to look at this.
-   - I'm upset that we even have to bother styling this.
-
-The most annoying thing about lists in Markdown is that `<li>` elements aren't given a child `<p>` tag unless there are multiple paragraphs in the list item. That means I have to worry about styling that annoying situation too.
-
-- **For example, here's another nested list.**
-
-  But this time with a second paragraph.
-
-  - These list items won't have `<p>` tags
-  - Because they are only one line each
-
-- **But in this second top-level list item, they will.**
-
-  This is especially annoying because of the spacing on this paragraph.
-
-  - As you can see here, because I've added a second line, this list item now has a `<p>` tag.
-
-    This is the second line I'm talking about by the way.
-
-  - Finally here's another list item so it's more like a list.
-
-- A closing list item, but with no nested list, because why not?
-
-And finally a sentence to close off this section.
-
-## There are other elements we need to style
-
-I almost forgot to mention links, like [this link to the Tailwind CSS website](https://tailwindcss.com). We almost made them blue but that's so yesterday, so we went with dark gray, feels edgier.
-
-We even included table styles, check it out:
-
-| Wrestler                | Origin       | Finisher           |
-| ----------------------- | ------------ | ------------------ |
-| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter       |
-| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner |
-| Randy Savage            | Sarasota, FL | Elbow Drop         |
-| Vader                   | Boulder, CO  | Vader Bomb         |
-| Razor Ramon             | Chuluota, FL | Razor's Edge       |
-
-We also need to make sure inline code looks good, like if I wanted to talk about `<span>` elements or tell you the good news about `@tailwindcss/typography`.
-
-### Sometimes I even use `code` in headings
-
-Even though it's probably a bad idea, and historically I've had a hard time making it look good. This _"wrap the code blocks in backticks"_ trick works pretty well though really.
-
-Another thing I've done in the past is put a `code` tag inside of a link, like if I wanted to tell you about the [`tailwindcss/docs`](https://github.com/tailwindcss/docs) repository. I don't love that there is an underline below the backticks but it is absolutely not worth the madness it would require to avoid it.
-
-#### We haven't used an `h4` yet
-
-But now we have. Please don't use `h5` or `h6` in your content, Medium only supports two heading levels for a reason, you animals. I honestly considered using a `before` pseudo-element to scream at you if you use an `h5` or `h6`.
-
-We don't style them at all out of the box because `h4` elements are already so small that they are the same size as the body copy. What are we supposed to do with an `h5`, make it _smaller_ than the body copy? No thanks.
-
-### We still need to think about stacked headings though.
-
-#### Let's make sure we don't screw that up with `h4` elements, either.
-
-Phew, with any luck we have styled the headings above this text and they look pretty good.
-
-Let's add a closing paragraph here so things end with a decently sized block of text. I can't explain why I want things to end that way but I have to assume it's because I think things will look weird or unbalanced if there is a heading too close to the end of the document.
-
-What I've written here is probably long enough, but adding this final sentence can't hurt.
-
-[^1]: This is a footnote.
+I really enjoyed making this library. I have one more feature in mind that I recently learnt how to do so I might do that when I get time. I also have 2 more library ideas that I want to make. A minimal table component and Neko(cat) component that you can add to your website like in this website(If you haven't see what it does, scroll to the bottom of the page and enable "Neko" and move your mouse around).

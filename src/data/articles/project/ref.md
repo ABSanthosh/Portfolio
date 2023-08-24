@@ -28,14 +28,6 @@ tags:
         <img alt="Verse Lyrics" src="{base}/assets/Images/Articles/01.webp"  loading="lazy" />
         <figcaption>Verse Lyrics</figcaption>
     </figure>
-    <figure class="MdFigure">
-        <img alt="Verse Lyrics" src="{base}/assets/Images/Articles/01.webp"  loading="lazy" />
-        <figcaption>Verse Lyrics</figcaption>
-    </figure>
-    <figure class="MdFigure">
-        <img alt="Verse Lyrics" src="{base}/assets/Images/Articles/01.webp"  loading="lazy" />
-        <figcaption>Verse Lyrics</figcaption>
-    </figure>
 </span>
 
 ## `<table>` tag
