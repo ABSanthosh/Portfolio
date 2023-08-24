@@ -37,11 +37,7 @@ const config = {
       $styles: "src/styles/routes",
       $data: "src/data",
       $utils: "src/utils",
-    },
-    paths: {
-      base: dev ? "" : "/Portfolio",
-      relative: false,
-    },
+    }
   },
 };
 

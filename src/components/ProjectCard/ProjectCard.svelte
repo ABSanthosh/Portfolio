@@ -1,7 +1,5 @@
 <script>
   export let { title, desc, links } = $$props;
-
-  import { base } from "$app/paths";
 </script>
 
 <div class="ProjectCardWrapper">
@@ -20,7 +18,7 @@
       >
         Live
         <!-- <img src="assets/Images/live.png" alt="Live Icon" /> -->
-        <img src={`${base}/assets/Images/live.png`} alt="Live Icon" />
+        <img src="/assets/Images/live.png" alt="Live Icon" />
       </a>
       <a
         href={links.github}
@@ -30,10 +28,7 @@
       >
         Code
       </a>
-      <a
-        href={`${base}/project/${links.slug}`}
-        class="ProjectCard__links--resource"
-      >
+      <a href={`/project/${links.slug}`} class="ProjectCard__links--resource">
         More
       </a>
     </div>

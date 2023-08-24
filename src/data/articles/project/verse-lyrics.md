@@ -8,7 +8,6 @@ tags:
 ---
 
 <script context="module">
-  import { base } from "$app/paths";
   import Testimonials from "@/components/VerseReview/Testimonials.svelte";
 </script>
 
@@ -42,7 +41,7 @@ When it launched in India, I started using it on my phone for a few months and f
 <br/>
 But you know...
 <figure class="MdFigure W100">
-    <img alt="Automate meme" src="{base}/assets/Articles/projects/verse-lyrics/automateMeme.jpg"  
+    <img alt="Automate meme" src="/assets/Articles/projects/verse-lyrics/automateMeme.jpg"  
     width="420px" loading="lazy" />
     <figcaption>Meme</figcaption>
 </figure>
@@ -107,11 +106,11 @@ And there you have it
 
 <span class="MdRow">
     <figure class="MdFigure">
-        <img alt="Verse Lyrics" src="{base}/assets/Articles/projects/verse-lyrics/LyricsPage.png"  loading="lazy" />
+        <img alt="Verse Lyrics" src="/assets/Articles/projects/verse-lyrics/LyricsPage.png"  loading="lazy" />
         <figcaption>Google results page</figcaption>
     </figure>
     <figure class="MdFigure">
-        <img alt="Verse Lyrics" src="{base}/assets/Articles/projects/verse-lyrics/LyricsPageHTML.jpg"  loading="lazy" />
+        <img alt="Verse Lyrics" src="/assets/Articles/projects/verse-lyrics/LyricsPageHTML.jpg"  loading="lazy" />
         <figcaption>Results page HTML</figcaption>
     </figure>
 </span>
@@ -157,7 +156,7 @@ I was not really a UI person but always had a knack for minimalism so that's how
 
 <span class="MdRow W100">
      <figure class="MdFigure">
-        <img alt="Version 1 home page" src="{base}/assets/Articles/projects/verse-lyrics/v1Demo.gif"  loading="lazy" width="275px" />
+        <img alt="Version 1 home page" src="/assets/Articles/projects/verse-lyrics/v1Demo.gif"  loading="lazy" width="275px" />
         <figcaption>v1 Home page</figcaption>
     </figure>
 </span>
@@ -194,7 +193,7 @@ I actually didn't care what most of the graphs means in the console dashboard. I
 
 <span class="MdRow W100">
      <figure class="MdFigure">
-        <img alt="conversion rate" src="{base}/assets/Articles/projects/verse-lyrics/conversionRate.png"  loading="lazy" />
+        <img alt="conversion rate" src="/assets/Articles/projects/verse-lyrics/conversionRate.png"  loading="lazy" />
         <figcaption>Conversion rate</figcaption>
     </figure>
 </span>

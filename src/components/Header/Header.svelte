@@ -1,6 +1,5 @@
 <script lang="ts">
   import { theme } from "$lib/ThemeStore";
-  import { base } from "$app/paths";
 
   // TODO: Get resume link from global store
 </script>
@@ -8,7 +7,7 @@
 <header class="HeaderWrapper">
   <div class="Header">
     <div class="Header__left">
-      <a href={`${base}/`} class="Header__title" id="headerName">
+      <a href="/" class="Header__title" id="headerName">
         <span class="Header__title--brackets">(</span>
         <span class="Header__title--params">AB</span>
         <span class="Header__title--brackets">)</span>

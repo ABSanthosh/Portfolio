@@ -6,10 +6,6 @@ tags:
   - Popular
 ---
 
-<script context="module">
-  import { base } from "$app/paths";
-</script>
-
 ## You can find implementation for custom markdown styles here
 
 ## `<details>` tag
@@ -25,7 +21,7 @@ tags:
 
 <span class="MdRow">
     <figure class="MdFigure">
-        <img alt="Verse Lyrics" src="{base}/assets/Images/Articles/01.webp"  loading="lazy" />
+        <img alt="Verse Lyrics" src="/assets/Images/Articles/01.webp"  loading="lazy" />
         <figcaption>Verse Lyrics</figcaption>
     </figure>
 </span>

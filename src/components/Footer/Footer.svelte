@@ -1,7 +1,6 @@
 <script lang="ts">
   import { nekoStore } from "$lib/NekoStore";
   import { NekoSizeVariations } from "$utils/Neko";
-  import { base } from "$app/paths";
 
   const nextSize = (size: NekoSizeVariations) => {
     switch (size) {
@@ -32,7 +31,7 @@
       Made with <span class="FooterWrapper__container--heart">&hearts;</span>
       and
       <a href="https://svelte.dev" target="_blank">
-        <img src={`${base}/assets/Images/Languages/svelte.png`} alt="Svelte" />
+        <img src="/assets/Images/Languages/svelte.png" alt="Svelte" />
       </a>
       by
       <a

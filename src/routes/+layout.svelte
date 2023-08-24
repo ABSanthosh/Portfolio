@@ -41,8 +41,8 @@
 
   <meta name="color-scheme" content={$theme} />
 
-  <link rel="stylesheet" href={`${base}/theme/light.css`} />
-  <link rel="stylesheet" href={`${base}/theme/dark.css`} />
+  <link rel="stylesheet" href="/theme/light.css" />
+  <link rel="stylesheet" href="/theme/dark.css" />
 
   <title>ABSanthosh</title>
 </svelte:head>

@@ -1,10 +1,9 @@
 <script lang="ts">
-  import { base } from "$app/paths";
   export let { src, title, desc, additions, deletions, href } = $$props;
 </script>
 
 <div class="OSCard">
-  <img src={`${base}/${src}`} alt="OSCard__image" class="OSCard__image" />
+  <img src={`/${src}`} alt="OSCard__image" class="OSCard__image" />
   <div class="OSCard__details">
     <a
       {href}

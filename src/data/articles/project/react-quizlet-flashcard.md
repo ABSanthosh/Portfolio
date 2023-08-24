@@ -7,13 +7,9 @@ tags:
   - React
 ---
 
-<script context="module">
-  import { base } from "$app/paths";
-</script>
-
 <h1 class="MdRow JustBetween W100">
   {title}
-  <a href='https://www.npmjs.com/package/react-quizlet-flashcard' target="_blank" rel="noopener noreferrer"><img alt='Get it on Google Play' height="30px" class="MdRow" src='{base}/assets/Images/Tools/NPM.svg'/></a>
+  <a href='https://www.npmjs.com/package/react-quizlet-flashcard' target="_blank" rel="noopener noreferrer"><img alt='Get it on Google Play' height="30px" class="MdRow" src='/assets/Images/Tools/NPM.svg'/></a>
 </h1>
 
 A simple and responsive quizlet-like flashcard component with no additional dependency. Written in Typescript and React.
@@ -39,7 +35,7 @@ But whats the core of a flashcard app? Flashcards. I looked for a library that w
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="Fine I'll do it myself meme" src="{base}/assets/Articles/projects/react-quizlet-flashcard/meme.gif"  loading="lazy" width="80%"/>
+        <img alt="Fine I'll do it myself meme" src="/assets/Articles/projects/react-quizlet-flashcard/meme.gif"  loading="lazy" width="80%"/>
         <figcaption>Meme</figcaption>
     </figure>
 </span>
@@ -68,7 +64,7 @@ There are around 50 people using my library and everytime I see the list, It jus
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="No. of people using" src="{base}/assets/Articles/projects/react-quizlet-flashcard/UsedBy.png"  loading="lazy" height="150px"/>
+        <img alt="No. of people using" src="/assets/Articles/projects/react-quizlet-flashcard/UsedBy.png"  loading="lazy" height="150px"/>
         <figcaption>No. of people using</figcaption>
     </figure>
 </span>
@@ -85,7 +81,7 @@ Special mention to my friend who made a website for me using my library so she c
 <span class="MdRow W100">
 
   <figure class="MdFigure">
-  <img alt="Latest star" src="{base}/assets/Articles/projects/react-quizlet-flashcard/starNotification.png"  loading="lazy"/>
+  <img alt="Latest star" src="/assets/Articles/projects/react-quizlet-flashcard/starNotification.png"  loading="lazy"/>
   <figcaption>Latest star</figcaption>
   </figure>
 </span>

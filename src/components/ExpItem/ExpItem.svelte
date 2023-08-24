@@ -1,5 +1,4 @@
 <script>
-  import { base } from "$app/paths";
   let { position, slug, shortDesc, desc, tStart, tEnd } = $$props;
 </script>
 
@@ -23,7 +22,7 @@
     <div class="ExpItemDetails__content--links">
       <a
         class="FancyLink"
-        href={`${base}/experience/${slug}`}
+        href={`/experience/${slug}`}
         data-type="ButtonLink"
       >
         Read more

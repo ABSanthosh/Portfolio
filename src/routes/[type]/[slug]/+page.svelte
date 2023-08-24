@@ -6,13 +6,10 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" href={`${base}/theme/prism.css`} />
+  <link rel="stylesheet" href="/theme/prism.css" />
 </svelte:head>
 
 <main class="Article Page">
-  <!-- <h1>
-    {data.meta.title}
-  </h1> -->
   <article class="MarkdownBody">
     {@html data.html}
   </article>
