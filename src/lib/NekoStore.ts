@@ -9,7 +9,7 @@ const initialValue = (): NekoStorage => {
     }
   }
   return {
-    isShown: true,
+    isShown: false,
     size: NekoSizeVariations.SMALL,
   };
 };

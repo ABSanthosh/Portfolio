@@ -5,7 +5,6 @@
   import { Neko, NekoSizeVariations } from "$utils/Neko";
   import Header from "$components/Header/Header.svelte";
   import Footer from "$components/Footer/Footer.svelte";
-  import { base } from "$app/paths";
 
   onMount(() => {
     theme.subscribe((value) => {
