@@ -18,6 +18,19 @@ tags:
 
 A simple and responsive quizlet-like flashcard component with no additional dependency. Written in Typescript and React.
 
+<details class="FancyDetail">
+<summary data-just="space-between" data-bg>In a rush? Here's tl;dr</summary>
+<main>    
+I created a responsive flashcard component similar to Quizlet, using Typescript and React. My motivation stemmed from the desire for a lightweight flashcard app without unnecessary features. I aimed to make a simple, fast, and responsive flashcard experience that aligned with my preferences.
+<br/><br/>
+However, I found that no existing library replicated Quizlet's flashcard functionality, prompting me to create my own. I initially replicated Quizlet's appearance and built a basic React component. I implemented a subtle animation by keeping three cards loaded at all times, allowing smooth transitions when moving between cards.
+<br/><br/>
+I addressed user feedback and gradually added features, resolving 11 issues so far. Over time, the project became difficult to maintain due to a lack of type safety and code organization. To enhance maintainability, I rewrote the entire component in TypeScript and created a Storybook for it.
+<br/><br/>
+Around 50 people are using the library, and I'm thrilled to see its growing popularity, boasting 33 stars on GitHub. I'm especially grateful to a friend who built a website using my library. Despite its success, I plan to continue improving the library and exploring other ideas, such as a minimal table component and a "Neko" (cat) component for websites
+</main>
+</details>
+
 ## Why did I make it?
 
 To talk about this project, I’ll have to bring in one of my other “failed” or “abandoned” or “re-thought” project, [Genki]. I wanted to make a lightweight, no-nonsense flashcard app that just does what it says on the box. Other popular apps like <a href="https://quizlet.com/" target="_blank" class="FancyLink" data-type="Bracket">Quizlet</a>, are bloated with features that I’m never going to use or apps like <a href="https://apps.ankiweb.net/" target="_blank" class="FancyLink" data-type="Bracket">Anki</a> that are straight from 2000s(<a href="https://en.m.wikipedia.org/wiki/Anki_(software)" target="_blank" class="FancyLink" data-type="Bracket">no really</a>). I wanted to make something that is simple, fast, and responsive. I wanted to make something that I would use.
@@ -35,7 +48,7 @@ But whats the core of a flashcard app? Flashcards. I looked for a library that w
 
 I wanted a Quizlet-like flashcard component right? And where can you find that? Yeah in Quizlet website. For the first version, I just copied CSS from Quizlet and made a simple React component. It was quite interesting to see how it was implemented in their site(although now they changed it).
 
-To have a subtle animation to make it come from right or left, the always have 3 cards loaded. When left or right button is clicked, the card in the other side is removed and a new card is added, making the invisible card visible.
+To have a subtle animation to make it come from right or left, they always have 3 cards loaded. When left or right button is clicked, the card in the other side is removed and a new card is added, making the invisible card visible.
 
 |                                               react-quizlet-flashcard                                               |                                            Quizlet's flashcard component                                            |
 | :-----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
@@ -60,6 +73,7 @@ There are around 50 people using my library and everytime I see the list, It jus
     </figure>
 </span>
 
+<br/>
 Thank you all &hearts;
 
 ## Stars
