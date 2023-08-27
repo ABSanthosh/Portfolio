@@ -17,7 +17,7 @@ A web based minimal IDE built with Monaco Editor and React. Supports multiple la
 
 ## Why did I build this?
 
-For my course Software Development Lab(SDL), we had to come up with a novel idea and build it out as a group. We had several ideas and my idea was to build a minimal IDE that can run on the browser, inspired by VS Code web. This was our project proposal:
+For my course Software Design Lab(SDL), we had to come up with a novel idea and build it out as a group. We had several ideas and my idea was to build a minimal IDE that can run on the browser, inspired by VS Code web. This was our project proposal:
 
 <br/>
 
@@ -106,7 +106,7 @@ export async function saveFileContents(fileHandle, content) {
 }
 ```
 
-You can see rest of the implementation <a href="https://github.com/Daima-Editor/Daima/blob/prod/src/utils/FileAccess.js" target="_blank" class="FancyLink" data-type="Bracket">here</a>. Except a few components, non of the components are made with reusablity in mind. I just wanted to get it done as fast as possible but you can have them as a reference.
+You can see rest of the implementation <a href="https://github.com/Daima-Editor/Daima/blob/prod/src/utils/FileAccess.js" target="_blank" class="FancyLink" data-type="Bracket">here</a>. Except a few components, none of the components are made with reusablity in mind. I just wanted to get it done as fast as possible but you can have them as a reference.
 
 _Note: If you are implementing the folder tree, use `<details>` tag. It saves a lot of time and I really love this component._
 
