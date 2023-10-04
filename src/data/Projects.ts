@@ -56,7 +56,7 @@ const Projects: IProject[] = [
     desc: "(Database asleep 😴)Event management website built with NextJs and Prisma. Handled 1000+ registrations and 30k+ unique page visits before the event.",
     links: {
       github: "https://github.com/surge-snu/Surge2022",
-      live: "https://surgesnu.in/",
+      live: "https://surge2022.vercel.app/",
       slug: "surge-2022",
     },
     tech: [

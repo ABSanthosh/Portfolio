@@ -15,6 +15,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="ProjectCard__links--resource"
+        media="all"
       >
         Live
         <!-- <img src="assets/Images/live.png" alt="Live Icon" /> -->
@@ -25,10 +26,15 @@
         target="_blank"
         rel="noopener noreferrer"
         class="ProjectCard__links--resource"
+        media="all"
       >
         Code
       </a>
-      <a href={`/project/${links.slug}`} class="ProjectCard__links--resource">
+      <a
+        href={`/project/${links.slug}`}
+        class="ProjectCard__links--resource"
+        media="all"
+      >
         More
       </a>
     </div>
