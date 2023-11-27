@@ -7,15 +7,6 @@
       href="%sveltekit.assets%/assets/Images/Languages/svelte.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Cloudflare Web Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "3c64c0e065a045738821167c110d5046"}'
-    ></script>
-    <!-- End Cloudflare Web Analytics -->
-
     <script>
       if (
         !("theme" in localStorage) &&
@@ -36,4 +27,12 @@
   <body data-sveltekit-preload-data="hover">
     <div id="app">%sveltekit.body%</div>
   </body>
+
+  <!-- Cloudflare Web Analytics -->
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "3c64c0e065a045738821167c110d5046"}'
+  ></script>
+  <!-- End Cloudflare Web Analytics -->
 </html>
