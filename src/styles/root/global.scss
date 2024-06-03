@@ -1,9 +1,11 @@
-@import "./fonts.scss";
 @import "./Fancy/FancyButton.scss";
 @import "./Fancy/FancyLink.scss";
 @import "./Fancy/FancySelect.scss";
 @import "./Fancy/FancyDetail.scss";
 @import "./mdStyles.scss";
+
+@import "./fonts.scss";
+@import "./theme.scss";
 
 @import "../routes/pageLayout.scss";
 

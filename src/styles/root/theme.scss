@@ -1,0 +1,43 @@
+:root {
+  --lightGray: light-dark(#f3f4f6, #1d1f22);
+  --lightPurple: light-dark(#adacff, #adacff);
+  --lightViolet: light-dark(#6741d9, #aa8dff);
+  --CardHover: light-dark(#0004ff65, #0affa2);
+  --headerBackground: light-dark(#fdfdfd3a, #2d30456b);
+  --headerBrackets: light-dark(#2532f5, #ff0000);
+  --headerParams: light-dark(#e1944d, #e1944d);
+  --headerArrow: light-dark(#9fd2c3, #0affa2);
+  --highlightColor: light-dark(#e7e5e4, #494949);
+  --borderColor: light-dark(#d1d5db, #9a9a9a);
+  --headingColor: light-dark(#2d3045, #ffffff);
+  --backgroundColor: light-dark(#fdfdfd, #111111);
+  --baseTextColor: light-dark(#111111, #f3f4f6);
+  --scrollbarThumb: light-dark(#d3d1cb, #d3d1cb);
+  --scrollbarTrack: light-dark(#edece9, #2d3045);
+  --textSelectionColor: light-dark(#2daadb4d, #2daadb91);
+  --footerBackground: light-dark(#f3f4f6, #292929);
+  --downArrow: light-dark(
+    url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+  );
+  --successColor: light-dark(#1a7f37, #3fb950);
+  --dangerColor: light-dark(#cf222e, #f85149);
+  --headerShadow: light-dark(
+    (0 2px 4px rgb(0 0 0 / 2%), inset 0 -1px 0 rgb(0 0 0 / 6%)),
+    inset 0 -1px 0 hsl(0deg 0% 100% / 10%)
+  );
+  --detailsBackground: light-dark(none, #f9f9f9);
+  --detailsHover: light-dark(#f3f3f3, #292929);
+  --detailsBorder: light-dark(#e6e6e6, #393939);
+  --detailsShortDesc: light-dark(#919191, #919191);
+
+  &[data-theme="dark"] {
+    --headerBlur: blur(5px);
+    color-scheme: dark;
+  }
+
+  &[data-theme="light"] {
+    --headerBlur: blur(20px);
+    color-scheme: light;
+  }
+}

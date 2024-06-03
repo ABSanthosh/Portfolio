@@ -4,12 +4,11 @@ import { browser } from "$app/environment";
 const initialValue = browser
   ? window.localStorage.getItem("theme") ?? "dark"
   : "dark";
-const theme = writable<Theme>(initialValue as Theme);
+export const theme = writable<Theme>(initialValue as Theme);
 
 theme.subscribe((value) => {
   if (browser) {
     window.localStorage.setItem("theme", value);
+    document.documentElement.dataset.theme = value;
   }
 });
-
-export { theme };
