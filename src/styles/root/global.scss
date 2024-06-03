@@ -37,6 +37,25 @@ $scrollbarWidth: 8px;
   background: var(--textSelectionColor);
 }
 
+[data-theme="light"] {
+  &::view-transition-old(root) {
+    z-index: 101;
+  }
+
+  &::view-transition-new(root) {
+    z-index: 100;
+  }
+}
+[data-theme="dark"] {
+  &::view-transition-new(root) {
+    z-index: 101;
+  }
+
+  &::view-transition-old(root) {
+    z-index: 100;
+  }
+}
+
 html {
   overflow-y: auto;
   overflow-x: hidden;

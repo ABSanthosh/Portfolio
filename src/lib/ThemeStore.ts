@@ -6,9 +6,10 @@ const initialValue = browser
   : "dark";
 export const theme = writable<Theme>(initialValue as Theme);
 
-theme.subscribe((value) => {
+export const setTheme = (value: Theme) => {
   if (browser) {
     window.localStorage.setItem("theme", value);
     document.documentElement.dataset.theme = value;
+    theme.set(value)
   }
-});
+};

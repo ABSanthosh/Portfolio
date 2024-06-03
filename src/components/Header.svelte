@@ -1,5 +1,54 @@
 <script lang="ts">
-  import { theme } from "$lib/ThemeStore";
+  import { setTheme, theme } from "$lib/ThemeStore";
+
+  let themeToggle: HTMLButtonElement;
+
+  const themeToggleTransition = async () => {
+    if (
+      !themeToggle ||
+      !document.startViewTransition ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      setTheme($theme === "dark" ? "light" : "dark");
+      return;
+    }
+
+    document
+      .startViewTransition(async () => {
+        setTheme($theme === "dark" ? "light" : "dark");
+      })
+      .ready.then(() => {
+        // https://akashhamirwasia.com/blog/full-page-theme-toggle-animation-with-view-transitions-api/#what-is-the-grow-animation
+        const { top, left, width, height } =
+          themeToggle.getBoundingClientRect();
+        const x = left + width / 2;
+        const y = top + height / 2;
+        const right = window.innerWidth - left;
+        const bottom = window.innerHeight - top;
+        const maxRadius = Math.hypot(
+          Math.max(left, right),
+          Math.max(top, bottom)
+        );
+        const isDark = $theme !== "dark";
+        const clipPath = [
+          `circle(0px at ${x}px ${y}px)`,
+          `circle(${maxRadius}px at ${x}px ${y}px)`,
+        ];
+
+        document.documentElement.animate(
+          {
+            clipPath: isDark ? clipPath.reverse() : clipPath,
+          },
+          {
+            duration: 500,
+            easing: "ease-in-out",
+            pseudoElement: isDark
+              ? "::view-transition-old(root)"
+              : "::view-transition-new(root)",
+          }
+        );
+      });
+  };
 
   // TODO: Get resume link from global store
 </script>
@@ -22,9 +71,8 @@
       >
       <button
         class="FancyButton"
-        on:click={() => {
-          theme.set($theme === "dark" ? "light" : "dark");
-        }}
+        bind:this={themeToggle}
+        on:click={async () => await themeToggleTransition()}
       >
         <svg viewBox="0 0 20 20" width="16px" height="16px" fill="currentColor">
           {#if $theme === "dark"}
@@ -46,6 +94,13 @@
 </header>
 
 <style lang="scss">
+  :root {
+    &::view-transition-old(root),
+    &::view-transition-new(root) {
+      animation: none;
+      mix-blend-mode: normal;
+    }
+  }
   .HeaderWrapper {
     top: 0;
     right: 0;
