@@ -3,8 +3,8 @@
   import { onMount } from "svelte";
   import { nekoStore } from "$lib/NekoStore";
   import { Neko, NekoSizeVariations } from "$utils/Neko";
-  import Header from "$components/Header/Header.svelte";
-  import Footer from "$components/Footer/Footer.svelte";
+  import Header from "$components/Header.svelte";
+  import Footer from "$components/Footer.svelte";
 
   onMount(() => {
     theme.subscribe((value) => {

@@ -9,4 +9,17 @@
   />
 </div>
 
-<style lang="scss" src="./GithubMap.scss"></style>
+<style lang="scss">
+  .GithubMap {
+    @include make-flex();
+    @include box();
+    gap: 30px;
+    img {
+      width: 100%;
+
+      // &:last-child {
+      //   max-width: 495px;
+      // }
+    }
+  }
+</style>

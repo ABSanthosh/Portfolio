@@ -45,4 +45,62 @@
   </div>
 </header>
 
-<style lang="scss" src="./Header.scss"></style>
+<style lang="scss">
+  .HeaderWrapper {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+    padding: 0 20px;
+    @include make-flex();
+    @include box(100%, 64px);
+    background: var(--headerBackground);
+    backdrop-filter: var(--headerBlur);
+    box-shadow: var(--headerShadow);
+  }
+
+  .Header {
+    @include box();
+    max-width: 835px;
+    @include make-flex($just: space-between, $dir: row);
+
+    &__left {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    &__right {
+      @include make-flex($dir: row);
+      gap: 20px;
+      a {
+        @include respondAt(400px) {
+          display: none;
+        }
+      }
+      button {
+        text-transform: capitalize;
+      }
+    }
+
+    &__title {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      &--brackets {
+        color: var(--headerBrackets);
+      }
+      &--params {
+        color: var(--headerParams);
+      }
+      &--arrow {
+        font-weight: 400;
+        font-family: "JetBrains Mono", monospace;
+        font-variant-ligatures: common-ligatures;
+        margin-right: 3px;
+        color: var(--headerArrow);
+      }
+    }
+  }
+</style>

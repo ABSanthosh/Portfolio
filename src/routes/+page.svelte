@@ -1,13 +1,13 @@
 <script lang="ts">
   import Experiences from "$data/Experiences";
   import Projects from "$data/Projects";
-  import ExpItem from "$components/ExpItem/ExpItem.svelte";
-  import ProjectCard from "$components/ProjectCard/ProjectCard.svelte";
+  import ExpItem from "$components/ExpItem.svelte";
+  import ProjectCard from "$components/ProjectCard.svelte";
   import { OpenSource } from "$data/OpenSource";
-  import OsCard from "$components/OSCard/OSCard.svelte";
+  import OsCard from "$components/OSCard.svelte";
   import { Logos } from "$data/Logos";
-  import ToolCard from "$components/ToolCard/ToolCard.svelte";
-  import GithubMap from "$components/GithubMap/GithubMap.svelte";
+  import ToolCard from "$components/ToolCard.svelte";
+  import GithubMap from "../components/GithubMap.svelte";
 
   let toolsOption = "languages",
     value: "language" | "tool" | "framework" = "language";
