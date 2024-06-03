@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Experiences from "$data/Experiences";
+  import Experiences, { RESUME_PATH } from "$data/Experiences";
   import Projects from "$data/Projects";
   import ExpItem from "$components/ExpItem.svelte";
   import ProjectCard from "$components/ProjectCard.svelte";
@@ -73,7 +73,7 @@
           Email
         </a>
         <a
-          href="https://raw.githubusercontent.com/ABSanthosh/Portfolio/main/public/assets/Docs/AB%20Santhosh%20Resume.pdf"
+          href={RESUME_PATH}
           target="_blank"
           rel="noopener noreferrer"
           class="FancyLink"

@@ -1,3 +1,5 @@
+export const RESUME_PATH = "https://raw.githubusercontent.com/ABSanthosh/Portfolio/main/public/assets/Docs/AB%20Santhosh%20Resume.pdf"
+
 interface IExperience {
   position: string;
   company: string;

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { RESUME_PATH } from "$data/Experiences";
   import { setTheme, theme } from "$lib/ThemeStore";
 
   let themeToggle: HTMLButtonElement;
@@ -49,8 +50,6 @@
         );
       });
   };
-
-  // TODO: Get resume link from global store
 </script>
 
 <header class="HeaderWrapper">
@@ -65,10 +64,7 @@
       </a>
     </div>
     <div class="Header__right">
-      <a
-        href="https://raw.githubusercontent.com/ABSanthosh/Portfolio/main/public/assets/Docs/AB%20Santhosh%20Resume.pdf"
-        target="_blank">Resume</a
-      >
+      <a href={RESUME_PATH} target="_blank"> Resume </a>
       <button
         class="FancyButton"
         bind:this={themeToggle}
