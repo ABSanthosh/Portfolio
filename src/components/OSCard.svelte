@@ -3,7 +3,7 @@
 </script>
 
 <div class="OSCard">
-  <img src={`/${src}`} alt="OSCard__image" class="OSCard__image" />
+  <img {src} alt="OSCard__image" class="OSCard__image" />
   <div class="OSCard__details">
     <a
       {href}

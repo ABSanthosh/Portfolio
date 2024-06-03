@@ -1,4 +1,5 @@
 <script>
+  import logo_live from "$images/live.png";
   export let { title, desc, links } = $$props;
 </script>
 
@@ -18,8 +19,7 @@
         media="all"
       >
         Live
-        <!-- <img src="assets/Images/live.png" alt="Live Icon" /> -->
-        <img src="/assets/Images/live.png" alt="Live Icon" />
+        <img src={logo_live} alt="Live Icon" />
       </a>
       <a
         href={links.github}
