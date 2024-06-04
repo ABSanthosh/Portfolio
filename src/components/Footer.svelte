@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Logos } from "$data/Logos";
   import { nekoStore } from "$lib/NekoStore";
   import { NekoSizeVariations } from "$utils/Neko";
 
@@ -31,7 +32,7 @@
       Made with <span class="FooterWrapper__container--heart">&hearts;</span>
       and
       <a href="https://svelte.dev" target="_blank">
-        <img src="/assets/Images/Languages/svelte.png" alt="Svelte" />
+        <img src={Logos.language.svelte.image} alt="Svelte" />
       </a>
       by
       <a

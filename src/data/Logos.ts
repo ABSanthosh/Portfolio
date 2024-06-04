@@ -39,7 +39,7 @@ import logo_Lightify from "$images/LightifyLogo.png";
 
 export interface ILogo {
   name: string;
-  image: string | typeof import("*.png");
+  image: string;
   href: string;
 }
 interface ILogos {

@@ -16,28 +16,26 @@
   --scrollbarTrack: light-dark(#edece9, #2d3045);
   --textSelectionColor: light-dark(#2daadb4d, #2daadb91);
   --footerBackground: light-dark(#f3f4f6, #292929);
-  --downArrow: light-dark(
-    url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"),
-    url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
-  );
   --successColor: light-dark(#1a7f37, #3fb950);
   --dangerColor: light-dark(#cf222e, #f85149);
-  --headerShadow: light-dark(
-    (0 2px 4px rgb(0 0 0 / 2%), inset 0 -1px 0 rgb(0 0 0 / 6%)),
-    inset 0 -1px 0 hsl(0deg 0% 100% / 10%)
-  );
   --detailsBackground: light-dark(none, #f9f9f9);
   --detailsHover: light-dark(#f3f3f3, #292929);
   --detailsBorder: light-dark(#e6e6e6, #393939);
   --detailsShortDesc: light-dark(#919191, #919191);
 
-  &[data-theme="dark"] {
-    --headerBlur: blur(5px);
-    color-scheme: dark;
+  &[data-theme="light"] {
+    color-scheme: light;
+
+    --headerBlur: blur(20px);
+    --downArrow: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    --headerShadow: 0 2px 4px rgb(0 0 0 / 2%), inset 0 -1px 0 rgb(0 0 0 / 6%);
   }
 
-  &[data-theme="light"] {
-    --headerBlur: blur(20px);
-    color-scheme: light;
+  &[data-theme="dark"] {
+    color-scheme: dark;
+
+    --headerBlur: blur(5px);
+    --downArrow: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    --headerShadow: inset 0 -1px 0 hsl(0deg 0% 100% / 10%);
   }
 }
