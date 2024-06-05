@@ -83,7 +83,6 @@
             />
           {/if}
         </svg>
-        {$theme}
       </button>
     </div>
   </div>

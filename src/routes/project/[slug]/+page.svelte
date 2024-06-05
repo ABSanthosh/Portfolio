@@ -1,6 +1,5 @@
 <script lang="ts">
   import "@/styles/root/markdown.scss";
-  import { base } from "$app/paths";
 
   export let data;
 </script>

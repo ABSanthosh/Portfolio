@@ -3,6 +3,7 @@ import { Logos, type ILogo } from "./Logos";
 interface IProject {
   title: string;
   desc: string;
+  featured: boolean;
   links: {
     github: string;
     live: string;
@@ -15,6 +16,7 @@ const Projects: IProject[] = [
   {
     title: "Verse Lyrics",
     desc: "Kotlin Android application that helps users to fetch and save lyrics of songs played in Spotify automatically. Available on Playstore.",
+    featured: true,
     links: {
       github: "https://github.com/ABSanthosh/Verse-Lyrics",
       live: "https://play.google.com/store/apps/details?id=com.absan.verse&hl=en_IN&gl=US",
@@ -25,6 +27,8 @@ const Projects: IProject[] = [
   {
     title: "react-quizlet-flashcard",
     desc: "A simple and responsive quizlet-like flashcard component with no additional dependency. Written in Javascript and React.",
+    featured: true,
+
     links: {
       github: "https://github.com/ABSanthosh/react-quizlet-flashcard",
       live: "https://www.npmjs.com/package/react-quizlet-flashcard",
@@ -39,6 +43,7 @@ const Projects: IProject[] = [
   {
     title: "Dàimǎ",
     desc: "A web based minimal IDE built with Monaco Editor and React. Supports multiple languages and themes. Runs faster than VSCode Web with less memory usage.",
+    featured: true,
     links: {
       github: "https://github.com/ABSanthosh/Daima-Hosting",
       live: "https://daima.netlify.app/",
@@ -54,6 +59,7 @@ const Projects: IProject[] = [
   {
     title: "Surge 2022",
     desc: "(Database asleep 😴)Event management website built with NextJs and Prisma. Handled 1000+ registrations and 30k+ unique page visits before the event.",
+    featured: true,
     links: {
       github: "https://github.com/surge-snu/Surge2022",
       live: "https://surge2022.vercel.app/",
@@ -69,6 +75,7 @@ const Projects: IProject[] = [
   {
     title: "Gastly",
     desc: "A simple pokedex web app that fetches from custom pokemon api and displays them in a beautiful UI. Built with NextJs.",
+    featured: false,
     links: {
       github: "https://github.com/ABSanthosh/Gastly",
       live: "https://gastly-v4.netlify.app/",
@@ -83,6 +90,7 @@ const Projects: IProject[] = [
   {
     title: "Nihongo",
     desc: "A blog built with NextJs to keep track of my Japanese learning process. Uses markdown to store and display posts.",
+    featured: true,
     links: {
       github: "https://github.com/ABSanthosh/Nihongo",
       live: "https://nihongo-blogs.netlify.app/",
@@ -97,6 +105,7 @@ const Projects: IProject[] = [
   {
     title: "Quartz(Under dev)",
     desc: "A multifunctional web app task managment tool with cross platform authentication and storage using Supabase, In the aim to replace Notion and Obsidian.",
+    featured: true,
     links: {
       github: "https://github.com/ABSanthosh/Quartz",
       live: "https://smoky-quartz.netlify.app/app",
@@ -111,6 +120,7 @@ const Projects: IProject[] = [
   {
     title: "Miru",
     desc: "A minimal web interface to explore Ethereum blockchain logs and analyze the interconnections of transactions. Built for the HackManthon 2022.",
+    featured: false,
     links: {
       github: "https://github.com/ABSanthosh/Miru",
       live: "https://miru-chain.netlify.app/eth",

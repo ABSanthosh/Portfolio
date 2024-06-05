@@ -109,7 +109,7 @@
     padding: 20px 0;
     text-align: center;
     @include make-flex();
-    @include box(100vw, 69px);
+    @include box(100vw, 64px);
     margin-top: 70px;
 
     @include respondAt(500px) {

@@ -2,6 +2,7 @@
   @include make-flex($just: flex-start);
   @include box($height: unset);
   background-color: var(--backgroundColor);
+  padding-top: 64px;
 
   @include respondAt(635px) {
     gap: 50px !important;
@@ -17,13 +18,4 @@
   @include make-flex($just: flex-start);
   padding: 20px;
   max-width: calc(835px + 40px);
-  gap: 65px;
-
-  @include respondAt(635px) {
-    margin-top: 115px !important;
-  }
-
-  @include respondAt(475px) {
-    margin-top: 80px !important;
-  }
 }

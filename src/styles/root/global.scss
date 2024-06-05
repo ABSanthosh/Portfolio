@@ -27,8 +27,8 @@ $scrollbarWidth: 8px;
   @include box($scrollbarWidth, $scrollbarWidth);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbarThumb);
   border-radius: 10px;
+  background: var(--scrollbarThumb);
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -88,3 +88,89 @@ body,
   z-index: 5;
 }
 // https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+http+java+javadoclike+jsdoc+kotlin+scss+typescript+uri
+
+.Row {
+  &--center {
+    @include make-flex($dir: row, $just: center);
+  }
+  &--start {
+    @include make-flex($dir: row, $just: flex-start);
+  }
+  &--end {
+    @include make-flex($dir: row, $just: flex-end);
+  }
+  &--between {
+    @include make-flex($dir: row, $just: space-between);
+  }
+  &--around {
+    @include make-flex($dir: row, $just: space-around);
+  }
+
+  &--a-start {
+    @include make-flex($dir: row, $align: flex-start);
+  }
+
+  &--a-end {
+    @include make-flex($dir: row, $align: flex-end);
+  }
+  &--j-start {
+    @include make-flex($dir: row, $just: flex-start);
+  }
+  &--j-end {
+    @include make-flex($dir: row, $just: flex-end);
+  }
+}
+
+.Col {
+  &--center {
+    @include make-flex($dir: column, $just: center);
+  }
+  &--j-start {
+    @include make-flex($dir: column, $just: flex-start);
+  }
+  &--j-end {
+    @include make-flex($dir: column, $just: flex-end);
+  }
+
+  &--a-start {
+    @include make-flex($dir: column, $align: flex-start);
+  }
+
+  &--a-end {
+    @include make-flex($dir: column, $align: flex-end);
+  }
+
+  &--between {
+    @include make-flex($dir: column, $just: space-between);
+  }
+  &--around {
+    @include make-flex($dir: column, $just: space-around);
+  }
+}
+
+.w {
+  &-auto {
+    width: auto;
+  }
+  &-100 {
+    width: 100%;
+  }
+  &-90 {
+    width: 90%;
+  }
+  &-80 {
+    width: 80%;
+  }
+}
+
+.h {
+  &-100 {
+    height: 100%;
+  }
+  &-90 {
+    height: 90%;
+  }
+  &-80 {
+    height: 80%;
+  }
+}

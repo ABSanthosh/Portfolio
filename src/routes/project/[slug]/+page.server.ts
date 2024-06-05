@@ -4,7 +4,7 @@ export async function load({
   params: { slug: string; type: string };
 }) {
   const post = await import(
-    `../../../data/articles/${params.type}/${params.slug}.md`
+    `../../../data/articles/project/${params.slug}.md`
   );
   return {
     html: post.default.render().html,
