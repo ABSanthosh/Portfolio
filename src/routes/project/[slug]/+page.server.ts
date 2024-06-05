@@ -3,11 +3,12 @@ export async function load({
 }: {
   params: { slug: string; type: string };
 }) {
-  const post = await import(
-    `../../../data/articles/project/${params.slug}.md`
-  );
+  const post = await import(`../../../data/articles/project/${params.slug}.md`);
+
   return {
-    html: post.default.render().html,
-    meta: post.metadata,
+    html: post.default.render().html as string,
+    meta: post.metadata as {
+      [key: string]: string;
+    },
   };
 }

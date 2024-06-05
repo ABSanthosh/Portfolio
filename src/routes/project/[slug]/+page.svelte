@@ -1,7 +1,8 @@
 <script lang="ts">
   import "@/styles/root/markdown.scss";
+  import type { PageData } from "./$types";
 
-  export let data;
+  export let data: PageData;
 </script>
 
 <svelte:head>
