@@ -3,84 +3,54 @@
   export let { title, desc, links } = $$props;
 </script>
 
-<div class="ProjectCardWrapper">
-  <div class="ProjectCard">
-    <div class="ProjectCard__content">
-      <h3 class="ProjectCard__content--title">{title}</h3>
-      <p class="ProjectCard__content--desc">{desc}</p>
-    </div>
+<div class="ProjectCard">
+  <div class="ProjectCard__content">
+    <h3 class="ProjectCard__content--title">{title}</h3>
+    <p class="ProjectCard__content--desc">{desc}</p>
+  </div>
 
-    <div class="ProjectCard__links">
-      <a
-        href={links.live}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="ProjectCard__links--resource"
-        media="all"
-      >
-        Live
-        <img src={logo_live} alt="Live Icon" />
-      </a>
-      <a
-        href={links.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="ProjectCard__links--resource"
-        media="all"
-      >
-        Code
-      </a>
-      <a
-        href={`/project/${links.slug}`}
-        class="ProjectCard__links--resource"
-        media="all"
-      >
-        More
-      </a>
-    </div>
+  <div class="ProjectCard__links">
+    <a
+      href={links.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="ProjectCard__links--resource"
+      media="all"
+    >
+      Live
+      <img src={logo_live} alt="Live Icon" />
+    </a>
+    <a
+      href={links.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="ProjectCard__links--resource"
+      media="all"
+    >
+      Code
+    </a>
+    <a
+      href={`/project/${links.slug}`}
+      class="ProjectCard__links--resource"
+      media="all"
+    >
+      More
+    </a>
   </div>
 </div>
 
 <style lang="scss">
-  .ProjectCardWrapper {
-    position: relative;
-    background-color: var(--borderColor);
-    border-radius: 4px;
-    @include box();
-
-    &::after {
-      border-radius: inherit;
-      content: "";
-      height: 100%;
-      left: 0px;
-      opacity: 0;
-      position: absolute;
-      top: 0px;
-      transition: opacity 500ms;
-      width: 100%;
-      user-select: none;
-      pointer-events: none;
-    }
-
-    &::after {
-      background: radial-gradient(
-        600px circle at var(--mouse-x) var(--mouse-y),
-        var(--CardHover),
-        transparent 40%
-      );
-      z-index: 1;
-    }
-  }
-
   .ProjectCard {
+    --border-radius: 11px;
     background-color: var(--backgroundColor);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     max-width: 455px;
 
     display: grid;
     grid-template-rows: 1fr 38px;
     gap: 20px;
 
+    border: 1px solid var(--borderColor);
     font-size: 16px;
     letter-spacing: 0.004em;
     line-height: 1.5;
@@ -90,7 +60,7 @@
     }
 
     inset: 1px;
-    position: absolute;
+    // position: absolute;
     z-index: 2;
     @include box(calc(100% - 2px), calc(100% - 2px));
 
@@ -119,10 +89,12 @@
     }
 
     &__links {
+      display: grid;
       @include box($height: 38px);
-      @include make-flex($just: space-between, $dir: row);
+      grid-template-columns: 1fr 1fr 1fr;
+
       &--resource {
-        @include box(50%);
+        @include box();
         @include make-flex($dir: row);
         gap: 4px;
         text-decoration: none;
@@ -130,6 +102,7 @@
         img {
           height: 20px;
         }
+
         &:hover {
           color: var(--backgroundColor);
           background-color: var(--lightPurple);
@@ -137,6 +110,7 @@
         &:first-child {
           border-top: 1px solid var(--borderColor);
           border-right: 1px solid var(--borderColor);
+          border-bottom-left-radius: calc(var(--border-radius) - 2px);
         }
 
         &:not(:first-child):not(:last-child) {
@@ -145,6 +119,7 @@
         }
 
         &:last-child {
+          border-bottom-right-radius: calc(var(--border-radius) - 2px);
           border-top: 1px solid var(--borderColor);
         }
       }
