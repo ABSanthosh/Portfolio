@@ -14,8 +14,12 @@
     <p class="OSCard__details--desc">{desc}</p>
   </div>
   <div class="OSCard__Stats">
-    <p class="OSCard__Stats--additions">{additions}</p>
-    <p class="OSCard__Stats--deletions">{deletions}</p>
+    <p class="OSCard__Stats--additions" title="No. of lines added">
+      {additions}
+    </p>
+    <p class="OSCard__Stats--deletions" title="No. of lines removed">
+      {deletions}
+    </p>
   </div>
 </div>
 
@@ -25,7 +29,7 @@
 
     @include make-flex($dir: row, $just: space-between);
     background-color: var(--backgroundColor);
-    border-radius: 4px;
+    border-radius: 11px;
     border: 1px solid var(--borderColor);
     padding: 11px;
 
