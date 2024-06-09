@@ -8,7 +8,7 @@ tags:
 
 <h1 class="MdRow JustBetween W100">
   {title}
-  <a href='https://daima.netlify.app/' target="_blank" rel="noopener noreferrer"><img alt='Get it on Google Play' height="35px" src='/assets/Images/Tools/PWA.png'/></a>
+  <a href='https://daima.netlify.app/' target="_blank" rel="noopener noreferrer"><img alt='Get it on Google Play' height="35px" src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Progressive_Web_Apps_Logo.svg/2560px-Progressive_Web_Apps_Logo.svg.png'/></a>
 </h1>
 
 A web based minimal IDE built with Monaco Editor and React. Supports multiple languages and themes. Runs faster than VSCode Web with less memory usage.
@@ -22,15 +22,16 @@ For my course Software Design Lab(SDL), we had to come up with a novel idea and 
 <br/>
 
 > #### 1) Low cost Activity and Health tracker for Aged people
+
 - The goal is to build an android app and apps for devices in the android ecosystem such as Google assistant, Android watch, Android TV, etc to monitor aged people who prefer living alone.
 - Data that is collected will only be available to the person's well-wishers and alert them when a suspicious pattern is found in the data.
 - For example, If the person is watching TV for 10 hours straight and has little to no movement while their vitals are stable, We can infer that the person is not very mobile compared to their usual routines.
-> #### 2) An Integrated development environment
+  > #### 2) An Integrated development environment
 - The goal is to make a browser based, lightweight IDE that does not take up much system resources like popular code editors like VS Code
 - On the surface level, the editor will be a Progressive Web App(PWA) that uses the file system access api to read and edit files on the system.
 - Additional features like a visualizer tool (that shows the sequence of lines executed in a program), live help feature that allows users to seek help from other online users and an extension system that extends the basic capabilities of the editor. These features can be added based on the time constraints after the basic implementation.
 - Technologies like WebAssembly can be looked into to make the editor really lightweight and faster.
-> #### 3) A better Google Scholar for Indian authors
+  > #### 3) A better Google Scholar for Indian authors
 - The goal is to build a one-stop site to search and find all the publications and research papers written by Indian authors.
 - Currently Google scholar can satisfy 50-80% of all searches on research topics but a major con is that not all authors have a profile in google scholar and its very ambiguous to figure out affiliations of the authors since many of them have similar or same name.
 - What we can do differently is to integrate multiple sources like Microsoft academic ID, Google scholar ID, ORCID ID, etc to scrape data that corresponds to Indian authors and papers that Indian authors have co-authored.
@@ -130,21 +131,23 @@ Of course, you can see my implementation too for reference.
 - <a href="https://github.com/ABSanthosh/Daima/blob/a021a2a2c61433ebefe61a64ca3ae968ce143cd9/src/components/MonacoEditor/MonacoEditor.jsx" target="_blank" class="FancyLink" data-type="Bracket">Monaco Editor Component</a>
 - <a href="https://github.com/ABSanthosh/Daima/blob/30565de5e486d59d923c78fe8c426e22d6e31d9a/src/utils/MonacoModel.js" target="_blank" class="FancyLink" data-type="Bracket">Monaco Helper functions</a> (To change files and to change editor content)
 
-
 ### Themes and Languages
-I just opened vscode web and copied the <a href="https://github.com/ABSanthosh/Daima/blob/a216126b12f4e4e626750543cc38959c05a10f02/src/components/MonacoEditor/ThemeHelper.js" target="_blank" class="FancyLink" data-type="Bracket">theme css files</a> and <a href="https://github.com/ABSanthosh/Daima/blob/f08c4307b3b33758cc46382585d8b6a612796ca4/src/assets/Maps/ExtToMap.json" target="_blank" class="FancyLink" data-type="Bracket">language ext mappings</a> in my project and look how I've used it. For the overall UI, you can find the list of themes <a href="https://github.com/ABSanthosh/Daima/blob/0d488bc01d99e941027c901b08738962ffe2f087/src/styles/Themes" target="_blank" class="FancyLink" data-type="Bracket">here</a>. 
+
+I just opened vscode web and copied the <a href="https://github.com/ABSanthosh/Daima/blob/a216126b12f4e4e626750543cc38959c05a10f02/src/components/MonacoEditor/ThemeHelper.js" target="_blank" class="FancyLink" data-type="Bracket">theme css files</a> and <a href="https://github.com/ABSanthosh/Daima/blob/f08c4307b3b33758cc46382585d8b6a612796ca4/src/assets/Maps/ExtToMap.json" target="_blank" class="FancyLink" data-type="Bracket">language ext mappings</a> in my project and look how I've used it. For the overall UI, you can find the list of themes <a href="https://github.com/ABSanthosh/Daima/blob/0d488bc01d99e941027c901b08738962ffe2f087/src/styles/Themes" target="_blank" class="FancyLink" data-type="Bracket">here</a>.
 
 If you want a particular theme from VSCode, just install it in the vscode web and get the css from networks panel. That's much easier than making it yourself.
 
 ### Collaborative Editing
-This one was a pain to implement. I didn't want to host a server that handles stuff. I wanted everything to be only in frontend. So I found <a href="https://github.com/yjs/y-webrtc" target="_blank" class="FancyLink" data-type="Bracket">y-webrtc</a>, <a href="https://docs.yjs.dev" target="_blank" class="FancyLink" data-type="Bracket">yjs</a> and <a href="https://github.com/y-js/y-monaco" target="_blank" class="FancyLink" data-type="Bracket">y-monaco</a>. 
 
-I wish I wrote "I found an example just for my use case, I copy-pasted it and it worked". I spent hours on end to make this work. Since it was a low priority feature, I was left until 2 days before the last presentation. 
+This one was a pain to implement. I didn't want to host a server that handles stuff. I wanted everything to be only in frontend. So I found <a href="https://github.com/yjs/y-webrtc" target="_blank" class="FancyLink" data-type="Bracket">y-webrtc</a>, <a href="https://docs.yjs.dev" target="_blank" class="FancyLink" data-type="Bracket">yjs</a> and <a href="https://github.com/y-js/y-monaco" target="_blank" class="FancyLink" data-type="Bracket">y-monaco</a>.
+
+I wish I wrote "I found an example just for my use case, I copy-pasted it and it worked". I spent hours on end to make this work. Since it was a low priority feature, I was left until 2 days before the last presentation.
 
 #### How it works
+
 Honestly, I don't remember anymore. I was implementing it at 2 or 3am, sitting in the library. I'll try to explain how it works. Good luck following it in the repo.
 
-1) First you <a href="https://github.com/ABSanthosh/Daima/blob/3a59dd7151e785550f0f6a338ccc2d67dfb51479/src/views/Home/Home.jsx#L191" target="_blank" class="FancyLink" data-type="Bracket">initialize </a> the `WebrtcProvider` with the room ID. Here, When you press "Start Session", I use <a href="https://github.com/ai/nanoid" target="_blank" class="FancyLink" data-type="Bracket">nanoid</a> to generate a random 7 character string and use that as the room ID. 
+1. First you <a href="https://github.com/ABSanthosh/Daima/blob/3a59dd7151e785550f0f6a338ccc2d67dfb51479/src/views/Home/Home.jsx#L191" target="_blank" class="FancyLink" data-type="Bracket">initialize </a> the `WebrtcProvider` with the room ID. Here, When you press "Start Session", I use <a href="https://github.com/ai/nanoid" target="_blank" class="FancyLink" data-type="Bracket">nanoid</a> to generate a random 7 character string and use that as the room ID.
 
 ```js
 const setJoinSessionId = useStoreActions((action) => action.setJoinSessionId);
@@ -152,7 +155,7 @@ const nanoid = customAlphabet("1234567890abcdef");
 setJoinSessionId(nanoid(7)); // This is the global state
 ```
 
-Then in <a href="https://github.com/ABSanthosh/Daima/blob/3a59dd7151e785550f0f6a338ccc2d67dfb51479/src/views/Home/Home.jsx#L192" target="_blank" class="FancyLink" data-type="Bracket">Home.jsx</a>, 
+Then in <a href="https://github.com/ABSanthosh/Daima/blob/3a59dd7151e785550f0f6a338ccc2d67dfb51479/src/views/Home/Home.jsx#L192" target="_blank" class="FancyLink" data-type="Bracket">Home.jsx</a>,
 
 ```jsx
 const joinSessionId = useStoreState((state) => state.joinSessionId);
@@ -174,12 +177,11 @@ useEffect(() => {
     const nullId = joinSessionId === null ? joinSessionId : hostSessionId;
   }
 }, [joinSessionId, hostSessionId]);
-
 ```
 
-I check if the session is a host session or a join session and initialize the `WebrtcProvider` with the room ID. I also set the `yProvider` in the global state so that I can use it in other components. 
+I check if the session is a host session or a join session and initialize the `WebrtcProvider` with the room ID. I also set the `yProvider` in the global state so that I can use it in other components.
 
-2) Then I bind the file to the provider when the user selects a file when the hostSessionId is not null.
+2. Then I bind the file to the provider when the user selects a file when the hostSessionId is not null.
 
 Ref: <a href="https://github.com/ABSanthosh/Daima/blob/30565de5e486d59d923c78fe8c426e22d6e31d9a/src/components/Tabs/Tabs.jsx#L57" target="_blank" class="FancyLink" data-type="Bracket">Tabs.jsx</a>
 
@@ -193,26 +195,22 @@ if (hostSessionId !== null) {
 
   const yText = window.yDoc.getText(item.path);
   console.log(yText);
-  const newBinding = new MonacoBinding(
-    yText,
-    model,
-    new Set([editor])
-  );
+  const newBinding = new MonacoBinding(yText, model, new Set([editor]));
   setYBinding(newBinding);
 }
 ```
 
 I've also used the `MonacoBinding` api in <a href="https://github.com/ABSanthosh/Daima/blob/30565de5e486d59d923c78fe8c426e22d6e31d9a/src/components/FolderTree/FolderTree.jsx#L61" target="_blank" class="FancyLink" data-type="Bracket">this file</a> but I have no idea why. It all works and if you're desperate to know how it works, you'll have to clone it and analyze it yourself.
 
-
 ## Conclusion
+
 This was a fun project. When I was trying to get the collaborative editing to work, I found a working demo somewhere online and it was globally collaborative. For fun, I typed "Santhosh was here" along with my github profile link and forgot about it. After a few weeks, I got this in my mail from someone in China:
 
 ```txt
 ...
-I got your contact through the message you left one Yjs Monaco Example the other day 
-while doing research for a personal project of mine. I was much impressed by your 
-resume and portfolio, and wondering if you would be interested in working for me 
+I got your contact through the message you left one Yjs Monaco Example the other day
+while doing research for a personal project of mine. I was much impressed by your
+resume and portfolio, and wondering if you would be interested in working for me
 remotely, for a fee to be agreed upon.
 ...
 ```

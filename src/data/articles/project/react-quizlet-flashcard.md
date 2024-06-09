@@ -9,7 +9,7 @@ tags:
 
 <h1 class="MdRow JustBetween W100">
   {title}
-  <a href='https://www.npmjs.com/package/react-quizlet-flashcard' target="_blank" rel="noopener noreferrer"><img alt='Get it on Google Play' height="30px" class="MdRow" src='/assets/Images/Tools/NPM.svg'/></a>
+  <a href='https://www.npmjs.com/package/react-quizlet-flashcard' target="_blank" rel="noopener noreferrer"><img alt='Get it on NPM' height="50px" class="MdRow" src='https://avatars.githubusercontent.com/u/6078720?s=200&v=4'/></a>
 </h1>
 
 A simple and responsive quizlet-like flashcard component with no additional dependency. Written in Typescript and React.

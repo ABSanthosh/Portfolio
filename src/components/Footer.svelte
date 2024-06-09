@@ -30,10 +30,6 @@
   <div class="FooterWrapper__container">
     <div class="FooterWrapper__container--left">
       Made with <span class="FooterWrapper__container--heart">&hearts;</span>
-      and
-      <a href="https://svelte.dev" target="_blank">
-        <img src={Logos.language.svelte.image} alt="Svelte" />
-      </a>
       by
       <a
         href="https://www.linkedin.com/in/a-b-santhosh-97872612b/"
