@@ -20,13 +20,15 @@
     <h1 class="HeroSection--title">Hey! I'm Santhosh</h1>
     <article class="HeroSection--desc">
       <p>
-        I'm a software developer and a CS undergrad at Shiv Nadar University,
-        Delhi, NCR. I make functional websites and native mobile android
-        applications while specializing at converting design to code. In my last
-        internship at GameNation, I created and maintained production level
-        modules as a php intern.
-      </p>
-      <p>
+        <!-- <img src="/favicon.png" alt="santhosh" style="float: left; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" /> -->
+        I'm a software developer and a CS undergrad at Shiv Nadar University, Delhi,
+        NCR. I make functional websites and native mobile android applications while
+        specializing at converting design to code. In my last internship at GameNation,
+        I created and maintained production level modules as a php intern.
+
+        <br />
+        <br />
+
         I also contribute to open source projects while also building and
         maintaining my own open source libraries. Currently, I'm working on
         <a
@@ -39,8 +41,9 @@
           react-quizlet-flashcard
         </a>
         component library.
-      </p>
-      <p>
+
+        <br />
+        <br />
         When I'm not writing code, I try to catch up with my favourite manga and
         anime series or play sandbox games like Minecraft.
       </p>
@@ -195,6 +198,7 @@
       &--title {
         font-size: 1.875rem;
         line-height: 2.25rem;
+        // font-weight: 500;
         color: var(--headingColor);
       }
 
@@ -203,7 +207,8 @@
         @include make-flex($align: flex-start);
 
         p {
-          line-height: 22px;
+          color: var(--subText);
+          line-height: 27px;
           text-align: justify;
           word-spacing: -0.05em;
           word-break: break-word;
@@ -284,7 +289,7 @@
         flex-wrap: wrap;
         align-content: flex-start;
         @include box($height: unset);
-        @include make-flex($just: flex-start, $align: flex-start, $dir: row);
+        @include make-flex($dir: row);
       }
     }
   }

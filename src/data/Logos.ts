@@ -3,36 +3,35 @@ import logo_Kotlin from "$images/Languages/Kotlin.png";
 import logo_Java from "$images/Languages/Java.png";
 import logo_Python from "$images/Languages/Python.png";
 import logo_JavaScript from "$images/Languages/JavaScript.png";
-import logo_C from "$images/Languages/C.svg";
+import logo_C from "$images/Languages/C.png";
 import logo_HTML from "$images/Languages/HTML.png";
 import logo_CSS from "$images/Languages/CSS.png";
 import logo_SASS from "$images/Languages/SASS.png";
-import logo_TypeScript from "$images/Languages/TypeScript.svg";
+import logo_TypeScript from "$images/Languages/TypeScript.png";
 import logo_ShellScript from "$images/Languages/ShellScript.png";
-import logo_PHP from "$images/Languages/PHP.svg";
+import logo_PHP from "$images/Languages/PHP.png";
 
-import logo_Django from "$images/Frameworks/Django.svg";
+import logo_Django from "$images/Frameworks/Django.png";
 import logo_ExpressJs from "$images/Frameworks/ExpressJs.png";
-import logo_FastifyDark from "$images/Frameworks/FastifyDark.png";
 import logo_NextJs from "$images/Frameworks/NextJs.png";
 import logo_NodeJs from "$images/Frameworks/NodeJs.png";
-import logo_ReactJs from "$images/Frameworks/ReactJs.svg";
+import logo_ReactJs from "$images/Frameworks/ReactJs.png";
 import logo_RemixJs from "$images/Frameworks/RemixJs.png";
-import logo_Prisma from "$images/Frameworks/Prisma.svg";
-import logo_Redux from "$images/Frameworks/Redux.svg";
+import logo_Prisma from "$images/Frameworks/Prisma.png";
+import logo_Redux from "$images/Frameworks/Redux.png";
 import logo_EasyPeasy from "$images/Frameworks/EasyPeasy.png";
 
-import logo_ESLint from "$images/Tools/ESLint.svg";
-import logo_Git from "$images/Tools/Git.svg";
-import logo_GitHub from "$images/Tools/GitHub.svg";
-import logo_NetlifyDark from "$images/Tools/NetlifyDark.svg";
-import logo_NPM from "$images/Tools/NPM.svg";
-import logo_SVN from "$images/Tools/SVN.svg";
-import logo_VSCode from "$images/Tools/VSCode.svg";
-import logo_Yarn from "$images/Tools/Yarn.svg";
-import logo_Figma from "$images/Tools/Figma.svg";
-import logo_Postman from "$images/Tools/Postman.svg";
-import logo_Docker from "$images/Tools/Docker.svg";
+import logo_ESLint from "$images/Tools/ESLint.png";
+import logo_Git from "$images/Tools/Git.png";
+import logo_GitHub from "$images/Tools/GitHub.png";
+import logo_Netlify from "$images/Tools/Netlify.png";
+import logo_NPM from "$images/Tools/NPM.png";
+import logo_SVN from "$images/Tools/SVN.png";
+import logo_VSCode from "$images/Tools/VSCode.png";
+import logo_Yarn from "$images/Tools/Yarn.png";
+import logo_Figma from "$images/Tools/Figma.png";
+import logo_Postman from "$images/Tools/Postman.png";
+import logo_Docker from "$images/Tools/Docker.png";
 
 import logo_Verse from "$images/VerseLogo.png";
 import logo_Lightify from "$images/LightifyLogo.png";
@@ -131,11 +130,6 @@ export const Logos: ILogos = {
       image: logo_ExpressJs,
       href: "https://expressjs.com/",
     },
-    fastify: {
-      name: "Fastify",
-      image: logo_FastifyDark,
-      href: "https://fastify.io/",
-    },
     nextjs: {
       name: "Next.js",
       image: logo_NextJs,
@@ -190,7 +184,7 @@ export const Logos: ILogos = {
     },
     netlify: {
       name: "Netlify",
-      image: logo_NetlifyDark,
+      image: logo_Netlify,
       href: "https://www.netlify.com/",
     },
     npm: {
