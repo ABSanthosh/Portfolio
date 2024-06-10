@@ -41,7 +41,7 @@
 
 <style lang="scss">
   .ProjectCard {
-    --border-radius: 11px;
+    --border-radius: 8px;
     background-color: var(--backgroundColor);
     border-radius: var(--border-radius);
     max-width: 455px;
@@ -85,6 +85,7 @@
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        color: var(--subText);
       }
     }
 

@@ -41,22 +41,13 @@ export interface ILogo {
   image: string;
   href: string;
 }
-interface ILogos {
-  language: {
-    [key: string]: ILogo;
-  };
-  framework: {
-    [key: string]: ILogo;
-  };
-  tool: {
-    [key: string]: ILogo;
-  };
-  misc: {
-    [key: string]: ILogo;
-  };
-}
+// type ILogos = ;
 
-export const Logos: ILogos = {
+export const Logos: {
+  [options: string]: {
+    [key: string]: ILogo;
+  };
+} = {
   language: {
     svelte: {
       name: "Svelte",

@@ -21,16 +21,15 @@
     <article class="HeroSection--desc">
       <p>
         <!-- <img src="/favicon.png" alt="santhosh" style="float: left; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" /> -->
-        I'm a software developer and a CS undergrad at Shiv Nadar University, Delhi,
-        NCR. I make functional websites and native mobile android applications while
-        specializing at converting design to code. In my last internship at GameNation,
-        I created and maintained production level modules as a php intern.
-
+        I'm a software developer with a B.Tech in Computer Science, specializing
+        in Cyber Security, from Shiv Nadar University, Delhi NCR. I create functional
+        websites and native mobile Android applications, excelling at converting
+        designs into code.
         <br />
         <br />
 
         I also contribute to open source projects while also building and
-        maintaining my own open source libraries. Currently, I'm working on
+        maintaining my own open source libraries. My recent works include
         <a
           class="FancyLink"
           data-type="Bracket"
@@ -40,12 +39,22 @@
         >
           react-quizlet-flashcard
         </a>
-        component library.
+        and
+        <a
+          class="FancyLink"
+          data-type="Bracket"
+          href="https://github.com/ABSanthosh/neko-ts"
+          target="_blank"
+          referrerpolicy="no-referrer"
+        >
+          neko-ts
+        </a>
+        libraries.
 
         <br />
         <br />
-        When I'm not writing code, I try to catch up with my favourite manga and
-        anime series or play sandbox games like Minecraft.
+        When I'm not writing code, I enjoy catching up with my favorite manga and
+        anime series or playing sandbox games like Minecraft.
       </p>
       <div class="HeroSection--actions">
         <a
@@ -144,6 +153,11 @@
       {#each Object.values(Logos[value]) as item}
         <ToolCard name={item.name} href={item.href} image={item.image} />
       {/each}
+      <!-- {#each ["language", "tool", "framework"] as key}
+        {#each Object.values(Logos[key]) as item}
+          <ToolCard name={item.name} href={item.href} image={item.image} />
+        {/each}
+      {/each} -->
     </div>
   </section>
   <section class="Home__section">

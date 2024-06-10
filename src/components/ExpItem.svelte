@@ -19,11 +19,11 @@
     <p>
       {desc}
     </p>
-    <div class="ExpItemDetails__content--links">
+    <!-- <div class="ExpItemDetails__content--links">
       <a class="FancyLink" href={`/experience/${slug}`} data-type="ButtonLink">
         Read more
       </a>
-    </div>
+    </div> -->
   </main>
 </details>
 
@@ -35,15 +35,20 @@
       @include make-flex();
       gap: 20px;
 
-      &--links {
-        @include box($height: auto);
-        @include make-flex($dir: row, $just: flex-end);
-
-        a {
-          @include box(auto, 28px);
-          font-size: 14px;
-        }
+      & > p {
+        color: var(--subText);
+        line-height: 30px;
       }
+
+      // &--links {
+      //   @include box($height: auto);
+      //   @include make-flex($dir: row, $just: flex-end);
+
+      //   a {
+      //     @include box(auto, 28px);
+      //     font-size: 14px;
+      //   }
+      // }
     }
   }
 

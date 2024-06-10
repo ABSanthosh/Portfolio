@@ -57,25 +57,9 @@ const Projects: IProject[] = [
     ],
   },
   {
-    title: "Surge 2022",
-    desc: "(Database asleep 😴)Event management website built with NextJs and Prisma. Handled 1000+ registrations and 30k+ unique page visits before the event.",
-    featured: true,
-    links: {
-      github: "https://github.com/surge-snu/Surge2022",
-      live: "https://surge2022.vercel.app/",
-      slug: "surge-2022",
-    },
-    tech: [
-      Logos.language.javascript,
-      Logos.language.sass,
-      Logos.framework.nextjs,
-      Logos.framework.prisma,
-    ],
-  },
-  {
     title: "Gastly",
     desc: "A simple pokedex web app that fetches from custom pokemon api and displays them in a beautiful UI. Built with NextJs.",
-    featured: false,
+    featured: true,
     links: {
       github: "https://github.com/ABSanthosh/Gastly",
       live: "https://gastly-v4.netlify.app/",
@@ -115,6 +99,22 @@ const Projects: IProject[] = [
       Logos.language.typescript,
       Logos.language.sass,
       Logos.framework.reactjs,
+    ],
+  },
+  {
+    title: "Surge 2022",
+    desc: "(Database asleep 😴)Event management website built with NextJs and Prisma. Handled 1000+ registrations and 30k+ unique page visits before the event.",
+    featured: false,
+    links: {
+      github: "https://github.com/surge-snu/Surge2022",
+      live: "https://surge2022.vercel.app/",
+      slug: "surge-2022",
+    },
+    tech: [
+      Logos.language.javascript,
+      Logos.language.sass,
+      Logos.framework.nextjs,
+      Logos.framework.prisma,
     ],
   },
   {

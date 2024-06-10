@@ -67,6 +67,7 @@
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
+        color: var(--subText);
         text-overflow: ellipsis;
       }
     }
