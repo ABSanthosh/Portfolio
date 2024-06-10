@@ -127,9 +127,6 @@
         display: inline-flex;
         gap: 4px;
         align-items: center;
-        img {
-          height: 15px;
-        }
       }
 
       &--right {
