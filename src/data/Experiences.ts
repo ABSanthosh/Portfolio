@@ -1,4 +1,4 @@
-export const RESUME_PATH = "https://raw.githubusercontent.com/ABSanthosh/Portfolio/main/public/assets/Docs/AB%20Santhosh%20Resume.pdf"
+export const RESUME_PATH = "https://github.com/ABSanthosh/Portfolio/raw/sveltekit/src/data/Resume.pdf"
 
 interface IExperience {
   position: string;
