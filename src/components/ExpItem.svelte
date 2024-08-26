@@ -21,11 +21,11 @@
     <p>
       {expItem.desc}
     </p>
-    <div class="ExpItemDetails__content--links">
+    <!-- <div class="ExpItemDetails__content--links">
       <a class="FancyLink" href={`/experience/${expItem.slug}`} data-type="ButtonLink">
         Read more
       </a>
-    </div>
+    </div> -->
   </main>
 </details>
 
@@ -42,15 +42,15 @@
         line-height: 30px;
       }
 
-      &--links {
-        @include box($height: auto);
-        @include make-flex($dir: row, $just: flex-end);
+      // &--links {
+      //   @include box($height: auto);
+      //   @include make-flex($dir: row, $just: flex-end);
 
-        a {
-          @include box(auto, 28px);
-          font-size: 14px;
-        }
-      }
+      //   a {
+      //     @include box(auto, 28px);
+      //     font-size: 14px;
+      //   }
+      // }
     }
   }
 
