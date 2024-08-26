@@ -38,10 +38,12 @@
     <article class="HeroSection--desc">
       <p>
         <!-- <img src="/favicon.png" alt="santhosh" style="float: left; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" /> -->
-        I'm a software developer with a B.Tech in Computer Science, specializing
-        in Cyber Security, from Shiv Nadar University, Delhi NCR. I create functional
-        websites and native mobile Android applications, excelling at converting
-        designs into code.
+        I'm a software developer with a
+        <b> B.Tech in Computer Science, specializing in Cyber Security,</b>
+        from Shiv Nadar University, Delhi NCR and am currently pursuing a
+        <b> Master of Software Engineering at Penn State University</b>. I
+        create functional websites and native mobile Android applications,
+        excelling at converting designs into code.
         <br />
         <br />
 
