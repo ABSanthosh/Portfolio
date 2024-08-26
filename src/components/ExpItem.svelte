@@ -1,29 +1,31 @@
-<script>
-  let { position, slug, shortDesc, desc, tStart, tEnd } = $$props;
+<script lang="ts">
+  import { type IExperience } from "$data/Experiences";
+
+  export let expItem = $$props as IExperience;
 </script>
 
 <details class="ExpItemDetails FancyDetail">
   <summary class="ExpItem">
     <h4>
-      {position}
+      {expItem.position}
     </h4>
     <p>
-      {shortDesc}
+      {expItem.shortDesc}
     </p>
     <hr />
     <span>
-      {tEnd === "Present" ? tStart.split(" ")[1] : tEnd.split(" ")[1]}
+      {expItem.end.getFullYear()}
     </span>
   </summary>
   <main class="ExpItemDetails__content">
     <p>
-      {desc}
+      {expItem.desc}
     </p>
-    <!-- <div class="ExpItemDetails__content--links">
-      <a class="FancyLink" href={`/experience/${slug}`} data-type="ButtonLink">
+    <div class="ExpItemDetails__content--links">
+      <a class="FancyLink" href={`/experience/${expItem.slug}`} data-type="ButtonLink">
         Read more
       </a>
-    </div> -->
+    </div>
   </main>
 </details>
 
@@ -40,15 +42,15 @@
         line-height: 30px;
       }
 
-      // &--links {
-      //   @include box($height: auto);
-      //   @include make-flex($dir: row, $just: flex-end);
+      &--links {
+        @include box($height: auto);
+        @include make-flex($dir: row, $just: flex-end);
 
-      //   a {
-      //     @include box(auto, 28px);
-      //     font-size: 14px;
-      //   }
-      // }
+        a {
+          @include box(auto, 28px);
+          font-size: 14px;
+        }
+      }
     }
   }
 
