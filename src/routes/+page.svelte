@@ -12,7 +12,6 @@
   let toolsOption = "languages",
     value: "language" | "tool" | "framework" = "language";
 
-  // Projects.splice(6, Projects.length - 6);
   let quickLinks = [
     {
       title: "Github",
@@ -76,30 +75,29 @@
       </p>
       <div class="HeroSection--actions">
         {#each quickLinks as link}
-            <a
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="FancyLink"
-              data-type="ButtonLink"
-            >
-              {link.title}
-            </a>
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="FancyLink"
+            data-type="ButtonLink"
+          >
+            {link.title}
+          </a>
         {/each}
       </div>
     </article>
   </section>
   <section class="Home__section">
     <h2>Experiences</h2>
-    {#each Experiences as exp (exp)}
-      <ExpItem
-        position={exp.position}
-        shortDesc={exp.shortDesc}
-        desc={exp.desc}
-        tStart={exp.start}
-        tEnd={exp.end}
-        slug={exp.slug}
-      />
+    {#each Experiences.sort((a, b) => {
+      if (a.end.getFullYear() === b.end.getFullYear()) {
+        return a.end.getMonth() - b.end.getMonth();
+      } else {
+        return b.end.getFullYear() - a.end.getFullYear();
+      }
+    }) as expItem (expItem)}
+      <ExpItem {expItem} />
     {/each}
   </section>
   <section class="Home__section ProjectSection">
@@ -146,11 +144,6 @@
       {#each Object.values(Logos[value]) as item}
         <ToolCard name={item.name} href={item.href} image={item.image} />
       {/each}
-      <!-- {#each ["language", "tool", "framework"] as key}
-        {#each Object.values(Logos[key]) as item}
-          <ToolCard name={item.name} href={item.href} image={item.image} />
-        {/each}
-      {/each} -->
     </div>
   </section>
   <section class="Home__section">
