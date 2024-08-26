@@ -1,5 +1,8 @@
+// export const RESUME_PATH =
+//   "https://docs.google.com/viewer?url=https://github.com/ABSanthosh/Portfolio/raw/sveltekit/src/data/Resume.pdf";
+
 export const RESUME_PATH =
-  "https://github.com/ABSanthosh/Portfolio/raw/sveltekit/src/data/Resume.pdf";
+  "https://nbviewer.org/github/ABSanthosh/Portfolio/blob/sveltekit/src/data/Resume.pdf";
 
 export interface IExperience {
   position: string;
