@@ -37,44 +37,53 @@
     <h1 class="HeroSection--title">Hey! I'm Santhosh</h1>
     <article class="HeroSection--desc">
       <p>
-        <!-- <img src="/favicon.png" alt="santhosh" style="float: left; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" /> -->
-        I'm a software developer with a
-        <b> B.Tech in Computer Science, specializing in Cyber Security,</b>
-        from Shiv Nadar University, Delhi NCR and am currently pursuing a
-        <b> Master of Software Engineering at Penn State University</b>. I
-        create functional websites and native mobile Android applications,
-        excelling at converting designs into code.
-        <br />
-        <br />
-
-        I also contribute to open source projects while also building and
-        maintaining my own open source libraries. My recent works include
-        <a
-          class="FancyLink"
-          data-type="Bracket"
-          href="https://www.npmjs.com/package/react-quizlet-flashcard"
-          target="_blank"
-          referrerpolicy="no-referrer"
-        >
-          react-quizlet-flashcard
-        </a>
-        and
-        <a
-          class="FancyLink"
-          data-type="Bracket"
-          href="https://github.com/ABSanthosh/neko-ts"
-          target="_blank"
-          referrerpolicy="no-referrer"
-        >
-          neko-ts
-        </a>
-        libraries.
-
-        <br />
-        <br />
-        When I'm not writing code, I enjoy catching up with my favorite manga and
-        anime series or playing sandbox games like Minecraft.
+        I know you don't have time to read long paragraphs, so here's what you
+        need to know:
       </p>
+      <ul>
+        <li>
+          I have a Bachelor's degree in Computer Science, specializing in Cyber
+          Security.
+        </li>
+        <li>
+          I'm currently pursuing a Master's degree in Software Engineering at
+          Penn State University.
+        </li>
+        <li>
+          I build websites(a lot of 'em) and native mobile Android applications.
+        </li>
+        <br />
+        <li>
+          I work on open source projects and maintain my own libraries.
+          <ul>
+            <li>
+              <a
+                class="FancyLink"
+                data-type="Bracket"
+                href="https://www.npmjs.com/package/react-quizlet-flashcard"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                react-quizlet-flashcard
+              </a>
+            </li>
+            <li>
+              <a
+                class="FancyLink"
+                data-type="Bracket"
+                href="https://github.com/ABSanthosh/neko-ts"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                neko-ts
+              </a>
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>I enjoy reading manga and watching anime in my free time.</li>
+        <li>I also (used to)play sandbox games like Minecraft.</li>
+      </ul>
       <div class="HeroSection--actions">
         {#each quickLinks as link}
           <a
@@ -214,6 +223,19 @@
           text-align: justify;
           word-spacing: -0.05em;
           word-break: break-word;
+        }
+
+        ul {
+          list-style-type: disc;
+          padding-left: 20px;
+          line-height: 27px;
+          // text-align: justify;
+          word-spacing: -0.05em;
+          word-break: break-word;
+
+          li {
+            color: var(--subText);
+          }
         }
       }
 
