@@ -13,6 +13,24 @@
     value: "language" | "tool" | "framework" = "language";
 
   // Projects.splice(6, Projects.length - 6);
+  let quickLinks = [
+    {
+      title: "Github",
+      href: "https://github.com/ABSanthosh",
+    },
+    {
+      title: "LinkedIn",
+      href: "https://www.linkedin.com/in/a-b-santhosh-97872612b/",
+    },
+    {
+      title: "Email",
+      href: "mailto:a.b.santhosh02@gmail.com",
+    },
+    {
+      title: "Resume",
+      href: RESUME_PATH,
+    },
+  ];
 </script>
 
 <main class="Home Page">
@@ -57,42 +75,17 @@
         anime series or playing sandbox games like Minecraft.
       </p>
       <div class="HeroSection--actions">
-        <a
-          href="https://github.com/ABSanthosh"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="FancyLink"
-          data-type="ButtonLink"
-        >
-          Github
-        </a>
-        <a
-          href="https://www.linkedin.com/in/a-b-santhosh-97872612b/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="FancyLink"
-          data-type="ButtonLink"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="mailTo:a.b.santhosh02@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="FancyLink"
-          data-type="ButtonLink"
-        >
-          Email
-        </a>
-        <a
-          href={RESUME_PATH}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="FancyLink"
-          data-type="ButtonLink"
-        >
-          Resume
-        </a>
+        {#each quickLinks as link}
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="FancyLink"
+              data-type="ButtonLink"
+            >
+              {link.title}
+            </a>
+        {/each}
       </div>
     </article>
   </section>
