@@ -39,7 +39,7 @@ I spent at least 2 months shortlisting universities. Every application costs rou
 
 ## Statement of Purpose
 
-The bread and butter of your application. This is where you tell the university why you want to study there and why you're the best fit for the program. Ironically, I spent very less time on this than I should've. I wrote 2 drafts and used the second draft as a template for all the universities I applied to while just changing the name of the university and the program.
+The bread and butter of your application. This is where you tell the university why you want to study there and why you're the best fit for the program. Ironically, I spent very less time on this than I should've. I wrote 2 drafts and used the second draft as a template for all the universities I applied to.
 
 It was so good I had a couple of people asking me if I used ChatGPT to write it. I didn't. Used some AI checker to check for grammar and plagiarism.
 
