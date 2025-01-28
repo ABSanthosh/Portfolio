@@ -4,6 +4,7 @@
   margin: 0;
   position: relative;
 
+  & > picture,
   & > img {
     border: 1px solid var(--detailsBorder);
     border-radius: 7px;

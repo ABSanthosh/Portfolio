@@ -72,6 +72,21 @@ const Projects: IProject[] = [
     ],
   },
   {
+    title: "Barn",
+    desc: "A feature-ful news application powered by RSS. Includes AI summary.",
+    featured: false,
+    links: {
+      github: "https://github.com/ABSanthosh/barn",
+      live: "https://barn.abs.moe",
+      slug: "barn",
+    },
+    tech: [
+      Logos.language.svelte,
+      Logos.language.sass,
+      Logos.language.typescript,
+    ],
+  },
+  {
     title: "Surge 2022",
     desc: "(Database asleep 😴)Event management website built with NextJs and Prisma. Handled 1000+ registrations and 30k+ unique page visits before the event.",
     featured: true,
