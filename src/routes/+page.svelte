@@ -113,6 +113,12 @@
       <ExpItem {expItem} />
     {/each}
   </section>
+  <section class="Home__section">
+    <h2>Publications</h2>
+    {#each Publications as item}
+      <PublicationCard {...item} />
+    {/each}
+  </section>
   <section class="Home__section ProjectSection">
     <div class="w-100 Row--between">
       <h2 class="Home__section--title">Projects</h2>
@@ -170,12 +176,6 @@
         additions={item.additions}
         deletions={item.deletions}
       />
-    {/each}
-  </section>
-  <section class="Home__section">
-    <h2>Publications</h2>
-    {#each Publications as item}
-      <PublicationCard {...item} />
     {/each}
   </section>
   <section class="Home__section">
