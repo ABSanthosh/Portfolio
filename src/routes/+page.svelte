@@ -8,6 +8,8 @@
   import GithubMap from "../components/GithubMap.svelte";
   import ProjectCard from "$components/ProjectCard.svelte";
   import Experiences, { RESUME_PATH } from "$data/Experiences";
+  import { Publications } from "$data/Publications";
+  import PublicationCard from "$components/PublicationCard.svelte";
 
   let toolsOption = "languages",
     value: "language" | "tool" | "framework" = "language";
@@ -19,7 +21,7 @@
     },
     {
       title: "LinkedIn",
-      href: "https://www.linkedin.com/in/a-b-santhosh-97872612b/",
+      href: "https://www.linkedin.com/in/absanthosh",
     },
     {
       title: "Email",
@@ -168,6 +170,12 @@
         additions={item.additions}
         deletions={item.deletions}
       />
+    {/each}
+  </section>
+  <section class="Home__section">
+    <h2>Publications</h2>
+    {#each Publications as item}
+      <PublicationCard {...item} />
     {/each}
   </section>
   <section class="Home__section">

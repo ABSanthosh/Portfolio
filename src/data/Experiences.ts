@@ -15,6 +15,15 @@ export interface IExperience {
 }
 const Experiences: IExperience[] = [
   {
+    position: "Graduate Research Assistant",
+    company: "Pennsylvania State University",
+    desc: "Support and work of research projects and publish papers in the field of LLMs",
+    shortDesc: "Work on research projects",
+    start: new Date("2024-06"),
+    end: new Date("2025-12"),
+    slug: "psu",
+  },
+  {
     position: "Development Lead",
     company: "Google Developer Student Club",
     desc: "Manage all the development activities of the club and teach a cohort of 30+ students about Web development and Mobile development.",
