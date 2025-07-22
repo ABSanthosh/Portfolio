@@ -10,6 +10,6 @@ export const setTheme = (value: Theme) => {
   if (browser) {
     window.localStorage.setItem("theme", value);
     document.documentElement.dataset.theme = value;
-    theme.set(value)
+    theme.set(value);
   }
 };
