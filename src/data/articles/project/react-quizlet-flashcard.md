@@ -89,3 +89,39 @@ Special mention to my friend who made a website for me using my library so she c
 ## Conclusion
 
 I really enjoyed making this library. I have one more feature in mind that I recently learnt how to do so I might do that when I get time. I also have 2 more library ideas that I want to make. A minimal table component and Neko(cat) component that you can add to your website like in this website(If you haven't see what it does, scroll to the bottom of the page and enable "Neko" and move your mouse around).
+
+## Update
+
+After 3 years of publishing the last version, it finally reached 100 stars!
+
+<span class="MdRow W100">
+  <figure class="MdFigure">
+    <img alt="100 stars" src="/assets/Articles/projects/react-quizlet-flashcard/starNotification2.png"  loading="lazy"/>
+    <figcaption>100 stars</figcaption>
+  </figure>
+</span>
+
+<br />
+
+A few weeks ago, I got a pull request from a user who added unit tests, which I had in the todo list for the last 3 years. I thought I could just swoop in, review it, and merge it. But when I opened the codebase again and dusted off the cobwebs, I realized that the code was a mess. Why was I using `useRef` to handle callbacks? Even thought I didn't use React for the last 2 years, I can still tell that it was a bad idea. So I decided to rewrite the whole thing.
+
+I think its a good sign when you can look back at your code and think "Wow, I was so dumb back then". It means you have improved. So I rewrote the whole thing, reduced the complexity, and abstracted the logic into a custom hook. So now the components `<Flashcard />` and `<FlashcardArray />` uses the `useFlashcard()` and `useFlashcardArray()` hooks internally to manage the state and logic and now you can use the hook separately and pass it to your own components to have fine-grained control over the flashcard state and logic.
+
+I added a couple more features that only a custom hook can provide so check out the [demo page](https://flashcard.abs.moe).
+
+I also got rid of Storybook and added a full documentation site using [Fumadocs](https://fumadocs.dev/). I also added [ladle](https://ladle.dev/) to use during development. It is very minimal and fast enough to use during development.
+
+Although it took me a couple of weeks to rewrite the whole thing, I think it was worth it. The code is now much cleaner and easier to maintain. It also reminded me why I moved away from React in the first place and switched over to Svelte and from Next.js to SvelteKit.
+
+At this rate, I might get to 200 stars in the next 3 years. But I'm happy that there are ~190 people using the library now compared to the 50 people when I wrote the last article.
+
+<span class="MdRow W100">
+  <figure class="MdFigure">
+    <img alt="Used by" src="/assets/Articles/projects/react-quizlet-flashcard/UsedBy2.png"  loading="lazy" height="150" />
+    <figcaption>Used by</figcaption>
+  </figure>
+</span>
+
+<br/>
+
+Feel free to make a issue on the [GitHub repository](https://github.com/ABSanthosh/react-quizlet-flashcard) if you have any questions or suggestions. I will try to respond as soon as possible.
