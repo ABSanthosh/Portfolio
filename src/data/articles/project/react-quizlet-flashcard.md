@@ -35,7 +35,7 @@ But whats the core of a flashcard app? Flashcards. I looked for a library that w
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="Fine I'll do it myself meme" src="/assets/Articles/projects/react-quizlet-flashcard/meme.gif"  loading="lazy" width="80%"/>
+        <img alt="Fine I'll do it myself meme" src="/assets/articles/projects/react-quizlet-flashcard/meme.gif"  loading="lazy" width="80%"/>
         <figcaption>Meme</figcaption>
     </figure>
 </span>
@@ -64,7 +64,7 @@ There are around 50 people using my library and everytime I see the list, It jus
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="No. of people using" src="/assets/Articles/projects/react-quizlet-flashcard/UsedBy.png"  loading="lazy" height="150px"/>
+        <img alt="No. of people using" src="/assets/articles/projects/react-quizlet-flashcard/UsedBy.png"  loading="lazy" height="150px"/>
         <figcaption>No. of people using</figcaption>
     </figure>
 </span>
@@ -81,7 +81,7 @@ Special mention to my friend who made a website for me using my library so she c
 <span class="MdRow W100">
 
   <figure class="MdFigure">
-  <img alt="Latest star" src="/assets/Articles/projects/react-quizlet-flashcard/starNotification.png"  loading="lazy"/>
+  <img alt="Latest star" src="/assets/articles/projects/react-quizlet-flashcard/starNotification.png"  loading="lazy"/>
   <figcaption>Latest star</figcaption>
   </figure>
 </span>
@@ -96,7 +96,7 @@ After 3 years of publishing the last version, it finally reached 100 stars!
 
 <span class="MdRow W100">
   <figure class="MdFigure">
-    <img alt="100 stars" src="/assets/Articles/projects/react-quizlet-flashcard/starNotification2.png"  loading="lazy"/>
+    <img alt="100 stars" src="/assets/articles/projects/react-quizlet-flashcard/starNotification2.png"  loading="lazy"/>
     <figcaption>100 stars</figcaption>
   </figure>
 </span>
@@ -117,7 +117,7 @@ At this rate, I might get to 200 stars in the next 3 years. But I'm happy that t
 
 <span class="MdRow W100">
   <figure class="MdFigure">
-    <img alt="Used by" src="/assets/Articles/projects/react-quizlet-flashcard/UsedBy2.png"  loading="lazy" height="150" />
+    <img alt="Used by" src="/assets/articles/projects/react-quizlet-flashcard/UsedBy2.png"  loading="lazy" height="150" />
     <figcaption>Used by</figcaption>
   </figure>
 </span>

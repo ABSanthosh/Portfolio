@@ -26,7 +26,7 @@ I found this design on [Dribble]()
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="Dribble design" src="/src/data/articles/assets/projects/gastly/dribble_design.png"  loading="lazy" width="100%"/>
+        <img alt="Dribble design" src="/assets/articles/projects/gastly/dribble_design.png"  loading="lazy" width="100%"/>
         <figcaption>Dribble design</figcaption>
     </figure>
 </span>
@@ -36,7 +36,7 @@ While building the website, I made a lot of changes to the initial inspiration.
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="Website design" src="/src/data/articles/assets/projects/gastly/website_design.png"  loading="lazy" width="100%"/>
+        <img alt="Website design" src="/assets/articles/projects/gastly/website_design.png"  loading="lazy" width="100%"/>
         <figcaption>Final Website design</figcaption>
     </figure>
 </span>
@@ -46,7 +46,7 @@ Unfortunately I can't seem to get the original Django website to work to take a 
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="Old Website design" src="/src/data/articles/assets/projects/gastly/old_design.png"  loading="lazy" width="100%"/>
+        <img alt="Old Website design" src="/assets/articles/projects/gastly/old_design.png"  loading="lazy" width="100%"/>
         <figcaption>Old Website design</figcaption>
     </figure>
 </span>
@@ -117,7 +117,7 @@ If you simplify the design from earlier, you get this:
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="Codepen demo" src="/src/data/articles/assets/projects/gastly/codepen_layout.png"  loading="lazy" width="90%"/>
+        <img alt="Codepen demo" src="/assets/articles/projects/gastly/codepen_layout.png"  loading="lazy" width="90%"/>
         <figcaption>Codepen demo</figcaption>
     </figure>
 </span>
@@ -127,7 +127,7 @@ but in the mobile design, I wanted the search bar at the top of the screen, then
 
 <span class="MdRow W100">
     <figure class="MdFigure">
-        <img alt="Codepen demo" src="/src/data/articles/assets/projects/gastly/codepen_layout_mobile.png"  loading="lazy" width="40%"/>
+        <img alt="Codepen demo" src="/assets/articles/projects/gastly/codepen_layout_mobile.png"  loading="lazy" width="40%"/>
         <figcaption>Codepen demo</figcaption>
     </figure>
 </span>

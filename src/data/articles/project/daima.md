@@ -61,7 +61,7 @@ At this time, Jetbrains released <a href="https://www.jetbrains.com/fleet/" targ
 
 |                       Fleet Side Pane                       |                       Daima Side Pane                       |                       VS Code Side Pane                       |
 | :---------------------------------------------------------: | :---------------------------------------------------------: | :-----------------------------------------------------------: |
-| ![Fleet](/assets/Articles/projects/daima/FleetSidePane.png) | ![Daima](/assets/Articles/projects/daima/DaimaSidePane.png) | ![VSCode](/assets/Articles/projects/daima/VSCodeSidePane.png) |
+| ![Fleet](/assets/articles/projects/daima/FleetSidePane.png) | ![Daima](/assets/articles/projects/daima/DaimaSidePane.png) | ![VSCode](/assets/articles/projects/daima/VSCodeSidePane.png) |
 
 Its not impressive but its not very bad either.
 
@@ -120,8 +120,8 @@ After a lot of research(or basically googling), I found some chinese blog that e
 - <a href="https://blog.expo.dev/building-a-code-editor-with-monaco-f84b3a06deaf" target="_blank" class="FancyLink" data-type="Bracket">Building a Code Editor with Monaco</a>
 - <a href="https://stackoverflow.com/questions/57048510/how-to-initialize-microsoft-monaco-editor-in-a-browser-using-simple-javascript-o" target="_blank" class="FancyLink" data-type="Bracket">How to initialize Microsoft Monaco Editor in a browser using simple JavaScript only?</a>
 - <a href="https://www.spectralcore.com/blog/integrating-monaco-editor/" target="_blank" class="FancyLink" data-type="Bracket">Integrating Monaco Editor</a>
-- <a href="github.com/microsoft/monaco-editor/tree/main/samples" target="_blank" class="FancyLink" data-type="Bracket">Monaco Editor Samples</a>
-- <a href="www.meziantou.net/using-monaco-editor-as-an-input-in-a-form.htm" target="_blank" class="FancyLink" data-type="Bracket">Using Monaco Editor as an Input in a Form</a>
+- <a href="https://github.com/microsoft/monaco-editor/tree/main/samples" target="_blank" class="FancyLink" data-type="Bracket">Monaco Editor Samples</a>
+- <a href="https://www.meziantou.net/using-monaco-editor-as-an-input-in-a-form.htm" target="_blank" class="FancyLink" data-type="Bracket">Using Monaco Editor as an Input in a Form</a>
 - <a href="https://betterprogramming.pub/create-a-custom-web-editor-using-typescript-react-antlr-and-monaco-editor-part-1-2f710c69c18c" target="_blank" class="FancyLink" data-type="Bracket">Create a Custom Web Editor Using TypeScript, React, ANTLR, and Monaco Editor</a>
 - <a href="https://javascript.plainenglish.io/embed-a-runnable-vs-code-clone-with-react-882173be2aae" target="_blank" class="FancyLink" data-type="Bracket">Embed a Runnable VS Code Clone With React</a>
 - #### And the most important one: <a href="https://segmentfault.com/a/1190000041686221/en" target="_blank" class="FancyLink" data-type="Bracket">To create a lightweight WebIDE, reading this article is enough</a>

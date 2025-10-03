@@ -1,9 +1,9 @@
 // export const RESUME_PATH =
 //   "https://docs.google.com/viewer?url=https://github.com/ABSanthosh/Portfolio/raw/sveltekit/src/data/Resume.pdf";
 
-import resume from "$data/Resume.pdf?url";
+// import resume from "$data/Resume.pdf?url";
 
-export const RESUME_PATH = "/resume";
+export const RESUME_PATH = "/resume.pdf";
 
 export interface IExperience {
   position: string;
