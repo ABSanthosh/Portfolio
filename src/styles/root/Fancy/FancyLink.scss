@@ -1,7 +1,7 @@
 
 .FancyLink {
   &[data-type="ButtonLink"] {
-    @include box($height: 32px);
+    @include box(auto, 32px);
     background-color: var(--lightGray);
     border: 1px solid var(--borderColor);
     @include make-flex();

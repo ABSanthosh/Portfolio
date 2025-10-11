@@ -31,6 +31,10 @@
       title: "Resume",
       href: RESUME_PATH,
     },
+    {
+      title: "Google Scholar",
+      href: "https://scholar.google.com/citations?user=2tdrS7EAAAAJ&hl=en",
+    },
   ];
 </script>
 
@@ -223,6 +227,7 @@
 
       &--desc {
         gap: 17px;
+        @include box($height: auto);
         @include make-flex($align: flex-start);
 
         p {
@@ -249,19 +254,22 @@
 
       &--actions {
         gap: 16px;
+        flex-wrap: wrap;
         margin-top: 15px;
-        @include box(50%, 40px);
+        @include box(100%, 40px);
         @include make-flex($dir: row, $just: flex-start);
 
-        @include respondAt(775px) {
-          width: 60%;
-        }
+        // @include respondAt(775px) {
+        //   width: 60%;
+        // }
         @include respondAt(620px) {
-          width: 80%;
+          height: auto;
+          & > a {
+            text-wrap: nowrap;
+            flex: 1;
+          }
         }
         @include respondAt(420px) {
-          width: 100%;
-          flex-wrap: wrap;
         }
       }
     }
